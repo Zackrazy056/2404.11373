@@ -1,0 +1,12 @@
+﻿{
+    "pid":  7272,
+    "run_tag":  "20260305-171606",
+    "cases":  "kerr220,kerr221,kerr330",
+    "device":  "cuda",
+    "with_overlay":  false,
+    "with_artifact_audit":  false,
+    "out_dir":  "reports\\posteriors\\fig1_paper_precision\\run_20260305-171606",
+    "stdout_log":  "reports\\posteriors\\fig1_paper_precision\\run_20260305-171606\\driver_stdout.log",
+    "stderr_log":  "reports\\posteriors\\fig1_paper_precision\\run_20260305-171606\\driver_stderr.log",
+    "started_at":  "2026-03-05T17:16:06"
+}

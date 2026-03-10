@@ -1,0 +1,53 @@
+{
+  "case": "kerr220",
+  "error": "You have already trained this neural network. After you had trained the network, you again appended simulations with `append_simulations(theta, x)`, but you did not provide a proposal. If the new simulations are sampled from the prior, you can set `.train(..., force_first_round_loss=True`). However, if the new simulations were not sampled from the prior, you should pass the proposal, i.e. `append_simulations(theta, x, proposal)`. If your samples are not sampled from the prior and you do not pass a proposal and you set `force_first_round_loss=True`, the result of SNPE will not be the true posterior. Instead, it will be the proposal posterior, which (usually) is more narrow than the true posterior.",
+  "error_type": "AssertionError",
+  "heartbeat_log": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_resume_fix_smoke\\heartbeat.log",
+  "latest_status": {
+    "acceptance_rate_in_round": 0.98553466796875,
+    "device": "cpu",
+    "epochs_trained_this_round": 124,
+    "event": "phase_end",
+    "heartbeat_interval_seconds": 15.0,
+    "inferred_num_epochs": 124,
+    "num_simulations": 256,
+    "phase": "training",
+    "phase_elapsed_seconds": 0.0019981861114501953,
+    "probe_acceptance_rate": 0.98828125,
+    "round_index": 2,
+    "state": "running",
+    "stop_by_ratio": false,
+    "stop_eligible": false,
+    "stop_reason": "first_round",
+    "timestamp": 1772859918.865786,
+    "truncated_prior_volume": 0.98651123046875,
+    "volume_ratio_to_previous": null
+  },
+  "partial_diagnostics": [
+    {
+      "acceptance_rate_in_round": 1.0,
+      "appended_simulations": 256,
+      "epochs_trained_this_round": 124,
+      "hpd_log_prob_threshold": -11.571697235107422,
+      "inferred_num_epochs": 124,
+      "num_simulations": 256,
+      "probe_acceptance_rate": 0.98828125,
+      "probe_logp_q01": -12.016931533813477,
+      "probe_logp_q50": -4.613154411315918,
+      "probe_logp_q99": 2.744398355484009,
+      "probe_samples": 512,
+      "round_index": 1,
+      "round_total_seconds": 19.91376829147339,
+      "simulation_seconds": 0.03474593162536621,
+      "stop_by_ratio": false,
+      "stop_eligible": false,
+      "stop_reason": "first_round",
+      "training_seconds": 19.377097606658936,
+      "truncated_prior_volume": 0.98651123046875,
+      "truncation_seconds": 0.4862043857574463,
+      "volume_ratio_to_previous": null
+    }
+  ],
+  "status_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_resume_fix_smoke\\status.json",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\scripts\\08_run_fig1_paper_precision.py\", line 473, in main\n    posterior, diagnostics = runner.run()\n                             ^^^^^^^^^^^^\n  File \"C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\src\\rd_sbi\\inference\\tsnpe_runner.py\", line 392, in run\n    density_estimator = inference.train(\n                        ^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\97747\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\sbi\\inference\\trainers\\npe\\npe_c.py\", line 203, in train\n    return super().train(**kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\97747\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\sbi\\inference\\trainers\\npe\\npe_base.py\", line 291, in train\n    assert force_first_round_loss or resume_training, (\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: You have already trained this neural network. After you had trained the network, you again appended simulations with `append_simulations(theta, x)`, but you did not provide a proposal. If the new simulations are sampled from the prior, you can set `.train(..., force_first_round_loss=True`). However, if the new simulations were not sampled from the prior, you should pass the proposal, i.e. `append_simulations(theta, x, proposal)`. If your samples are not sampled from the prior and you do not pass a proposal and you set `force_first_round_loss=True`, the result of SNPE will not be the true posterior. Instead, it will be the proposal posterior, which (usually) is more narrow than the true posterior.\n"
+}

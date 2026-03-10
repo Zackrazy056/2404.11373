@@ -1,0 +1,10 @@
+﻿{
+    "case":  "kerr220",
+    "device":  "cuda",
+    "pid":  28768,
+    "run_tag":  "20260305-205241",
+    "out_dir":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241",
+    "started_at":  "2026-03-05T20:52:41",
+    "stdout_log":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\train_stdout.log",
+    "stderr_log":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\train_stderr.log"
+}

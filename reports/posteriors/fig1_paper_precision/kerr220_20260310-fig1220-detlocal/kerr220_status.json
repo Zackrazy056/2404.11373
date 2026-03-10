@@ -1,0 +1,8 @@
+{
+  "event": "posterior_sampling_end",
+  "num_simulations": 0,
+  "phase": "posterior_sampling",
+  "phase_elapsed_seconds": 0.0,
+  "round_index": 4,
+  "state": "running"
+}

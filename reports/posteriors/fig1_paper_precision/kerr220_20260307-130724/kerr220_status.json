@@ -1,0 +1,10 @@
+{
+  "error": "TSNPE rejection sampler could not collect 100000 points (got 13721, total_drawn=16777216).",
+  "event": "error",
+  "failure_summary": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-130724\\kerr220_failure_summary.json",
+  "num_simulations": 100000,
+  "phase": "complete",
+  "phase_elapsed_seconds": 3.699030876159668,
+  "round_index": 2,
+  "state": "failed"
+}

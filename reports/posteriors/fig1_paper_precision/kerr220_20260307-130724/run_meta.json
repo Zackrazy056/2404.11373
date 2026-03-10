@@ -1,0 +1,11 @@
+﻿{
+    "case":  "kerr220",
+    "device":  "cuda:0",
+    "pid":  30820,
+    "run_tag":  "20260307-130724",
+    "out_dir":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-130724",
+    "status_path":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-130724\\kerr220_status.json",
+    "heartbeat_log":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-130724\\kerr220_heartbeat.log",
+    "case_log":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-130724\\kerr220.log",
+    "started_at":  "2026-03-07T13:07:25"
+}

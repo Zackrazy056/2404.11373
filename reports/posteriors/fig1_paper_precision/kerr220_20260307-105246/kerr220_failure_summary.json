@@ -1,0 +1,51 @@
+{
+  "case": "kerr220",
+  "error": "Aborting next round: previous round produced no effective truncation (volume=1.000000 >= 0.999000).",
+  "error_type": "RuntimeError",
+  "heartbeat_log": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-105246\\kerr220_heartbeat.log",
+  "latest_status": {
+    "acceptance_rate_in_round": 1.0,
+    "device": "cpu",
+    "event": "round_complete",
+    "heartbeat_interval_seconds": 60.0,
+    "inferred_num_epochs": 61,
+    "num_simulations": 50000,
+    "phase": "complete",
+    "phase_elapsed_seconds": 3.5316295623779297,
+    "probe_acceptance_rate": 1.0,
+    "round_index": 1,
+    "state": "running",
+    "stop_by_ratio": false,
+    "stop_eligible": false,
+    "stop_reason": "first_round",
+    "timestamp": 1772854645.279958,
+    "truncated_prior_volume": 1.0,
+    "volume_ratio_to_previous": null
+  },
+  "partial_diagnostics": [
+    {
+      "acceptance_rate_in_round": 1.0,
+      "appended_simulations": 50000,
+      "hpd_log_prob_threshold": 17.024642944335938,
+      "inferred_num_epochs": 61,
+      "num_simulations": 50000,
+      "probe_acceptance_rate": 1.0,
+      "probe_logp_q01": 30.812803268432617,
+      "probe_logp_q50": 31.424301147460938,
+      "probe_logp_q99": 31.863977432250977,
+      "probe_samples": 50000,
+      "round_index": 1,
+      "round_total_seconds": 2667.9403414726257,
+      "simulation_seconds": 229.64362144470215,
+      "stop_by_ratio": false,
+      "stop_eligible": false,
+      "stop_reason": "first_round",
+      "training_seconds": 2432.6547813415527,
+      "truncated_prior_volume": 1.0,
+      "truncation_seconds": 3.539630174636841,
+      "volume_ratio_to_previous": null
+    }
+  ],
+  "status_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-105246\\kerr220_status.json",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\scripts\\08_run_fig1_paper_precision.py\", line 319, in main\n    with path.open(\"a\", encoding=\"utf-8\") as f:\n                                 ^^^^^^^^^^^^\n  File \"C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\src\\rd_sbi\\inference\\tsnpe_runner.py\", line 331, in run\n    previous_volume: float | None = None\n                ^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Aborting next round: previous round produced no effective truncation (volume=1.000000 >= 0.999000).\n"
+}

@@ -1,0 +1,204 @@
+{
+  "case": "kerr220",
+  "config": "configs\\injections\\kerr220.yaml",
+  "coverage": {
+    "appendix_b_run": false,
+    "summary_path": null
+  },
+  "diagnostics": [
+    {
+      "acceptance_rate_in_round": 1.0,
+      "appended_simulations": 8,
+      "hpd_log_prob_threshold": 13.781827926635742,
+      "inferred_num_epochs": 3,
+      "num_simulations": 8,
+      "probe_acceptance_rate": 1.0,
+      "probe_logp_q01": 18.589378356933594,
+      "probe_logp_q50": 22.93317413330078,
+      "probe_logp_q99": 24.229814529418945,
+      "probe_samples": 32,
+      "round_index": 1,
+      "round_total_seconds": 9.67747974395752,
+      "simulation_seconds": 0.058031320571899414,
+      "stop_by_ratio": false,
+      "stop_eligible": false,
+      "stop_reason": "first_round",
+      "training_seconds": 7.7428138256073,
+      "truncated_prior_volume": 1.0,
+      "truncation_seconds": 1.8381245136260986,
+      "volume_ratio_to_previous": null
+    }
+  ],
+  "heartbeat_log": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_smoke_whitened_v2\\kerr220_heartbeat.log",
+  "injection_context": {
+    "dec_rad": -1.27,
+    "duration_s": 0.1,
+    "gps_h1": 1126259462.42323,
+    "inclination_rad": 3.141592653589793,
+    "leap_seconds": 18,
+    "psi_rad": 0.82,
+    "ra_rad": 1.95,
+    "sample_rate_hz": 2048.0,
+    "t_start_s": 0.0,
+    "use_detector_time_delay": true
+  },
+  "output_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_smoke_whitened_v2\\kerr220_sbi_posterior_20000.npz",
+  "parameterization": {
+    "dimension": 4,
+    "fixed_params": [
+      "ra_rad",
+      "dec_rad",
+      "psi_rad",
+      "inclination_rad",
+      "gps_h1",
+      "sample_rate_hz",
+      "duration_s",
+      "t_start_s",
+      "use_detector_time_delay"
+    ],
+    "inferred_params": [
+      "M_f_msun",
+      "chi_f",
+      "A_220",
+      "phi_220"
+    ]
+  },
+  "params": {
+    "device": "cpu",
+    "fail_on_no_truncation_for_next_round": true,
+    "final_sampling_device": "cpu_safe_copy",
+    "heartbeat_interval_seconds": 0.0,
+    "max_rounds": 1,
+    "max_volume_for_stopping": 0.95,
+    "min_rounds_before_stopping": 3,
+    "no_truncation_volume_threshold": 0.999,
+    "num_sim_first": 8,
+    "num_sim_round": 8,
+    "posterior_samples": 32,
+    "require_volume_shrink_for_stopping": true,
+    "stopping_ratio": 0.8,
+    "trunc_quantile": 0.0001,
+    "truncation_device": "cpu",
+    "truncation_probe_samples": 32
+  },
+  "preprocessing": {
+    "appendix_a_faithful": true,
+    "duration_s": 0.1,
+    "input_dim": 408,
+    "per_detector_bins": 204,
+    "psd_manifest_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\processed\\psd\\GW150914\\manifest_psd.json",
+    "psd_metadata": {
+      "H1": {
+        "detector": "H1",
+        "n_frequency_bins": 8193,
+        "noverlap": 8192,
+        "nperseg": 16384,
+        "output_npz": "data\\processed\\psd\\GW150914\\H1_psd_welch.npz",
+        "sample_rate_hz": 4096.0,
+        "source_hdf5": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\raw\\gwosc\\GW150914\\H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+      },
+      "L1": {
+        "detector": "L1",
+        "n_frequency_bins": 8193,
+        "noverlap": 8192,
+        "nperseg": 16384,
+        "output_npz": "data\\processed\\psd\\GW150914\\L1_psd_welch.npz",
+        "sample_rate_hz": 4096.0,
+        "source_hdf5": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\raw\\gwosc\\GW150914\\L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+      }
+    },
+    "psd_sources": {
+      "H1": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\processed\\psd\\GW150914\\H1_psd_welch.npz",
+      "L1": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\processed\\psd\\GW150914\\L1_psd_welch.npz"
+    },
+    "representation": "time_domain_dual_detector_concat",
+    "sample_rate_hz": 2048.0,
+    "theta_normalization": {
+      "applied": true,
+      "source": "sbi z_score_theta=independent inside density estimator"
+    },
+    "whitening_method": "psd_to_acf_to_toeplitz_to_cholesky",
+    "x_standardization": {
+      "applied": true,
+      "source": "sbi z_score_x=independent inside density estimator"
+    }
+  },
+  "prior": {
+    "high": [
+      300.0,
+      0.9900000095367432,
+      4.9999998413276127e-20,
+      6.2831854820251465
+    ],
+    "low": [
+      20.0,
+      0.0,
+      1.000000031374395e-22,
+      0.0
+    ],
+    "paper_table_ii_expected": {
+      "M_f_msun": [
+        20.0,
+        300.0
+      ],
+      "chi_f": [
+        0.0,
+        0.99
+      ]
+    },
+    "param_order": [
+      "M_f_msun",
+      "chi_f",
+      "A_220",
+      "phi_220"
+    ]
+  },
+  "snr": {
+    "measured_network_snr": 12.635481907328982,
+    "paper_faithful": false,
+    "per_detector": {
+      "H1": 12.49784936109464,
+      "L1": 1.8598828935780753
+    },
+    "psd_source": {
+      "H1": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\processed\\psd\\GW150914\\H1_psd_welch.npz",
+      "L1": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\processed\\psd\\GW150914\\L1_psd_welch.npz"
+    },
+    "relative_error_to_target": 0.09746557804792985,
+    "target_network_snr": 14.0
+  },
+  "status_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_smoke_whitened_v2\\kerr220_status.json",
+  "total_seconds": 9.88471245765686,
+  "training_contract": {
+    "density_estimator": {
+      "batch_norm": true,
+      "hidden_features": 150,
+      "model": "nsf",
+      "num_bins": 10,
+      "num_blocks": 2,
+      "num_transforms": 5
+    },
+    "embedding": {
+      "hidden_dim": 150,
+      "input_dim": 408,
+      "num_hidden_layers": 2,
+      "output_dim": 128
+    },
+    "normalization": {
+      "theta": "independent",
+      "x": "independent"
+    },
+    "varying_noise": {
+      "apply_in_validation": false,
+      "enabled": true,
+      "implementation": "TSNPERunner -> NoiseResamplingSNPE in whitened space",
+      "noise_std": 1.0
+    }
+  },
+  "tsnpe_definition": {
+    "criterion": "accept theta when log q_phi(theta|x_o) >= tau_epsilon",
+    "stopping_rule": "stop when V_t/V_(t-1) > stopping_ratio for t>1",
+    "tau_source": "posterior sample log_prob quantile at epsilon=trunc_quantile",
+    "truncation": "density-threshold HPD approximation"
+  }
+}

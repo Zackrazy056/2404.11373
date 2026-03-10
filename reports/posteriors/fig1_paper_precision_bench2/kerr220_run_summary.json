@@ -1,0 +1,41 @@
+{
+  "case": "kerr220",
+  "config": "configs\\injections\\kerr220.yaml",
+  "diagnostics": [
+    {
+      "acceptance_rate_in_round": 1.0,
+      "hpd_log_prob_threshold": 14.617494583129883,
+      "num_simulations": 2048,
+      "round_index": 1,
+      "round_total_seconds": 70.18973922729492,
+      "simulation_seconds": 20.275986433029175,
+      "stop_by_ratio": false,
+      "training_seconds": 48.074570655822754,
+      "truncated_prior_volume": 1.0,
+      "truncation_seconds": 1.1072630882263184
+    },
+    {
+      "acceptance_rate_in_round": 1.0,
+      "hpd_log_prob_threshold": 15.312060356140137,
+      "num_simulations": 4096,
+      "round_index": 2,
+      "round_total_seconds": 44.22612977027893,
+      "simulation_seconds": 42.67526888847351,
+      "stop_by_ratio": true,
+      "training_seconds": 0.19898605346679688,
+      "truncated_prior_volume": 1.0,
+      "truncation_seconds": 1.0215511322021484
+    }
+  ],
+  "output_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision_bench2\\kerr220_sbi_posterior_20000.npz",
+  "params": {
+    "device": "cuda",
+    "max_rounds": 2,
+    "num_sim_first": 2048,
+    "num_sim_round": 4096,
+    "posterior_samples": 2000,
+    "stopping_ratio": 0.8,
+    "trunc_quantile": 0.0001
+  },
+  "total_seconds": 114.8660044670105
+}

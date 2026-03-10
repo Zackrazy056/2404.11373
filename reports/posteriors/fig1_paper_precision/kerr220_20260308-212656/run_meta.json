@@ -1,0 +1,9 @@
+{
+  "case": "kerr220",
+  "case_log": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260308-212656\\kerr220.log",
+  "device": "cuda:0",
+  "heartbeat_log": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260308-212656\\kerr220_heartbeat.log",
+  "out_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260308-212656",
+  "run_tag": "20260308-212656",
+  "status_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260308-212656\\kerr220_status.json"
+}

@@ -1,0 +1,54 @@
+$ C:\Users\97747\AppData\Local\Programs\Python\Python311\python.exe scripts/19_run_pyring_fig1_case.py --case kerr221 --run-tag 20260310-fig1-rest-locallike-main --wait --sampling-rate 2048 --analysis-duration 0.1 --disable-bandpass --nlive 256 --maxmcmc 256
+{
+  "case": "kerr221",
+  "export_sample_count": 20000,
+  "manifest_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\manifest_pyring.json",
+  "posterior_columns": [
+    "Mf",
+    "af",
+    "A2220",
+    "A2221",
+    "phi2220",
+    "phi2221",
+    "logL",
+    "logPrior"
+  ],
+  "raw_sample_count": 1092,
+  "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr221_20260310-fig1-rest-locallike-main",
+  "run_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr221_20260310-fig1-rest-locallike-main\\kerr221_pyring.npz",
+  "stable_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr221_pyring.npz"
+}
+[exit=0]
+
+$ C:\Users\97747\AppData\Local\Programs\Python\Python311\python.exe scripts/19_run_pyring_fig1_case.py --case kerr330 --run-tag 20260310-fig1-rest-locallike-main --wait --sampling-rate 2048 --analysis-duration 0.1 --disable-bandpass --nlive 256 --maxmcmc 256
+{
+  "case": "kerr330",
+  "export_sample_count": 20000,
+  "manifest_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\manifest_pyring.json",
+  "posterior_columns": [
+    "Mf",
+    "af",
+    "A2220",
+    "A2330",
+    "phi2220",
+    "phi2330",
+    "logL",
+    "logPrior"
+  ],
+  "raw_sample_count": 1143,
+  "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr330_20260310-fig1-rest-locallike-main",
+  "run_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr330_20260310-fig1-rest-locallike-main\\kerr330_pyring.npz",
+  "stable_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr330_pyring.npz"
+}
+[exit=0]
+
+$ C:\Users\97747\AppData\Local\Programs\Python\Python311\python.exe -u scripts/08_run_fig1_paper_precision.py --case kerr221 --device cuda --output-dir C:\Users\97747\GW QNM EMRI PROJECT\2404.11373v3\2404.11373\reports\posteriors\fig1_paper_precision\kerr221_20260310-fig1-rest-detlocal --status-path C:\Users\97747\GW QNM EMRI PROJECT\2404.11373v3\2404.11373\reports\posteriors\fig1_paper_precision\kerr221_20260310-fig1-rest-detlocal\kerr221_status.json --heartbeat-log C:\Users\97747\GW QNM EMRI PROJECT\2404.11373v3\2404.11373\reports\posteriors\fig1_paper_precision\kerr221_20260310-fig1-rest-detlocal\kerr221_heartbeat.log --heartbeat-interval-seconds 60.0 --observation-timing-mode detector_local_truncation
+WARNING (pytensor.configdefaults): g++ not available, if using conda: `conda install gxx`
+WARNING (pytensor.configdefaults): g++ not detected!  PyTensor will be unable to compile C-implementations and will default to Python. Performance may be severely degraded. To remove this warning, set PyTensor flags cxx to an empty string.
+Status file: C:\Users\97747\GW QNM EMRI PROJECT\2404.11373v3\2404.11373\reports\posteriors\fig1_paper_precision\kerr221_20260310-fig1-rest-detlocal\kerr221_status.json
+Heartbeat log: C:\Users\97747\GW QNM EMRI PROJECT\2404.11373v3\2404.11373\reports\posteriors\fig1_paper_precision\kerr221_20260310-fig1-rest-detlocal\kerr221_heartbeat.log
+[TSNPE] round=1/8 n_sim=50000/50000 accept=1.0000
+C:\Users\97747\AppData\Local\Programs\Python\Python311\Lib\site-packages\sbi\inference\trainers\npe\npe_base.py:177: UserWarning: Data x has device 'cpu'. Moving x to the data_device 'cuda'. Training will proceed on device 'cuda'.
+  theta, x = validate_theta_and_x(
+C:\Users\97747\AppData\Local\Programs\Python\Python311\Lib\site-packages\sbi\inference\trainers\npe\npe_base.py:177: UserWarning: Parameters theta has device 'cuda:0'. Moving theta to the data_device 'cuda'. Training will proceed on device 'cuda'.
+  theta, x = validate_theta_and_x(

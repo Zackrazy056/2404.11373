@@ -1,0 +1,10 @@
+{
+  "error": "Aborting next round: previous round produced no effective truncation (volume=1.000000 >= 0.999000).",
+  "event": "error",
+  "failure_summary": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260308-212656\\kerr220_failure_summary.json",
+  "num_simulations": 50000,
+  "phase": "complete",
+  "phase_elapsed_seconds": 1.1528923511505127,
+  "round_index": 1,
+  "state": "failed"
+}

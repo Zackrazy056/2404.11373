@@ -1,0 +1,12 @@
+2026-03-07 11:34:39 event=run_start state=starting round=0 phase=setup elapsed=n/a
+2026-03-07 11:34:39 event=round_start state=running round=1 phase=prepare elapsed=n/a
+2026-03-07 11:34:39 event=phase_start state=running round=1 phase=simulation elapsed=0.0s
+2026-03-07 11:34:39 event=phase_end state=running round=1 phase=simulation elapsed=0.0s
+2026-03-07 11:34:39 event=phase_start state=running round=1 phase=training elapsed=0.0s
+2026-03-07 11:34:41 event=phase_end state=running round=1 phase=training elapsed=1.8s
+2026-03-07 11:34:41 event=phase_start state=running round=1 phase=truncation elapsed=0.0s
+2026-03-07 11:34:41 event=phase_end state=running round=1 phase=truncation elapsed=0.6s
+2026-03-07 11:34:41 event=round_complete state=running round=1 phase=complete elapsed=0.6s volume=1.000000 probe_accept=1.000000 reason=first_round
+2026-03-07 11:34:41 event=run_complete state=completed round=1 phase=complete elapsed=0.6s volume=1.000000 probe_accept=1.000000 reason=first_round
+2026-03-07 11:34:41 event=posterior_sampling_start state=running round=1 phase=posterior_sampling elapsed=0.0s
+2026-03-07 11:34:41 event=posterior_sampling_end state=running round=1 phase=posterior_sampling elapsed=0.0s

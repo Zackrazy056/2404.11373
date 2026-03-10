@@ -1,0 +1,89 @@
+{
+  "case": "kerr220",
+  "config": "configs\\injections\\kerr220.yaml",
+  "diagnostics": [
+    {
+      "acceptance_rate_in_round": 1.0,
+      "hpd_log_prob_threshold": 20.849407196044922,
+      "num_simulations": 50000,
+      "round_index": 1,
+      "round_total_seconds": 3032.3319046497345,
+      "simulation_seconds": 184.32049441337585,
+      "stop_by_ratio": false,
+      "training_seconds": 2846.2408175468445,
+      "truncated_prior_volume": 1.0,
+      "truncation_seconds": 1.289090871810913
+    },
+    {
+      "acceptance_rate_in_round": 1.0,
+      "hpd_log_prob_threshold": 17.993436813354492,
+      "num_simulations": 100000,
+      "round_index": 2,
+      "round_total_seconds": 345.6142988204956,
+      "simulation_seconds": 343.5251114368439,
+      "stop_by_ratio": true,
+      "training_seconds": 0.18895936012268066,
+      "truncated_prior_volume": 1.0,
+      "truncation_seconds": 1.1145715713500977
+    }
+  ],
+  "injection_context": {
+    "dec_rad": -1.27,
+    "duration_s": 0.1,
+    "gps_h1": 1126259462.42323,
+    "inclination_rad": 3.141592653589793,
+    "psi_rad": 0.82,
+    "ra_rad": 1.95,
+    "sample_rate_hz": 2048.0,
+    "t_start_s": 0.0,
+    "use_detector_time_delay": true
+  },
+  "output_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\kerr220_sbi_posterior_20000.npz",
+  "params": {
+    "device": "cuda",
+    "max_rounds": 8,
+    "num_sim_first": 50000,
+    "num_sim_round": 100000,
+    "posterior_samples": 20000,
+    "stopping_ratio": 0.8,
+    "trunc_quantile": 0.0001,
+    "truncation_device": "cpu"
+  },
+  "prior": {
+    "high": [
+      300.0,
+      0.9900000095367432,
+      4.9999998413276127e-20,
+      6.2831854820251465
+    ],
+    "low": [
+      20.0,
+      0.0,
+      1.000000031374395e-22,
+      0.0
+    ],
+    "paper_table_ii_expected": {
+      "M_f_msun": [
+        20.0,
+        300.0
+      ],
+      "chi_f": [
+        0.0,
+        0.99
+      ]
+    },
+    "param_order": [
+      "M_f_msun",
+      "chi_f",
+      "A_220",
+      "phi_220"
+    ]
+  },
+  "total_seconds": 3378.5249724388123,
+  "tsnpe_definition": {
+    "criterion": "accept theta when log q_phi(theta|x_o) >= tau_epsilon",
+    "stopping_rule": "stop when V_t/V_(t-1) > stopping_ratio for t>1",
+    "tau_source": "posterior sample log_prob quantile at epsilon=trunc_quantile",
+    "truncation": "density-threshold HPD approximation"
+  }
+}

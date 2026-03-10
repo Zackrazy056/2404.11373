@@ -1,0 +1,21 @@
+2026-03-07 13:06:21 event=run_start state=starting round=0 phase=setup elapsed=n/a
+2026-03-07 13:06:21 event=round_start state=running round=1 phase=prepare elapsed=n/a
+2026-03-07 13:06:21 event=phase_start state=running round=1 phase=simulation elapsed=0.0s
+2026-03-07 13:06:21 event=phase_end state=running round=1 phase=simulation elapsed=0.0s
+2026-03-07 13:06:21 event=phase_start state=running round=1 phase=training elapsed=0.0s
+2026-03-07 13:06:36 event=heartbeat state=running round=1 phase=training elapsed=15.0s
+2026-03-07 13:06:40 event=phase_end state=running round=1 phase=training elapsed=19.3s
+2026-03-07 13:06:40 event=phase_start state=running round=1 phase=truncation elapsed=0.0s
+2026-03-07 13:06:41 event=phase_end state=running round=1 phase=truncation elapsed=0.5s
+2026-03-07 13:06:41 event=round_complete state=running round=1 phase=complete elapsed=0.5s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:06:41 event=round_start state=running round=2 phase=prepare elapsed=0.5s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:06:41 event=phase_start state=running round=2 phase=simulation elapsed=0.0s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:06:41 event=phase_end state=running round=2 phase=simulation elapsed=0.0s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:06:41 event=phase_start state=running round=2 phase=training elapsed=0.0s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:06:48 event=phase_end state=running round=2 phase=training elapsed=7.3s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:06:48 event=phase_start state=running round=2 phase=truncation elapsed=0.0s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:06:49 event=phase_end state=running round=2 phase=truncation elapsed=0.5s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:06:49 event=round_complete state=running round=2 phase=complete elapsed=0.5s volume=0.903564 probe_accept=0.896484 reason=insufficient_rounds
+2026-03-07 13:06:49 event=run_complete state=completed round=2 phase=complete elapsed=0.5s volume=0.903564 probe_accept=0.896484 reason=insufficient_rounds
+2026-03-07 13:06:49 event=posterior_sampling_start state=running round=2 phase=posterior_sampling elapsed=0.0s
+2026-03-07 13:06:49 event=posterior_sampling_end state=running round=2 phase=posterior_sampling elapsed=0.0s

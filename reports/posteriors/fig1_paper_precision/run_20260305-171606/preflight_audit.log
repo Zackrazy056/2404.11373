@@ -1,0 +1,4 @@
+$ C:\Users\97747\AppData\Local\Programs\Python\Python311\python.exe scripts/11_audit_fig1_paper_spec.py --output-json C:\Users\97747\GW QNM EMRI PROJECT\2404.11373v3\2404.11373\reports\posteriors\fig1_paper_precision\run_20260305-171606\preflight_audit.json
+
+Saved audit report: C:\Users\97747\GW QNM EMRI PROJECT\2404.11373v3\2404.11373\reports\posteriors\fig1_paper_precision\run_20260305-171606\preflight_audit.json
+overall_ok=True

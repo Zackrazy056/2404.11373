@@ -1,0 +1,10 @@
+{
+  "error": "TSNPE rejection budget infeasible for next round: requested=100000, estimated_max_accepted=2684, acceptance_estimate=0.000200, max_draws=16777216. Increase rejection budget or relax truncation.",
+  "event": "error",
+  "failure_summary": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-215155\\kerr220_failure_summary.json",
+  "num_simulations": 4294,
+  "phase": "complete",
+  "phase_elapsed_seconds": 3.8549811840057373,
+  "round_index": 6,
+  "state": "failed"
+}

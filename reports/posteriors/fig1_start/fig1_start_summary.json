@@ -1,0 +1,83 @@
+{
+  "cases": {
+    "kerr220": {
+      "chi_mean": 0.5791524052619934,
+      "config": "configs\\injections\\kerr220.yaml",
+      "diagnostics": [
+        {
+          "acceptance_rate_in_round": 1.0,
+          "hpd_log_prob_threshold": 21.60307502746582,
+          "num_simulations": 8,
+          "round_index": 1,
+          "stop_by_ratio": false,
+          "truncated_prior_volume": 0.5
+        }
+      ],
+      "m_mean": 148.7954864501953,
+      "n_samples": 80,
+      "param_names": [
+        "M",
+        "chi",
+        "A220",
+        "phi220"
+      ],
+      "posterior_file": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_start\\kerr220_sbi_posterior.npz",
+      "true_M": 67.0,
+      "true_chi": 0.6700000166893005
+    },
+    "kerr221": {
+      "chi_mean": 0.46988433599472046,
+      "config": "configs\\injections\\kerr221.yaml",
+      "diagnostics": [
+        {
+          "acceptance_rate_in_round": 1.0,
+          "hpd_log_prob_threshold": 49.77543640136719,
+          "num_simulations": 8,
+          "round_index": 1,
+          "stop_by_ratio": false,
+          "truncated_prior_volume": 0.6875
+        }
+      ],
+      "m_mean": 170.36825561523438,
+      "n_samples": 80,
+      "param_names": [
+        "M",
+        "chi",
+        "A220",
+        "phi220",
+        "A221",
+        "phi221"
+      ],
+      "posterior_file": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_start\\kerr221_sbi_posterior.npz",
+      "true_M": 67.0,
+      "true_chi": 0.6700000166893005
+    },
+    "kerr330": {
+      "chi_mean": 0.2613948881626129,
+      "config": "configs\\injections\\kerr330.yaml",
+      "diagnostics": [
+        {
+          "acceptance_rate_in_round": 1.0,
+          "hpd_log_prob_threshold": 47.44192886352539,
+          "num_simulations": 8,
+          "round_index": 1,
+          "stop_by_ratio": false,
+          "truncated_prior_volume": 0.6875
+        }
+      ],
+      "m_mean": 170.9332733154297,
+      "n_samples": 80,
+      "param_names": [
+        "M",
+        "chi",
+        "A220",
+        "phi220",
+        "A330",
+        "phi330"
+      ],
+      "posterior_file": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_start\\kerr330_sbi_posterior.npz",
+      "true_M": 67.0,
+      "true_chi": 0.6700000166893005
+    }
+  }
+}

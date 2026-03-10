@@ -1,0 +1,11 @@
+2026-03-08 21:27:31 event=run_start state=starting round=0 phase=setup elapsed=n/a
+2026-03-08 21:27:31 event=round_start state=running round=1 phase=prepare elapsed=n/a
+2026-03-08 21:27:31 event=phase_start state=running round=1 phase=simulation elapsed=0.0s
+2026-03-08 21:27:35 event=phase_end state=running round=1 phase=simulation elapsed=4.6s
+2026-03-08 21:27:35 event=phase_start state=running round=1 phase=training elapsed=0.0s
+2026-03-08 21:28:35 event=heartbeat state=running round=1 phase=training elapsed=60.0s
+2026-03-08 21:29:14 event=phase_end state=running round=1 phase=training elapsed=98.6s
+2026-03-08 21:29:14 event=phase_start state=running round=1 phase=truncation elapsed=0.0s
+2026-03-08 21:29:15 event=phase_end state=running round=1 phase=truncation elapsed=1.2s
+2026-03-08 21:29:15 event=round_complete state=running round=1 phase=complete elapsed=1.2s volume=1.000000 probe_accept=1.000000 reason=first_round
+2026-03-08 21:29:15 event=error state=failed round=1 phase=complete elapsed=1.2s

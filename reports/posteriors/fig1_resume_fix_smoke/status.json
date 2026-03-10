@@ -1,0 +1,10 @@
+{
+  "error": "You have already trained this neural network. After you had trained the network, you again appended simulations with `append_simulations(theta, x)`, but you did not provide a proposal. If the new simulations are sampled from the prior, you can set `.train(..., force_first_round_loss=True`). However, if the new simulations were not sampled from the prior, you should pass the proposal, i.e. `append_simulations(theta, x, proposal)`. If your samples are not sampled from the prior and you do not pass a proposal and you set `force_first_round_loss=True`, the result of SNPE will not be the true posterior. Instead, it will be the proposal posterior, which (usually) is more narrow than the true posterior.",
+  "event": "error",
+  "failure_summary": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_resume_fix_smoke\\kerr220_failure_summary.json",
+  "num_simulations": 256,
+  "phase": "training",
+  "phase_elapsed_seconds": 0.0019981861114501953,
+  "round_index": 2,
+  "state": "failed"
+}

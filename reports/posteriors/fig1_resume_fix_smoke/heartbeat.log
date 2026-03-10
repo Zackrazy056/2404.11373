@@ -1,0 +1,16 @@
+2026-03-07 13:04:58 event=run_start state=starting round=0 phase=setup elapsed=n/a
+2026-03-07 13:04:58 event=round_start state=running round=1 phase=prepare elapsed=n/a
+2026-03-07 13:04:58 event=phase_start state=running round=1 phase=simulation elapsed=0.0s
+2026-03-07 13:04:58 event=phase_end state=running round=1 phase=simulation elapsed=0.0s
+2026-03-07 13:04:58 event=phase_start state=running round=1 phase=training elapsed=0.0s
+2026-03-07 13:05:13 event=heartbeat state=running round=1 phase=training elapsed=15.0s
+2026-03-07 13:05:18 event=phase_end state=running round=1 phase=training elapsed=19.4s
+2026-03-07 13:05:18 event=phase_start state=running round=1 phase=truncation elapsed=0.0s
+2026-03-07 13:05:18 event=phase_end state=running round=1 phase=truncation elapsed=0.5s
+2026-03-07 13:05:18 event=round_complete state=running round=1 phase=complete elapsed=0.5s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:05:18 event=round_start state=running round=2 phase=prepare elapsed=0.5s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:05:18 event=phase_start state=running round=2 phase=simulation elapsed=0.0s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:05:18 event=phase_end state=running round=2 phase=simulation elapsed=0.0s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:05:18 event=phase_start state=running round=2 phase=training elapsed=0.0s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:05:18 event=phase_end state=running round=2 phase=training elapsed=0.0s volume=0.986511 probe_accept=0.988281 reason=first_round
+2026-03-07 13:05:18 event=error state=failed round=2 phase=training elapsed=0.0s

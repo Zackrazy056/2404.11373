@@ -1,0 +1,10 @@
+﻿{
+    "case":  "kerr220",
+    "device":  "cpu",
+    "pid":  19648,
+    "run_tag":  "20260307-104438",
+    "out_dir":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-104438",
+    "started_at":  "2026-03-07T10:44:38",
+    "stdout_log":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-104438\\driver_stdout.log",
+    "stderr_log":  "reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-104438\\driver_stderr.log"
+}

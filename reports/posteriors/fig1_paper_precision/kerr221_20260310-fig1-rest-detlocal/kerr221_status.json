@@ -1,0 +1,18 @@
+{
+  "acceptance_rate_in_round": 1.0,
+  "device": "cuda",
+  "estimated_max_accepted_under_budget": null,
+  "estimated_rejection_acceptance_rate": null,
+  "event": "heartbeat",
+  "heartbeat_interval_seconds": 60.0,
+  "num_simulations": 50000,
+  "phase": "training",
+  "phase_elapsed_seconds": 3600.5051419734955,
+  "rejection_budget_max_draws": null,
+  "requested_num_simulations": 50000,
+  "round_index": 1,
+  "simulation_budget_adjusted": false,
+  "simulation_budget_adjustment_reason": null,
+  "state": "running",
+  "timestamp": 1773156045.0777166
+}

@@ -1,0 +1,11 @@
+{
+  "device": "cuda",
+  "kerr220_sbi_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260310-fig1220-detlocal",
+  "log_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\run_20260310-fig1-rest_remaining_cases.log",
+  "pyring_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring",
+  "run_tag": "20260310-fig1-rest",
+  "selected_cases": [
+    "kerr221",
+    "kerr330"
+  ]
+}

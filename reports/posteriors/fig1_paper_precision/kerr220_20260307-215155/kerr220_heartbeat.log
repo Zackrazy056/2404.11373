@@ -1,0 +1,503 @@
+2026-03-07 21:52:08 event=run_start state=starting round=0 phase=setup elapsed=n/a
+2026-03-07 21:52:08 event=round_start state=running round=1 phase=prepare elapsed=n/a
+2026-03-07 21:52:08 event=phase_start state=running round=1 phase=simulation elapsed=0.0s
+2026-03-07 21:52:53 event=phase_end state=running round=1 phase=simulation elapsed=44.4s
+2026-03-07 21:52:53 event=phase_start state=running round=1 phase=training elapsed=0.0s
+2026-03-07 21:53:53 event=heartbeat state=running round=1 phase=training elapsed=60.0s
+2026-03-07 21:54:53 event=heartbeat state=running round=1 phase=training elapsed=120.0s
+2026-03-07 21:55:53 event=heartbeat state=running round=1 phase=training elapsed=180.0s
+2026-03-07 21:56:53 event=heartbeat state=running round=1 phase=training elapsed=240.0s
+2026-03-07 21:57:53 event=heartbeat state=running round=1 phase=training elapsed=300.0s
+2026-03-07 21:58:53 event=heartbeat state=running round=1 phase=training elapsed=360.1s
+2026-03-07 21:59:53 event=heartbeat state=running round=1 phase=training elapsed=420.1s
+2026-03-07 22:00:53 event=heartbeat state=running round=1 phase=training elapsed=480.1s
+2026-03-07 22:01:53 event=heartbeat state=running round=1 phase=training elapsed=540.1s
+2026-03-07 22:02:53 event=heartbeat state=running round=1 phase=training elapsed=600.1s
+2026-03-07 22:03:53 event=heartbeat state=running round=1 phase=training elapsed=660.1s
+2026-03-07 22:04:53 event=heartbeat state=running round=1 phase=training elapsed=720.1s
+2026-03-07 22:05:53 event=heartbeat state=running round=1 phase=training elapsed=780.1s
+2026-03-07 22:06:53 event=heartbeat state=running round=1 phase=training elapsed=840.1s
+2026-03-07 22:07:53 event=heartbeat state=running round=1 phase=training elapsed=900.2s
+2026-03-07 22:08:53 event=heartbeat state=running round=1 phase=training elapsed=960.2s
+2026-03-07 22:09:53 event=heartbeat state=running round=1 phase=training elapsed=1020.2s
+2026-03-07 22:10:53 event=heartbeat state=running round=1 phase=training elapsed=1080.2s
+2026-03-07 22:11:53 event=heartbeat state=running round=1 phase=training elapsed=1140.2s
+2026-03-07 22:12:53 event=heartbeat state=running round=1 phase=training elapsed=1200.2s
+2026-03-07 22:13:53 event=heartbeat state=running round=1 phase=training elapsed=1260.2s
+2026-03-07 22:14:54 event=heartbeat state=running round=1 phase=training elapsed=1320.2s
+2026-03-07 22:15:54 event=heartbeat state=running round=1 phase=training elapsed=1380.2s
+2026-03-07 22:16:54 event=heartbeat state=running round=1 phase=training elapsed=1440.2s
+2026-03-07 22:17:54 event=heartbeat state=running round=1 phase=training elapsed=1500.2s
+2026-03-07 22:18:54 event=heartbeat state=running round=1 phase=training elapsed=1560.2s
+2026-03-07 22:19:54 event=heartbeat state=running round=1 phase=training elapsed=1620.3s
+2026-03-07 22:20:54 event=heartbeat state=running round=1 phase=training elapsed=1680.3s
+2026-03-07 22:21:54 event=heartbeat state=running round=1 phase=training elapsed=1740.3s
+2026-03-07 22:22:54 event=heartbeat state=running round=1 phase=training elapsed=1800.3s
+2026-03-07 22:23:54 event=heartbeat state=running round=1 phase=training elapsed=1860.3s
+2026-03-07 22:24:54 event=heartbeat state=running round=1 phase=training elapsed=1920.3s
+2026-03-07 22:25:54 event=heartbeat state=running round=1 phase=training elapsed=1980.3s
+2026-03-07 22:26:54 event=heartbeat state=running round=1 phase=training elapsed=2040.3s
+2026-03-07 22:27:54 event=heartbeat state=running round=1 phase=training elapsed=2100.3s
+2026-03-07 22:28:54 event=heartbeat state=running round=1 phase=training elapsed=2160.3s
+2026-03-07 22:29:54 event=heartbeat state=running round=1 phase=training elapsed=2220.3s
+2026-03-07 22:30:54 event=heartbeat state=running round=1 phase=training elapsed=2280.3s
+2026-03-07 22:31:54 event=heartbeat state=running round=1 phase=training elapsed=2340.3s
+2026-03-07 22:32:13 event=phase_end state=running round=1 phase=training elapsed=2359.8s
+2026-03-07 22:32:13 event=phase_start state=running round=1 phase=truncation elapsed=0.0s
+2026-03-07 22:32:17 event=phase_end state=running round=1 phase=truncation elapsed=3.5s
+2026-03-07 22:32:17 event=round_complete state=running round=1 phase=complete elapsed=3.5s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:32:38 event=round_start state=running round=2 phase=prepare elapsed=3.5s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:32:38 event=phase_start state=running round=2 phase=simulation elapsed=0.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:33:38 event=heartbeat state=running round=2 phase=simulation elapsed=60.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:34:22 event=phase_end state=running round=2 phase=simulation elapsed=104.4s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:34:23 event=phase_start state=running round=2 phase=training elapsed=0.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:35:23 event=heartbeat state=running round=2 phase=training elapsed=60.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:36:23 event=heartbeat state=running round=2 phase=training elapsed=120.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:37:23 event=heartbeat state=running round=2 phase=training elapsed=180.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:38:23 event=heartbeat state=running round=2 phase=training elapsed=240.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:39:23 event=heartbeat state=running round=2 phase=training elapsed=300.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:40:23 event=heartbeat state=running round=2 phase=training elapsed=360.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:41:23 event=heartbeat state=running round=2 phase=training elapsed=420.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:42:23 event=heartbeat state=running round=2 phase=training elapsed=480.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:43:23 event=heartbeat state=running round=2 phase=training elapsed=540.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:44:23 event=heartbeat state=running round=2 phase=training elapsed=600.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:45:23 event=heartbeat state=running round=2 phase=training elapsed=660.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:46:23 event=heartbeat state=running round=2 phase=training elapsed=720.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:47:23 event=heartbeat state=running round=2 phase=training elapsed=780.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:48:23 event=heartbeat state=running round=2 phase=training elapsed=840.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:49:23 event=heartbeat state=running round=2 phase=training elapsed=900.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:50:23 event=heartbeat state=running round=2 phase=training elapsed=960.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:51:23 event=heartbeat state=running round=2 phase=training elapsed=1020.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:52:23 event=heartbeat state=running round=2 phase=training elapsed=1080.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:53:23 event=heartbeat state=running round=2 phase=training elapsed=1140.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:54:23 event=heartbeat state=running round=2 phase=training elapsed=1200.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:55:23 event=heartbeat state=running round=2 phase=training elapsed=1260.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:56:23 event=heartbeat state=running round=2 phase=training elapsed=1320.4s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:57:23 event=heartbeat state=running round=2 phase=training elapsed=1380.4s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:58:23 event=heartbeat state=running round=2 phase=training elapsed=1440.4s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 22:59:23 event=heartbeat state=running round=2 phase=training elapsed=1500.4s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:00:23 event=heartbeat state=running round=2 phase=training elapsed=1560.4s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:01:23 event=heartbeat state=running round=2 phase=training elapsed=1620.4s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:02:23 event=heartbeat state=running round=2 phase=training elapsed=1680.5s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:03:23 event=heartbeat state=running round=2 phase=training elapsed=1740.5s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:04:23 event=heartbeat state=running round=2 phase=training elapsed=1800.5s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:05:24 event=heartbeat state=running round=2 phase=training elapsed=1860.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:06:24 event=heartbeat state=running round=2 phase=training elapsed=1920.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:07:24 event=heartbeat state=running round=2 phase=training elapsed=1980.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:08:24 event=heartbeat state=running round=2 phase=training elapsed=2040.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:09:24 event=heartbeat state=running round=2 phase=training elapsed=2100.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:10:24 event=heartbeat state=running round=2 phase=training elapsed=2160.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:11:24 event=heartbeat state=running round=2 phase=training elapsed=2220.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:12:24 event=heartbeat state=running round=2 phase=training elapsed=2280.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:13:24 event=heartbeat state=running round=2 phase=training elapsed=2340.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:14:24 event=heartbeat state=running round=2 phase=training elapsed=2400.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:15:24 event=heartbeat state=running round=2 phase=training elapsed=2461.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:16:24 event=heartbeat state=running round=2 phase=training elapsed=2521.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:17:24 event=heartbeat state=running round=2 phase=training elapsed=2581.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:18:24 event=heartbeat state=running round=2 phase=training elapsed=2641.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:19:24 event=heartbeat state=running round=2 phase=training elapsed=2701.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:20:24 event=heartbeat state=running round=2 phase=training elapsed=2761.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:21:24 event=heartbeat state=running round=2 phase=training elapsed=2821.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:22:24 event=heartbeat state=running round=2 phase=training elapsed=2881.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:23:24 event=heartbeat state=running round=2 phase=training elapsed=2941.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:24:24 event=heartbeat state=running round=2 phase=training elapsed=3001.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:25:24 event=heartbeat state=running round=2 phase=training elapsed=3061.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:26:24 event=heartbeat state=running round=2 phase=training elapsed=3121.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:27:24 event=heartbeat state=running round=2 phase=training elapsed=3181.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:28:24 event=heartbeat state=running round=2 phase=training elapsed=3241.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:29:24 event=heartbeat state=running round=2 phase=training elapsed=3301.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:30:24 event=heartbeat state=running round=2 phase=training elapsed=3361.1s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:31:24 event=heartbeat state=running round=2 phase=training elapsed=3421.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:32:24 event=heartbeat state=running round=2 phase=training elapsed=3481.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:33:24 event=heartbeat state=running round=2 phase=training elapsed=3541.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:34:24 event=heartbeat state=running round=2 phase=training elapsed=3601.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:35:24 event=heartbeat state=running round=2 phase=training elapsed=3661.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:36:24 event=heartbeat state=running round=2 phase=training elapsed=3721.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:37:24 event=heartbeat state=running round=2 phase=training elapsed=3781.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:38:24 event=heartbeat state=running round=2 phase=training elapsed=3841.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:39:24 event=heartbeat state=running round=2 phase=training elapsed=3901.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:40:24 event=heartbeat state=running round=2 phase=training elapsed=3961.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:41:24 event=heartbeat state=running round=2 phase=training elapsed=4021.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:42:24 event=heartbeat state=running round=2 phase=training elapsed=4081.3s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:43:24 event=heartbeat state=running round=2 phase=training elapsed=4141.3s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:44:24 event=heartbeat state=running round=2 phase=training elapsed=4201.3s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:45:24 event=heartbeat state=running round=2 phase=training elapsed=4261.3s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:46:24 event=heartbeat state=running round=2 phase=training elapsed=4321.3s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:47:24 event=heartbeat state=running round=2 phase=training elapsed=4381.3s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:48:24 event=heartbeat state=running round=2 phase=training elapsed=4441.3s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:49:24 event=heartbeat state=running round=2 phase=training elapsed=4501.3s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:50:24 event=heartbeat state=running round=2 phase=training elapsed=4561.3s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:51:25 event=heartbeat state=running round=2 phase=training elapsed=4621.6s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:52:25 event=heartbeat state=running round=2 phase=training elapsed=4681.6s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:53:25 event=heartbeat state=running round=2 phase=training elapsed=4741.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:54:25 event=heartbeat state=running round=2 phase=training elapsed=4801.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:55:25 event=heartbeat state=running round=2 phase=training elapsed=4861.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:56:25 event=heartbeat state=running round=2 phase=training elapsed=4921.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:57:25 event=heartbeat state=running round=2 phase=training elapsed=4981.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:58:25 event=heartbeat state=running round=2 phase=training elapsed=5041.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-07 23:59:25 event=heartbeat state=running round=2 phase=training elapsed=5101.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:00:25 event=heartbeat state=running round=2 phase=training elapsed=5161.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:01:25 event=heartbeat state=running round=2 phase=training elapsed=5221.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:02:25 event=heartbeat state=running round=2 phase=training elapsed=5281.7s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:03:25 event=heartbeat state=running round=2 phase=training elapsed=5341.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:04:25 event=heartbeat state=running round=2 phase=training elapsed=5401.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:05:25 event=heartbeat state=running round=2 phase=training elapsed=5461.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:06:25 event=heartbeat state=running round=2 phase=training elapsed=5521.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:07:25 event=heartbeat state=running round=2 phase=training elapsed=5581.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:08:25 event=heartbeat state=running round=2 phase=training elapsed=5641.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:09:25 event=heartbeat state=running round=2 phase=training elapsed=5701.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:10:25 event=heartbeat state=running round=2 phase=training elapsed=5761.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:11:25 event=heartbeat state=running round=2 phase=training elapsed=5821.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:12:25 event=heartbeat state=running round=2 phase=training elapsed=5881.8s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:13:25 event=heartbeat state=running round=2 phase=training elapsed=5941.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:14:25 event=heartbeat state=running round=2 phase=training elapsed=6001.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:15:25 event=heartbeat state=running round=2 phase=training elapsed=6061.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:16:25 event=heartbeat state=running round=2 phase=training elapsed=6121.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:17:25 event=heartbeat state=running round=2 phase=training elapsed=6181.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:18:25 event=heartbeat state=running round=2 phase=training elapsed=6241.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:19:25 event=heartbeat state=running round=2 phase=training elapsed=6301.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:20:25 event=heartbeat state=running round=2 phase=training elapsed=6361.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:21:25 event=heartbeat state=running round=2 phase=training elapsed=6421.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:22:25 event=heartbeat state=running round=2 phase=training elapsed=6481.9s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:23:25 event=heartbeat state=running round=2 phase=training elapsed=6542.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:24:25 event=heartbeat state=running round=2 phase=training elapsed=6602.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:25:25 event=heartbeat state=running round=2 phase=training elapsed=6662.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:26:25 event=heartbeat state=running round=2 phase=training elapsed=6722.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:27:25 event=heartbeat state=running round=2 phase=training elapsed=6782.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:28:25 event=heartbeat state=running round=2 phase=training elapsed=6842.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:29:25 event=heartbeat state=running round=2 phase=training elapsed=6902.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:30:25 event=heartbeat state=running round=2 phase=training elapsed=6962.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:31:25 event=heartbeat state=running round=2 phase=training elapsed=7022.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:31:55 event=phase_end state=running round=2 phase=training elapsed=7052.2s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:31:55 event=phase_start state=running round=2 phase=truncation elapsed=0.0s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:31:59 event=phase_end state=running round=2 phase=truncation elapsed=3.5s volume=0.038757 probe_accept=0.037900 reason=first_round
+2026-03-08 00:31:59 event=round_complete state=running round=2 phase=complete elapsed=3.5s volume=0.000610 probe_accept=0.000660 reason=insufficient_rounds
+2026-03-08 00:33:17 event=round_start state=running round=3 phase=prepare elapsed=3.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:33:17 event=phase_start state=running round=3 phase=simulation elapsed=0.0s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:33:25 event=phase_end state=running round=3 phase=simulation elapsed=8.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:33:25 event=phase_start state=running round=3 phase=training elapsed=0.0s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:34:25 event=heartbeat state=running round=3 phase=training elapsed=60.0s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:35:25 event=heartbeat state=running round=3 phase=training elapsed=120.0s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:36:25 event=heartbeat state=running round=3 phase=training elapsed=180.0s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:37:25 event=heartbeat state=running round=3 phase=training elapsed=240.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:38:25 event=heartbeat state=running round=3 phase=training elapsed=300.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:39:25 event=heartbeat state=running round=3 phase=training elapsed=360.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:40:25 event=heartbeat state=running round=3 phase=training elapsed=420.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:41:25 event=heartbeat state=running round=3 phase=training elapsed=480.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:42:25 event=heartbeat state=running round=3 phase=training elapsed=540.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:43:25 event=heartbeat state=running round=3 phase=training elapsed=600.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:44:25 event=heartbeat state=running round=3 phase=training elapsed=660.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:45:25 event=heartbeat state=running round=3 phase=training elapsed=720.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:46:25 event=heartbeat state=running round=3 phase=training elapsed=780.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:47:25 event=heartbeat state=running round=3 phase=training elapsed=840.1s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:48:25 event=heartbeat state=running round=3 phase=training elapsed=900.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:49:25 event=heartbeat state=running round=3 phase=training elapsed=960.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:50:25 event=heartbeat state=running round=3 phase=training elapsed=1020.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:51:25 event=heartbeat state=running round=3 phase=training elapsed=1080.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:52:25 event=heartbeat state=running round=3 phase=training elapsed=1140.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:53:25 event=heartbeat state=running round=3 phase=training elapsed=1200.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:54:25 event=heartbeat state=running round=3 phase=training elapsed=1260.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:55:25 event=heartbeat state=running round=3 phase=training elapsed=1320.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:56:25 event=heartbeat state=running round=3 phase=training elapsed=1380.2s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:57:25 event=heartbeat state=running round=3 phase=training elapsed=1440.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:58:25 event=heartbeat state=running round=3 phase=training elapsed=1500.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 00:59:25 event=heartbeat state=running round=3 phase=training elapsed=1560.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:00:25 event=heartbeat state=running round=3 phase=training elapsed=1620.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:01:25 event=heartbeat state=running round=3 phase=training elapsed=1680.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:02:25 event=heartbeat state=running round=3 phase=training elapsed=1740.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:03:25 event=heartbeat state=running round=3 phase=training elapsed=1800.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:04:25 event=heartbeat state=running round=3 phase=training elapsed=1860.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:05:25 event=heartbeat state=running round=3 phase=training elapsed=1920.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:06:25 event=heartbeat state=running round=3 phase=training elapsed=1980.3s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:07:25 event=heartbeat state=running round=3 phase=training elapsed=2040.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:08:25 event=heartbeat state=running round=3 phase=training elapsed=2100.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:09:25 event=heartbeat state=running round=3 phase=training elapsed=2160.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:10:25 event=heartbeat state=running round=3 phase=training elapsed=2220.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:11:25 event=heartbeat state=running round=3 phase=training elapsed=2280.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:12:25 event=heartbeat state=running round=3 phase=training elapsed=2340.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:13:25 event=heartbeat state=running round=3 phase=training elapsed=2400.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:14:25 event=heartbeat state=running round=3 phase=training elapsed=2460.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:15:25 event=heartbeat state=running round=3 phase=training elapsed=2520.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:16:25 event=heartbeat state=running round=3 phase=training elapsed=2580.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:17:25 event=heartbeat state=running round=3 phase=training elapsed=2640.4s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:18:25 event=heartbeat state=running round=3 phase=training elapsed=2700.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:19:25 event=heartbeat state=running round=3 phase=training elapsed=2760.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:20:25 event=heartbeat state=running round=3 phase=training elapsed=2820.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:21:25 event=heartbeat state=running round=3 phase=training elapsed=2880.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:22:25 event=heartbeat state=running round=3 phase=training elapsed=2940.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:23:25 event=heartbeat state=running round=3 phase=training elapsed=3000.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:24:25 event=heartbeat state=running round=3 phase=training elapsed=3060.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:25:25 event=heartbeat state=running round=3 phase=training elapsed=3120.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:26:25 event=heartbeat state=running round=3 phase=training elapsed=3180.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:27:25 event=heartbeat state=running round=3 phase=training elapsed=3240.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:28:25 event=heartbeat state=running round=3 phase=training elapsed=3300.5s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:29:25 event=heartbeat state=running round=3 phase=training elapsed=3360.6s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:30:25 event=heartbeat state=running round=3 phase=training elapsed=3420.6s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:31:25 event=heartbeat state=running round=3 phase=training elapsed=3480.6s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:32:25 event=heartbeat state=running round=3 phase=training elapsed=3540.6s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:33:25 event=heartbeat state=running round=3 phase=training elapsed=3600.6s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:34:25 event=heartbeat state=running round=3 phase=training elapsed=3660.6s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:35:25 event=heartbeat state=running round=3 phase=training elapsed=3720.6s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:35:58 event=phase_end state=running round=3 phase=training elapsed=3752.8s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:35:58 event=phase_start state=running round=3 phase=truncation elapsed=0.0s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:36:01 event=phase_end state=running round=3 phase=truncation elapsed=3.8s n_sim=8858/100000 volume=0.000610 probe_accept=0.000660 budget_adjusted=1 reason=insufficient_rounds
+2026-03-08 01:36:01 event=round_complete state=running round=3 phase=complete elapsed=3.8s n_sim=8858/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:37:53 event=round_start state=running round=4 phase=prepare elapsed=3.8s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:37:53 event=phase_start state=running round=4 phase=simulation elapsed=0.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:37:59 event=phase_end state=running round=4 phase=simulation elapsed=5.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:37:59 event=phase_start state=running round=4 phase=training elapsed=0.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:38:59 event=heartbeat state=running round=4 phase=training elapsed=60.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:39:59 event=heartbeat state=running round=4 phase=training elapsed=120.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:40:59 event=heartbeat state=running round=4 phase=training elapsed=180.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:41:59 event=heartbeat state=running round=4 phase=training elapsed=240.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:42:59 event=heartbeat state=running round=4 phase=training elapsed=300.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:43:59 event=heartbeat state=running round=4 phase=training elapsed=360.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:44:59 event=heartbeat state=running round=4 phase=training elapsed=420.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:45:59 event=heartbeat state=running round=4 phase=training elapsed=480.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:46:59 event=heartbeat state=running round=4 phase=training elapsed=540.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:47:59 event=heartbeat state=running round=4 phase=training elapsed=600.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:48:59 event=heartbeat state=running round=4 phase=training elapsed=660.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:49:59 event=heartbeat state=running round=4 phase=training elapsed=720.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:50:59 event=heartbeat state=running round=4 phase=training elapsed=780.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:51:59 event=heartbeat state=running round=4 phase=training elapsed=840.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:52:59 event=heartbeat state=running round=4 phase=training elapsed=900.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:53:59 event=heartbeat state=running round=4 phase=training elapsed=960.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:54:59 event=heartbeat state=running round=4 phase=training elapsed=1020.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:55:59 event=heartbeat state=running round=4 phase=training elapsed=1080.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:56:59 event=heartbeat state=running round=4 phase=training elapsed=1140.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:57:59 event=heartbeat state=running round=4 phase=training elapsed=1200.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:58:59 event=heartbeat state=running round=4 phase=training elapsed=1260.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 01:59:59 event=heartbeat state=running round=4 phase=training elapsed=1320.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:00:59 event=heartbeat state=running round=4 phase=training elapsed=1380.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:01:59 event=heartbeat state=running round=4 phase=training elapsed=1440.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:02:59 event=heartbeat state=running round=4 phase=training elapsed=1500.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:03:59 event=heartbeat state=running round=4 phase=training elapsed=1560.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:04:59 event=heartbeat state=running round=4 phase=training elapsed=1620.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:06:00 event=heartbeat state=running round=4 phase=training elapsed=1680.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:07:00 event=heartbeat state=running round=4 phase=training elapsed=1740.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:08:00 event=heartbeat state=running round=4 phase=training elapsed=1800.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:09:00 event=heartbeat state=running round=4 phase=training elapsed=1860.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:10:00 event=heartbeat state=running round=4 phase=training elapsed=1920.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:11:00 event=heartbeat state=running round=4 phase=training elapsed=1980.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:12:00 event=heartbeat state=running round=4 phase=training elapsed=2040.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:13:00 event=heartbeat state=running round=4 phase=training elapsed=2100.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:14:00 event=heartbeat state=running round=4 phase=training elapsed=2160.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:15:00 event=heartbeat state=running round=4 phase=training elapsed=2220.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:16:00 event=heartbeat state=running round=4 phase=training elapsed=2280.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:17:00 event=heartbeat state=running round=4 phase=training elapsed=2340.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:18:00 event=heartbeat state=running round=4 phase=training elapsed=2400.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:19:00 event=heartbeat state=running round=4 phase=training elapsed=2460.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:20:00 event=heartbeat state=running round=4 phase=training elapsed=2520.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:21:00 event=heartbeat state=running round=4 phase=training elapsed=2580.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:22:00 event=heartbeat state=running round=4 phase=training elapsed=2640.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:23:00 event=heartbeat state=running round=4 phase=training elapsed=2700.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:24:00 event=heartbeat state=running round=4 phase=training elapsed=2760.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:25:00 event=heartbeat state=running round=4 phase=training elapsed=2820.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:26:00 event=heartbeat state=running round=4 phase=training elapsed=2880.5s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:27:00 event=heartbeat state=running round=4 phase=training elapsed=2940.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:28:00 event=heartbeat state=running round=4 phase=training elapsed=3000.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:29:00 event=heartbeat state=running round=4 phase=training elapsed=3060.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:30:00 event=heartbeat state=running round=4 phase=training elapsed=3120.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:31:00 event=heartbeat state=running round=4 phase=training elapsed=3180.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:32:00 event=heartbeat state=running round=4 phase=training elapsed=3240.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:33:00 event=heartbeat state=running round=4 phase=training elapsed=3300.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:34:00 event=heartbeat state=running round=4 phase=training elapsed=3360.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:35:00 event=heartbeat state=running round=4 phase=training elapsed=3420.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:36:00 event=heartbeat state=running round=4 phase=training elapsed=3480.6s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:37:00 event=heartbeat state=running round=4 phase=training elapsed=3540.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:38:00 event=heartbeat state=running round=4 phase=training elapsed=3600.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:39:00 event=heartbeat state=running round=4 phase=training elapsed=3660.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:40:00 event=heartbeat state=running round=4 phase=training elapsed=3720.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:41:00 event=heartbeat state=running round=4 phase=training elapsed=3780.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:42:00 event=heartbeat state=running round=4 phase=training elapsed=3840.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:43:00 event=heartbeat state=running round=4 phase=training elapsed=3900.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:44:00 event=heartbeat state=running round=4 phase=training elapsed=3960.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:45:00 event=heartbeat state=running round=4 phase=training elapsed=4020.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:46:00 event=heartbeat state=running round=4 phase=training elapsed=4080.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:47:00 event=heartbeat state=running round=4 phase=training elapsed=4140.8s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:48:00 event=heartbeat state=running round=4 phase=training elapsed=4200.8s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:49:00 event=heartbeat state=running round=4 phase=training elapsed=4260.8s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:50:00 event=heartbeat state=running round=4 phase=training elapsed=4320.8s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:51:00 event=heartbeat state=running round=4 phase=training elapsed=4380.8s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:52:00 event=heartbeat state=running round=4 phase=training elapsed=4440.8s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:53:00 event=heartbeat state=running round=4 phase=training elapsed=4500.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:54:00 event=heartbeat state=running round=4 phase=training elapsed=4560.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:55:00 event=heartbeat state=running round=4 phase=training elapsed=4620.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:56:00 event=heartbeat state=running round=4 phase=training elapsed=4680.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:57:00 event=heartbeat state=running round=4 phase=training elapsed=4740.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:58:00 event=heartbeat state=running round=4 phase=training elapsed=4800.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 02:59:00 event=heartbeat state=running round=4 phase=training elapsed=4860.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:00:00 event=heartbeat state=running round=4 phase=training elapsed=4920.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:01:00 event=heartbeat state=running round=4 phase=training elapsed=4980.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:02:00 event=heartbeat state=running round=4 phase=training elapsed=5040.9s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:03:00 event=heartbeat state=running round=4 phase=training elapsed=5101.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:04:00 event=heartbeat state=running round=4 phase=training elapsed=5161.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:05:00 event=heartbeat state=running round=4 phase=training elapsed=5221.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:06:00 event=heartbeat state=running round=4 phase=training elapsed=5281.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:07:00 event=heartbeat state=running round=4 phase=training elapsed=5341.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:08:00 event=heartbeat state=running round=4 phase=training elapsed=5401.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:09:00 event=heartbeat state=running round=4 phase=training elapsed=5461.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:10:00 event=heartbeat state=running round=4 phase=training elapsed=5521.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:11:00 event=heartbeat state=running round=4 phase=training elapsed=5581.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:12:00 event=heartbeat state=running round=4 phase=training elapsed=5641.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:13:00 event=heartbeat state=running round=4 phase=training elapsed=5701.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:14:00 event=heartbeat state=running round=4 phase=training elapsed=5761.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:15:00 event=heartbeat state=running round=4 phase=training elapsed=5821.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:16:00 event=heartbeat state=running round=4 phase=training elapsed=5881.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:17:00 event=heartbeat state=running round=4 phase=training elapsed=5941.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:18:00 event=heartbeat state=running round=4 phase=training elapsed=6001.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:19:00 event=heartbeat state=running round=4 phase=training elapsed=6061.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:20:00 event=heartbeat state=running round=4 phase=training elapsed=6121.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:21:00 event=heartbeat state=running round=4 phase=training elapsed=6181.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:22:00 event=heartbeat state=running round=4 phase=training elapsed=6241.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:23:00 event=heartbeat state=running round=4 phase=training elapsed=6301.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:24:00 event=heartbeat state=running round=4 phase=training elapsed=6361.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:25:00 event=heartbeat state=running round=4 phase=training elapsed=6421.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:26:00 event=heartbeat state=running round=4 phase=training elapsed=6481.2s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:27:00 event=heartbeat state=running round=4 phase=training elapsed=6541.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:28:00 event=heartbeat state=running round=4 phase=training elapsed=6601.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:29:00 event=heartbeat state=running round=4 phase=training elapsed=6661.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:30:00 event=heartbeat state=running round=4 phase=training elapsed=6721.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:31:00 event=heartbeat state=running round=4 phase=training elapsed=6781.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:32:00 event=heartbeat state=running round=4 phase=training elapsed=6841.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:33:00 event=heartbeat state=running round=4 phase=training elapsed=6901.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:34:01 event=heartbeat state=running round=4 phase=training elapsed=6961.3s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:35:01 event=heartbeat state=running round=4 phase=training elapsed=7021.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:36:01 event=heartbeat state=running round=4 phase=training elapsed=7081.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:37:01 event=heartbeat state=running round=4 phase=training elapsed=7141.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:38:01 event=heartbeat state=running round=4 phase=training elapsed=7201.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:39:01 event=heartbeat state=running round=4 phase=training elapsed=7261.4s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:40:01 event=heartbeat state=running round=4 phase=training elapsed=7321.7s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:41:01 event=heartbeat state=running round=4 phase=training elapsed=7381.8s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:41:18 event=phase_end state=running round=4 phase=training elapsed=7399.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:41:18 event=phase_start state=running round=4 phase=truncation elapsed=0.0s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:41:21 event=phase_end state=running round=4 phase=truncation elapsed=3.1s n_sim=5905/100000 volume=0.000671 probe_accept=0.000440 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 03:41:21 event=round_complete state=running round=4 phase=complete elapsed=3.1s n_sim=5905/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:42:54 event=round_start state=running round=5 phase=prepare elapsed=3.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:42:54 event=phase_start state=running round=5 phase=simulation elapsed=0.0s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:42:59 event=phase_end state=running round=5 phase=simulation elapsed=4.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:42:59 event=phase_start state=running round=5 phase=training elapsed=0.0s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:43:59 event=heartbeat state=running round=5 phase=training elapsed=60.0s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:44:59 event=heartbeat state=running round=5 phase=training elapsed=120.0s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:45:59 event=heartbeat state=running round=5 phase=training elapsed=180.0s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:46:59 event=heartbeat state=running round=5 phase=training elapsed=240.0s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:47:59 event=heartbeat state=running round=5 phase=training elapsed=300.0s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:48:59 event=heartbeat state=running round=5 phase=training elapsed=360.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:49:59 event=heartbeat state=running round=5 phase=training elapsed=420.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:50:59 event=heartbeat state=running round=5 phase=training elapsed=480.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:51:59 event=heartbeat state=running round=5 phase=training elapsed=540.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:52:59 event=heartbeat state=running round=5 phase=training elapsed=600.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:53:59 event=heartbeat state=running round=5 phase=training elapsed=660.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:54:59 event=heartbeat state=running round=5 phase=training elapsed=720.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:55:59 event=heartbeat state=running round=5 phase=training elapsed=780.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:56:59 event=heartbeat state=running round=5 phase=training elapsed=840.1s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:57:59 event=heartbeat state=running round=5 phase=training elapsed=900.2s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:58:59 event=heartbeat state=running round=5 phase=training elapsed=960.2s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 03:59:59 event=heartbeat state=running round=5 phase=training elapsed=1020.2s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:00:59 event=heartbeat state=running round=5 phase=training elapsed=1080.2s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:01:59 event=heartbeat state=running round=5 phase=training elapsed=1140.2s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:02:59 event=heartbeat state=running round=5 phase=training elapsed=1200.2s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:03:59 event=heartbeat state=running round=5 phase=training elapsed=1260.2s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:04:59 event=heartbeat state=running round=5 phase=training elapsed=1320.2s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:05:59 event=heartbeat state=running round=5 phase=training elapsed=1380.2s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:06:59 event=heartbeat state=running round=5 phase=training elapsed=1440.3s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:07:59 event=heartbeat state=running round=5 phase=training elapsed=1500.3s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:08:59 event=heartbeat state=running round=5 phase=training elapsed=1560.3s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:09:59 event=heartbeat state=running round=5 phase=training elapsed=1620.3s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:10:59 event=heartbeat state=running round=5 phase=training elapsed=1680.3s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:11:59 event=heartbeat state=running round=5 phase=training elapsed=1740.3s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:12:59 event=heartbeat state=running round=5 phase=training elapsed=1800.3s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:13:59 event=heartbeat state=running round=5 phase=training elapsed=1860.3s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:14:59 event=heartbeat state=running round=5 phase=training elapsed=1920.3s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:15:59 event=heartbeat state=running round=5 phase=training elapsed=1980.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:16:59 event=heartbeat state=running round=5 phase=training elapsed=2040.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:17:59 event=heartbeat state=running round=5 phase=training elapsed=2100.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:18:59 event=heartbeat state=running round=5 phase=training elapsed=2160.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:19:59 event=heartbeat state=running round=5 phase=training elapsed=2220.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:20:59 event=heartbeat state=running round=5 phase=training elapsed=2280.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:21:59 event=heartbeat state=running round=5 phase=training elapsed=2340.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:22:59 event=heartbeat state=running round=5 phase=training elapsed=2400.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:23:59 event=heartbeat state=running round=5 phase=training elapsed=2460.4s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:24:59 event=heartbeat state=running round=5 phase=training elapsed=2520.5s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:25:59 event=heartbeat state=running round=5 phase=training elapsed=2580.5s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:26:59 event=heartbeat state=running round=5 phase=training elapsed=2640.5s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:27:59 event=heartbeat state=running round=5 phase=training elapsed=2700.5s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:28:59 event=heartbeat state=running round=5 phase=training elapsed=2760.5s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:29:59 event=heartbeat state=running round=5 phase=training elapsed=2820.5s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:30:59 event=heartbeat state=running round=5 phase=training elapsed=2880.5s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:31:59 event=heartbeat state=running round=5 phase=training elapsed=2940.5s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:32:59 event=heartbeat state=running round=5 phase=training elapsed=3000.6s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:33:59 event=heartbeat state=running round=5 phase=training elapsed=3060.6s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:34:04 event=phase_end state=running round=5 phase=training elapsed=3065.8s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:34:04 event=phase_start state=running round=5 phase=truncation elapsed=0.0s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:34:08 event=phase_end state=running round=5 phase=truncation elapsed=3.9s n_sim=4563/100000 volume=0.000488 probe_accept=0.000340 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:34:08 event=round_complete state=running round=5 phase=complete elapsed=3.9s n_sim=4563/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:35:50 event=round_start state=running round=6 phase=prepare elapsed=3.9s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:35:50 event=phase_start state=running round=6 phase=simulation elapsed=0.0s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:35:54 event=phase_end state=running round=6 phase=simulation elapsed=4.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:35:54 event=phase_start state=running round=6 phase=training elapsed=0.0s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:36:54 event=heartbeat state=running round=6 phase=training elapsed=60.0s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:37:54 event=heartbeat state=running round=6 phase=training elapsed=120.0s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:38:54 event=heartbeat state=running round=6 phase=training elapsed=180.0s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:39:54 event=heartbeat state=running round=6 phase=training elapsed=240.0s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:40:54 event=heartbeat state=running round=6 phase=training elapsed=300.0s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:41:54 event=heartbeat state=running round=6 phase=training elapsed=360.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:42:54 event=heartbeat state=running round=6 phase=training elapsed=420.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:43:54 event=heartbeat state=running round=6 phase=training elapsed=480.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:44:54 event=heartbeat state=running round=6 phase=training elapsed=540.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:45:54 event=heartbeat state=running round=6 phase=training elapsed=600.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:46:54 event=heartbeat state=running round=6 phase=training elapsed=660.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:47:54 event=heartbeat state=running round=6 phase=training elapsed=720.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:48:54 event=heartbeat state=running round=6 phase=training elapsed=780.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:49:54 event=heartbeat state=running round=6 phase=training elapsed=840.1s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:50:54 event=heartbeat state=running round=6 phase=training elapsed=900.2s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:51:54 event=heartbeat state=running round=6 phase=training elapsed=960.2s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:52:54 event=heartbeat state=running round=6 phase=training elapsed=1020.2s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:53:54 event=heartbeat state=running round=6 phase=training elapsed=1080.2s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:54:54 event=heartbeat state=running round=6 phase=training elapsed=1140.2s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:55:54 event=heartbeat state=running round=6 phase=training elapsed=1200.2s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:56:54 event=heartbeat state=running round=6 phase=training elapsed=1260.2s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:57:54 event=heartbeat state=running round=6 phase=training elapsed=1320.2s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:58:54 event=heartbeat state=running round=6 phase=training elapsed=1380.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 04:59:54 event=heartbeat state=running round=6 phase=training elapsed=1440.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:00:54 event=heartbeat state=running round=6 phase=training elapsed=1500.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:01:54 event=heartbeat state=running round=6 phase=training elapsed=1560.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:02:54 event=heartbeat state=running round=6 phase=training elapsed=1620.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:03:54 event=heartbeat state=running round=6 phase=training elapsed=1680.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:04:54 event=heartbeat state=running round=6 phase=training elapsed=1740.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:05:54 event=heartbeat state=running round=6 phase=training elapsed=1800.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:06:54 event=heartbeat state=running round=6 phase=training elapsed=1860.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:07:54 event=heartbeat state=running round=6 phase=training elapsed=1920.3s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:08:54 event=heartbeat state=running round=6 phase=training elapsed=1980.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:09:54 event=heartbeat state=running round=6 phase=training elapsed=2040.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:10:54 event=heartbeat state=running round=6 phase=training elapsed=2100.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:11:54 event=heartbeat state=running round=6 phase=training elapsed=2160.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:12:54 event=heartbeat state=running round=6 phase=training elapsed=2220.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:13:54 event=heartbeat state=running round=6 phase=training elapsed=2280.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:14:54 event=heartbeat state=running round=6 phase=training elapsed=2340.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:15:54 event=heartbeat state=running round=6 phase=training elapsed=2400.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:16:54 event=heartbeat state=running round=6 phase=training elapsed=2460.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:17:54 event=heartbeat state=running round=6 phase=training elapsed=2520.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:18:54 event=heartbeat state=running round=6 phase=training elapsed=2580.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:19:55 event=heartbeat state=running round=6 phase=training elapsed=2640.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:20:55 event=heartbeat state=running round=6 phase=training elapsed=2700.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:21:55 event=heartbeat state=running round=6 phase=training elapsed=2760.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:22:55 event=heartbeat state=running round=6 phase=training elapsed=2820.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:23:55 event=heartbeat state=running round=6 phase=training elapsed=2880.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:24:55 event=heartbeat state=running round=6 phase=training elapsed=2940.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:25:55 event=heartbeat state=running round=6 phase=training elapsed=3000.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:26:55 event=heartbeat state=running round=6 phase=training elapsed=3060.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:27:55 event=heartbeat state=running round=6 phase=training elapsed=3120.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:28:55 event=heartbeat state=running round=6 phase=training elapsed=3180.5s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:29:55 event=heartbeat state=running round=6 phase=training elapsed=3240.6s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:30:55 event=heartbeat state=running round=6 phase=training elapsed=3300.6s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:31:55 event=heartbeat state=running round=6 phase=training elapsed=3360.6s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:32:55 event=heartbeat state=running round=6 phase=training elapsed=3420.6s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:33:55 event=heartbeat state=running round=6 phase=training elapsed=3480.6s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:34:55 event=heartbeat state=running round=6 phase=training elapsed=3540.6s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:35:55 event=heartbeat state=running round=6 phase=training elapsed=3600.6s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:36:27 event=phase_end state=running round=6 phase=training elapsed=3633.4s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:36:27 event=phase_start state=running round=6 phase=truncation elapsed=0.0s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:36:31 event=phase_end state=running round=6 phase=truncation elapsed=3.9s n_sim=4294/100000 volume=0.000122 probe_accept=0.000320 budget_adjusted=1 reason=eligible_ratio_check
+2026-03-08 05:36:31 event=round_complete state=running round=6 phase=complete elapsed=3.9s n_sim=4294/100000 volume=0.000244 probe_accept=0.000200 budget_adjusted=1 reason=no_volume_shrink
+2026-03-08 05:36:31 event=error state=failed round=6 phase=complete elapsed=3.9s
