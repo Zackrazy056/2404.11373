@@ -1,0 +1,20 @@
+{
+  "duration_seconds": 32,
+  "event": "GW150914",
+  "event_page": "https://gwosc.org/eventapi/html/GWTC-1-confident/GW150914/v3/",
+  "file_count": 2,
+  "files": [
+    {
+      "local_path": "data\\raw\\gwosc\\GW150914\\H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5",
+      "sha256": "c5ea87beced5094b56b4d694f3a36e6d59f74d3a46e546b980a6a199d1f252a9",
+      "size_bytes": 1040781,
+      "url": "https://gwosc.org/eventapi/html/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+    },
+    {
+      "local_path": "data\\raw\\gwosc\\GW150914\\L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5",
+      "sha256": "9d65bde82f7ec035bea4c02228bce4acb3dcaae774c047edce71ef2ad64f1cc4",
+      "size_bytes": 1007262,
+      "url": "https://gwosc.org/eventapi/html/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+    }
+  ]
+}
