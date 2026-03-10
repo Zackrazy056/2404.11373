@@ -1,0 +1,2 @@
+# Mf_low	Mf_up	af_low	af_up	A2220_low	A2220_up	A2330_low	A2330_up	phi2220_low	phi2220_up	phi2330_low	phi2330_up	
+0 0 0 0 0 0 0 0 0 0 0 0

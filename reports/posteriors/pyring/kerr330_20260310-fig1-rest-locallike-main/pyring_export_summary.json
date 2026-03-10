@@ -1,0 +1,21 @@
+{
+  "case": "kerr330",
+  "export_sample_count": 20000,
+  "manifest_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\manifest_pyring.json",
+  "posterior_columns": [
+    "Mf",
+    "af",
+    "A2220",
+    "A2330",
+    "phi2220",
+    "phi2330",
+    "logL",
+    "logPrior"
+  ],
+  "raw_run_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr330_20260310-fig1-rest-locallike-main\\kerr330_pyring_raw.npz",
+  "raw_sample_count": 1143,
+  "raw_stable_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr330_pyring_raw.npz",
+  "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr330_20260310-fig1-rest-locallike-main",
+  "run_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr330_20260310-fig1-rest-locallike-main\\kerr330_pyring.npz",
+  "stable_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr330_pyring.npz"
+}
