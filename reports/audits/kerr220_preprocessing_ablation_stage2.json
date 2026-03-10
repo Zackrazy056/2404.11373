@@ -1,0 +1,201 @@
+{
+  "case": "kerr220",
+  "runs": [
+    {
+      "contraction_ok": true,
+      "error": null,
+      "exit_code": 0,
+      "label": "detector_local_2048_0p1_nobp",
+      "measured_network_snr": 15.720895091764794,
+      "per_detector_snr": {
+        "H1": 12.415666102113503,
+        "L1": 9.643535540822363
+      },
+      "preprocessing": {
+        "bandpass": {
+          "enabled": false,
+          "f_max_hz": null,
+          "f_min_hz": null,
+          "filter": null,
+          "paper_faithful": true
+        },
+        "duration_s": 0.1,
+        "input_dim": 408,
+        "per_detector_bins": 204,
+        "sample_rate_hz": 2048.0,
+        "window_anchor": {
+          "detector_local_truncation_like_pyring": true,
+          "earliest_detector": null,
+          "earliest_relative_delay_s": null,
+          "observation_timing_mode": "detector_local_truncation",
+          "reference_detector": "H1",
+          "relative_delay_to_reference_s": {
+            "H1": 0.0,
+            "L1": -0.006984385696649813
+          },
+          "shift_s": 0.0,
+          "strategy": "detector_local_truncation_like_pyring",
+          "t_start_detector_s": {
+            "H1": 0.0,
+            "L1": 0.0
+          }
+        }
+      },
+      "requested": {
+        "bandpass_max_hz": null,
+        "bandpass_min_hz": null,
+        "duration_s": 0.1,
+        "sample_rate_hz": 2048.0
+      },
+      "round1_epochs": 88,
+      "round1_probe_accept": 0.018459999933838844,
+      "round1_total_seconds": 391.31640005111694,
+      "round1_training_seconds": 385.8559901714325,
+      "round1_volume": 0.018798828125,
+      "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\kerr220_preprocessing_ablation_stage2\\detector_local_2048_0p1_nobp",
+      "state": "completed",
+      "wall_seconds": 396.2917215824127
+    },
+    {
+      "contraction_ok": true,
+      "error": null,
+      "exit_code": 0,
+      "label": "detector_local_4096_0p1_nobp",
+      "measured_network_snr": 35.674236762718614,
+      "per_detector_snr": {
+        "H1": 28.469900959237314,
+        "L1": 21.496881354599378
+      },
+      "preprocessing": {
+        "bandpass": {
+          "enabled": false,
+          "f_max_hz": null,
+          "f_min_hz": null,
+          "filter": null,
+          "paper_faithful": true
+        },
+        "duration_s": 0.1,
+        "input_dim": 818,
+        "per_detector_bins": 409,
+        "sample_rate_hz": 4096.0,
+        "window_anchor": {
+          "detector_local_truncation_like_pyring": true,
+          "earliest_detector": null,
+          "earliest_relative_delay_s": null,
+          "observation_timing_mode": "detector_local_truncation",
+          "reference_detector": "H1",
+          "relative_delay_to_reference_s": {
+            "H1": 0.0,
+            "L1": -0.006984385696649813
+          },
+          "shift_s": 0.0,
+          "strategy": "detector_local_truncation_like_pyring",
+          "t_start_detector_s": {
+            "H1": 0.0,
+            "L1": 0.0
+          }
+        }
+      },
+      "requested": {
+        "bandpass_max_hz": null,
+        "bandpass_min_hz": null,
+        "duration_s": 0.1,
+        "sample_rate_hz": 4096.0
+      },
+      "round1_epochs": 74,
+      "round1_probe_accept": 0.009340000338852406,
+      "round1_total_seconds": 337.0459544658661,
+      "round1_training_seconds": 330.07253217697144,
+      "round1_volume": 0.01019287109375,
+      "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\kerr220_preprocessing_ablation_stage2\\detector_local_4096_0p1_nobp",
+      "state": "completed",
+      "wall_seconds": 342.1583466529846
+    },
+    {
+      "contraction_ok": true,
+      "error": null,
+      "exit_code": 0,
+      "label": "detector_local_4096_0p2_nobp",
+      "measured_network_snr": 37.0314589711607,
+      "per_detector_snr": {
+        "H1": 29.125110240376497,
+        "L1": 22.87043740330898
+      },
+      "preprocessing": {
+        "bandpass": {
+          "enabled": false,
+          "f_max_hz": null,
+          "f_min_hz": null,
+          "filter": null,
+          "paper_faithful": true
+        },
+        "duration_s": 0.2,
+        "input_dim": 1638,
+        "per_detector_bins": 819,
+        "sample_rate_hz": 4096.0,
+        "window_anchor": {
+          "detector_local_truncation_like_pyring": true,
+          "earliest_detector": null,
+          "earliest_relative_delay_s": null,
+          "observation_timing_mode": "detector_local_truncation",
+          "reference_detector": "H1",
+          "relative_delay_to_reference_s": {
+            "H1": 0.0,
+            "L1": -0.006984385696649813
+          },
+          "shift_s": 0.0,
+          "strategy": "detector_local_truncation_like_pyring",
+          "t_start_detector_s": {
+            "H1": 0.0,
+            "L1": 0.0
+          }
+        }
+      },
+      "requested": {
+        "bandpass_max_hz": null,
+        "bandpass_min_hz": null,
+        "duration_s": 0.2,
+        "sample_rate_hz": 4096.0
+      },
+      "round1_epochs": 76,
+      "round1_probe_accept": 0.010540000163018703,
+      "round1_total_seconds": 356.56402015686035,
+      "round1_training_seconds": 343.8114948272705,
+      "round1_volume": 0.0101318359375,
+      "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\kerr220_preprocessing_ablation_stage2\\detector_local_4096_0p2_nobp",
+      "state": "completed",
+      "wall_seconds": 361.64640164375305
+    },
+    {
+      "contraction_ok": true,
+      "error": "[Errno 22] Invalid argument",
+      "exit_code": 120,
+      "label": "detector_local_4096_0p2_bp100_500",
+      "measured_network_snr": null,
+      "per_detector_snr": null,
+      "preprocessing": {
+        "bandpass": null,
+        "duration_s": null,
+        "input_dim": null,
+        "per_detector_bins": null,
+        "sample_rate_hz": null,
+        "window_anchor": null
+      },
+      "requested": {
+        "bandpass_max_hz": 500.0,
+        "bandpass_min_hz": 100.0,
+        "duration_s": 0.2,
+        "sample_rate_hz": 4096.0
+      },
+      "round1_epochs": 172,
+      "round1_probe_accept": 0.0023399998899549246,
+      "round1_total_seconds": 1076.8647210597992,
+      "round1_training_seconds": 1019.2612204551697,
+      "round1_volume": 0.001953125,
+      "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\kerr220_preprocessing_ablation_stage2\\detector_local_4096_0p2_bp100_500",
+      "state": "failed",
+      "wall_seconds": 1082.168881893158
+    }
+  ],
+  "timing_mode": "detector_local_truncation"
+}

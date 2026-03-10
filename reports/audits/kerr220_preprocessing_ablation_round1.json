@@ -1,0 +1,99 @@
+{
+  "case": "kerr220",
+  "comparison": [
+    {
+      "error": null,
+      "observation_timing_mode": "shared_window_anchor",
+      "round1": {
+        "contraction_ok": false,
+        "epochs_trained_this_round": 21,
+        "hpd_log_prob_threshold": -13.90605640411377,
+        "probe_acceptance_rate": 1.0,
+        "round_total_seconds": 213.6658070087433,
+        "simulation_seconds": 37.263967514038086,
+        "training_seconds": 174.67376470565796,
+        "truncated_prior_volume": 1.0
+      },
+      "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\kerr220_preprocessing_ablation\\shared_window_anchor_20260308-2218",
+      "snr": {
+        "measured_network_snr": 14.27204981161924,
+        "paper_faithful": true,
+        "per_detector": {
+          "H1": 10.521103939142353,
+          "L1": 9.643535540822363
+        },
+        "psd_source": {
+          "H1": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\processed\\psd\\GW150914\\H1_psd_welch.npz",
+          "L1": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\processed\\psd\\GW150914\\L1_psd_welch.npz"
+        },
+        "relative_error_to_target": 0.019432129401374305,
+        "target_network_snr": 14.0
+      },
+      "state": "completed",
+      "window_anchor": {
+        "detector_local_truncation_like_pyring": false,
+        "earliest_detector": "L1",
+        "earliest_relative_delay_s": -0.006984385696649813,
+        "observation_timing_mode": "shared_window_anchor",
+        "reference_detector": "H1",
+        "relative_delay_to_reference_s": {
+          "H1": 0.0,
+          "L1": -0.006984385696649813
+        },
+        "shift_s": 0.006984385696649813,
+        "strategy": "preserve_earliest_arrival_in_common_window",
+        "t_start_detector_s": {
+          "H1": 0.006984385696649813,
+          "L1": 0.0
+        }
+      }
+    },
+    {
+      "error": null,
+      "observation_timing_mode": "detector_local_truncation",
+      "round1": {
+        "contraction_ok": true,
+        "epochs_trained_this_round": 88,
+        "hpd_log_prob_threshold": -7.782260417938232,
+        "probe_acceptance_rate": 0.018459999933838844,
+        "round_total_seconds": 382.9828429222107,
+        "simulation_seconds": 4.459710121154785,
+        "training_seconds": 377.616024017334,
+        "truncated_prior_volume": 0.018798828125
+      },
+      "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\kerr220_preprocessing_ablation\\detector_local_truncation_20260308-2222",
+      "snr": {
+        "measured_network_snr": 15.720895091764794,
+        "paper_faithful": false,
+        "per_detector": {
+          "H1": 12.415666102113503,
+          "L1": 9.643535540822363
+        },
+        "psd_source": {
+          "H1": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\processed\\psd\\GW150914\\H1_psd_welch.npz",
+          "L1": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\processed\\psd\\GW150914\\L1_psd_welch.npz"
+        },
+        "relative_error_to_target": 0.12292107798319954,
+        "target_network_snr": 14.0
+      },
+      "state": "completed",
+      "window_anchor": {
+        "detector_local_truncation_like_pyring": true,
+        "earliest_detector": null,
+        "earliest_relative_delay_s": null,
+        "observation_timing_mode": "detector_local_truncation",
+        "reference_detector": "H1",
+        "relative_delay_to_reference_s": {
+          "H1": 0.0,
+          "L1": -0.006984385696649813
+        },
+        "shift_s": 0.0,
+        "strategy": "detector_local_truncation_like_pyring",
+        "t_start_detector_s": {
+          "H1": 0.0,
+          "L1": 0.0
+        }
+      }
+    }
+  ]
+}

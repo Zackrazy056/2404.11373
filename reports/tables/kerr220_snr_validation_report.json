@@ -1,0 +1,22 @@
+{
+  "all_pass": true,
+  "metric": "network",
+  "relative_tolerance": 0.05,
+  "results": [
+    {
+      "config": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\configs\\injections\\kerr220.yaml",
+      "metric": "network",
+      "metric_value": 14.27205026991145,
+      "name": "Kerr220",
+      "network_snr": 14.27205026991145,
+      "pass": true,
+      "per_detector": {
+        "H1": 10.521104294497556,
+        "L1": 9.643535831383868
+      },
+      "relative_error": 0.019432162136532125,
+      "rss_mean_snr": 10.091863527289682,
+      "target_snr": 14.0
+    }
+  ]
+}

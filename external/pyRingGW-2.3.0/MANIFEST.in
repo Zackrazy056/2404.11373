@@ -1,0 +1,16 @@
+include LICENSE README MANIFEST.in
+include requirements.txt
+include pyRing/data/NR_data/berti_qnm_fits.txt
+include pyRing/data/NR_data/ParSpec_coefficients.txt
+include pyRing/data/NR_data/ParSpec_coefficients_high_spin.txt
+include pyRing/data/PSDs/ASD_LIGO-P1200087-v18-AdV_DESIGN.txt	
+include pyRing/data/PSDs/ASD_LIGO-P1200087-v18-aLIGO_DESIGN.txt
+include pyRing/data/Real_data/GW150914/GW150914_LAL_IMRPhenomP_O1_GWOSC_Mf_af_samples.txt
+include pyRing/data/Real_data/GW150914/H-H1_GWOSC_4KHZ_R1-1126259447-32.txt
+include pyRing/data/Real_data/GW150914/L-L1_GWOSC_4KHZ_R1-1126259447-32.txt
+include pyRing/data/Real_data/GW170814/H-H1_GWOSC_4KHZ_R1-1186741846-32.txt	
+include pyRing/data/Real_data/GW170814/L-L1_GWOSC_4KHZ_R1-1186741846-32.txt	
+include pyRing/data/Real_data/GW170814/V-V1_GWOSC_4KHZ_R1-1186741846-32.txt
+recursive-include pyRing *.c *.pxd *.pyx
+recursive-include config_files/ *.ini
+recursive-include docs *.rst

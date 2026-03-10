@@ -1,0 +1,6 @@
+*.png -text
+*.p -text
+*.dat text
+*.hdf5 -text
+*.txt text
+**/requirements.txt text

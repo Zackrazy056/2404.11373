@@ -1,0 +1,1111 @@
+
+===== PAGE 1 =====
+
+Simulation-based inference of black hole ringdowns in the time domain
+Costantino Pacilio ,1, 2, ∗ Swetha Bhagwat ,3 and Roberto Cotesta4
+1Dipartimento di Fisica “G. Occhialini”, Universitá degli Studi di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy
+2INFN, Sezione di Milano-Bicocca, Piazza della Scienza 3, 20126 Milano, Italy
+3School of Physics and Astronomy & Institute for Gravitational Wave Astronomy, University of Birmingham,
+Birmingham, B15 2TT, United Kingdom
+4William H. Miller III Department of Physics and Astronomy, Johns Hopkins
+University, 3400 N. Charles Street, Baltimore, Maryland, 21218, USA
+(Dated: December 4, 2024)
+Gravitational waves emitted by a ringing black hole allow us to perform precision tests of general
+relativity in the strong field regime. With improvements to our current gravitational wave detectors
+and upcoming next-generation detectors, developing likelihood-free parameter inference infrastructure
+is critical as we will face complications like nonstandard noise properties, partial data and incomplete
+signal modeling that may not allow for an analytically tractable likelihood function. In this work,
+we present a proof-of-concept strategy to perform likelihood-free Bayesian inference on ringdown
+gravitational waves using simulation based inference. Specifically, our method is based on truncated
+sequential neural posterior estimation, which trains a neural density estimator of the posterior for a
+specific observed data segment. We setup the ringdown parameter estimation directly in the time
+domain. We show that the parameter estimation results obtained using our trained networks are in
+agreement with well-established Markov-chain methods for simulated injections as well as analysis
+on real detector data corresponding to GW150914. Additionally, to assess our approach’s internal
+consistency, we show that the density estimators pass a Bayesian coverage test.
+I. INTRODUCTION
+The detection of gravitational waves (GWs) from binary
+black-hole (BBH) mergers [1] enables the possibility to
+performnoveltestsofgeneralrelativity(GR)inthestrong-
+field regime [2–4]. GR predicts that stationary black holes
+(BHs) are described by a strikingly simple two-parameter
+family metric known as the Kerr solution [5], a result
+that is commonly known as the “no-hair theorem” [6, 7].
+This is particularly relevant to the final phase of a BBH
+evolution, where the two black holes have merged to form
+a perturbed remnant that settles down to a stationary
+Kerr BH [8].
+Perturbed BHs shed away multiple moments by emit-
+ting GWs [9] with characteristic complex oscillation fre-
+quencies called quasinormal modes (QNMs) [10, 11]. In
+GR, the oscillation frequency spectrum can be predicted
+from the mass and spin of the remnant BH [11, 12] in
+accordance with the no-hair theorem. Detecting multiple
+QNMs from the observed signal, also known as black-hole
+spectroscopy [13, 14], allows us to test deviations from
+the BH geometry and in the perturbative equation of
+motion in GR as well as the boundary conditions imposed
+to solve the perturbative equation of motion [15, 16].
+Detecting multiple QNMs unambiguously with present
+GW detectors has been challenging thus far due to the
+low signal-to-noise ratio (SNR) in the ringdown portion
+of the signal [3, 4, 14] (but see [17, 18] for recent hints
+of multiple QNMs detections from GW data). On the
+other hand, it is expected that multiple ringdowns at
+high SNRs will be observed with next-generation GW
+∗ costantino.pacilio@unimib.it
+detectors such as LISA [19], Einstein Telescope [20], and
+Cosmic Explorer [21].
+Next-generation detectors are expected to routinely
+observe ringdown SNRs as high asO(100), with excep-
+tionally loud events having SNRs greater than1000 [22–
+26]. Such observations will enable to detect several su-
+perimposed QNMs and measure deviations from GR at
+subpercent level [25, 26]. These will require more pow-
+erful Bayesian techniques to both isolate the signal from
+the background noise and to handle nonstandard noise
+properties like nonstationarities and non-Gaussianities
+[27–29], and gaps in data as well as systematics in model-
+ing the signal [30]. Hence, exploring alternative inference
+methods is of fundamental interest.
+The aim of this paper is to propose a likelihood-free
+method for the parameter estimation of BH ringdowns,
+based on simulation-based inference (SBI) [31]. SBI meth-
+ods have been previously applied to GW inference of a
+full inspiral-merger-ringdown signals, starting with the
+pioneering works of [32–35] and followed by manifold
+improvements [36–39]. All these studies show that SBI
+reaches an accuracy comparable with traditional Markov-
+chain methods for a full inspiral-merger-ringdown wave-
+form [40–43] and also allow for a considerable speedup in
+the analysis.
+In addition, SBI is highly efficient in estimating auto-
+matically marginalized posterior densities [39]. This is
+crucial in the parameter estimation of BHs in the ring-
+down phase when the observable signal includes a very
+large number of QNMs but, in practice, one is only inter-
+ested is a small subset of well-resolved modes for testing
+GR purposes [44–47].
+In this work we introduce a time domain implementa-
+tionoflikelihood-freeinferenceofBHringdownsusing SBI.
+arXiv:2404.11373v3  [gr-qc]  3 Dec 2024
+
+===== PAGE 2 =====
+
+2
+In contrast to frequency domain approaches presented in
+a recent study [48], this technique facilitates noise simula-
+tion and requires fewer training samples. Likelihood-free
+ringdown inference in the time domain was first explored
+in [49] based on the technique of conditional variational
+autoencoders [50, 51]. Here, we demonstrate for the first
+time that SBI matches the performance of well-established
+Markov-chain methods for several simulated signal injec-
+tions [52, 53]. We also provide a real-data application
+of estimating the posterior mass and spin of the final
+BH remnant from GW150914 [1], which agrees well with
+previous Bayesian analyses [54].
+II. SEQUENTIAL NEURAL POSTERIOR
+ESTIMA TION
+We use sequential neural posterior estimation (SNPE)
+to estimate posterior densities. SNPE was first introduced
+in [55] and further expanded in [56, 57]. The aim of SNPE
+istotrainanapproximatedensityestimator qϕ(θ|x)ofthe
+true posterior densityp(θ|x). Here, x is the data segment
+and θ is the set of model parameters to be estimated; in
+particular, x is the sum of a deterministic componenth(θ)
+(hereafter identified with the strain of the GW projected
+on the detector) and a stochastic componentn (the noise
+of the detector),x(θ) = h(θ) +n. It is assumed that one
+can generate h(θ) though a numerical process, so as to
+prepare a training set of ordered couples{θi, xi} to train
+the density estimator.
+The training process maximises the likelihoodQ
+i qϕ(θi|xi) with respect to the model parameters ϕ.
+As shown in [55], the estimator converges to the true
+posterior density asymptotically with the dimension of
+the training set. A particular class of estimators called
+normalizing flows [58] has become increasingly popular
+for SNPE. In the following, we model the estimator as a
+neural spline flow (NSF), a spline-based neural normaliz-
+ing flow [35, 59]. We use the implementation from thesbi
+package [60] — see also Appendix A for implementational
+details.
+Once trained, the modelqϕ can be sampled from in
+a fraction of a second, returning fast posterior samples
+{θn}. Moreover, differently from Markov-chain methods,
+the model can also be evaluated and returns fast accurate
+estimates of p(θ|x).
+The word “sequential” refers to the fact that the ap-
+proximate density estimatorqϕ(θ|x) targets a particular
+observation xo, as opposed to an amortized NPE which
+targets the entire prior volume of the training set. Specif-
+ically, sequential training proceeds through a series of
+adaptive steps, or rounds: at each round, new training
+samples are drawn from a proposal distribution ˜p(θ),
+which is initially set to the priorp(θ) and then it shrinks
+adaptively at each round to prioritize samples with high
+posterior density qϕ(θ|x) conditioned to x = xo. While
+the original implementation of SNPE in [55] proposes
+to draw the new samples directly from the posterior of
+the previous round, we opt for a refined version called
+truncated SNPE (TSNPE) [57], as we observed it to give
+more stable results. We briefly summarize it here:
+1. During the first roundr = 1, the training samples
+{θi, xi}r=1 are drawn from the priorp(θ) and the
+model is optimized with respect to{θi, xi}r=1.
+2. Duringthe k-thround( k > 1), newtrainingsamples
+are still drawn from the priorp(θ), but they are
+rejected if they fall outside the1−ϵhighest posterior
+density (HPD) region ofqϕ(θ|x) from the previous
+round, evaluated atx = xo. The model from the
+previous round r = k − 1 is then further optimized
+with respect to the collection of samples from all
+rounds {θi, xi}r=1 ∪ · · · ∪ {θi, xi}r=k.
+3. The training proceeds until a stopping criterion is
+met.
+Here, ϵ is an hyperparameter that is fixed in advance
+and plays a crucial role: a largeϵ leads to undercovered
+posteriors due to large truncation of the original prior
+volume, while a smallϵ does not adapt the prior enough to
+advancethetraining. Reference[ 57]reportsthattherange
+10−5 < ϵ < 10−2 is working for a variety of benchmarking
+problems. In this work, we fixϵ = 10−4 as we found it to
+give the best results.
+To avoid overfitting, we stop the training when the
+truncated volume at the current round encompasses more
+than 80% of the truncated volume at the previous round.
+Moreover, at roundsr > 1, we also discard simulations
+from the first round since they are less informative.
+More details about the data preparation and the density
+estimator are provided in Appendix A.
+III. RINGDOWN W A VEFORM
+The GW strain that we use for the inference has the
+form
+h(θ) = F+h+ + F×h× (1)
+where F+ and F× are the pattern functions of the detector
+[61], depending on the sky position and relative orienta-
+tion of the source, of the polarization of the waveform and
+of the starting time of the ringdown. The plus- and cross-
+waveform components are expressed as superpositions of
+damped sinusoids as
+h+ =
+X
+l,m,n
+Almne− (t−tstart )
+τlmn cos(Φlmn)Y +
+lm(ι) (2a)
+h× =
+X
+l,m,n
+Almne− (t−tstart )
+τlmn sin(Φlmn)Y ×
+lm(ι) (2b)
+where l ≥ 2, |m| ≤ l and n ≥ 0, and
+Φlmn ≡ 2πflmn(t − tstart) + ϕlmn . (3)
+
+===== PAGE 3 =====
+
+3
+The discrete indices(l, m, n) label the (complex) QNMs
+˜ωlmn = 2πflmn + i/τlmn of the remnant black hole, with
+flmn and τlmn being the (l, m, n) frequency and damping
+time, respectively. While the QNM indices(l, m, n) span
+a countably infinite set, numerical simulations show that
+only a finite subset is significantly excited in the aftermath
+of a binary black-hole merger [13, 14, 44]. The amplitudes
+Almn quantify the extent to which different QNMs are
+excited [14, 22, 44, 62–65].
+The expressions(2a) assume nonprecessing progenitors,
+implying the equatorial symmetry
+Al−mneiϕl−mn = (−1)lAlmne−iϕlmn . (4)
+Together with the symmetry˜ωl−mn = −˜ω∗
+lmn valid for the
+QNMs of Kerr BHs, it allows us to reabsorb negative-m
+modes into positive-m ones and to restrict the sums over
+m > 0 only.
+The plus- and cross- spherical harmonics are functions
+of the inclination angleι defined as
+Y +,×
+lm (ι) = Y−2 lm (ι, 0) ± (−1)l Y−2 l−m (ι, 0) (5)
+in terms of the spin-weighted spherical harmonics Y−2 lm .
+Note that we set the azimuthal angle to zero because it is
+degenerate with the QNM phases. We also take the the
+spin-weighted spherical harmonics Y−2 lm to approximate
+the spin-weighted spheroidal harmonics [66], Y−2 lm ≈
+S−2 lmn.
+For the parameter estimation, we follow [17, 67, 68]
+and keep sky position, polarization, starting time and
+inclination as fixed parameters.
+As a consequence, the space of independent model
+parameters is spanned byθ = {M, χ} ∪ {Almn, ϕlmn}lmn
+and has 2(1 + Nmodes) dimensions. We assume that GR
+is valid and we map{Mf , χf } into the Kerr QNMs using
+the fits in [45].
+IV. SIMULA TED INJECTIONS
+We perform simulated injections into zero noise [69, 70]
+to benchmark the ability to recover a known set of injected
+parameters. We simulate three systems:
+1. Kerr220: Asystemcontainingonlythe (2, 2, 0)mode.
+This system is designed to benchmark our inference
+strategy on the simplest problem of a single excited
+mode.
+2. Kerr221: A system containing the(2, 2, 0) mode and
+the (2, 2, 1) mode, checking the ability to recover
+the fundamental tone and its first overtone.
+3. Kerr330: A system containing the(2, 2, 0) and the
+(3, 3, 0) mode, checking the ability to recover the
+fundamental tone and a higher angular mode.
+In all cases, the mass and spin of the remnant BH
+are fixed to Mf = 67 M⊙ and χf = 0 .67. The other
+Kerr220 : (2 , 2, 0)
+Mf χf A220 ϕ220 ι SNR
+67 M⊙ 0.67 5 1.047 π 14
+Kerr221 : (2 , 2, 0) + (2, 2, 1)
+Mf χf A220 A221 ϕ220 ϕ221 ι SNR
+67 M⊙ 0.67 8.92 9.81 1.047 4.19 π 14
+Kerr330 : (2 , 2, 0) + (3, 3, 0)
+Mf χf A220 A330 ϕ220 ϕ330 ι SNR
+67 M⊙ 0.67 30 3 1.047 5.014 π/4 53
+TABLE I. Parameters of the simulated zero-noise injections.
+Amplitudes are expressed in units of10−21.
+parameters are listed in Table I. For theKerr220 and
+the Kerr221 systems, we fix the inclination angle to the
+GW150914-like valueι = π [67, 68]. Since the spherical
+harmonics Y +,×
+330 vanish at ι = π, we fix ι = π/4 for
+the Kerr330 system, in order to excite the higher angular
+mode.
+Following [67], we fix the right ascensionα, declina-
+tion δ and polarization ψ to the GW150914-like values
+{α, δ, ψ} = {1.95, −1.27, 0.82}. Similarly, we fix the start-
+ing time of the ringdown to the median peak time esti-
+mated from the posterior samples of GW150914 [68, 71];
+specifically, we fix the GPS starting time at H1 to be
+tH1 = 1126259462.42323, while the starting time at L1
+is derived from the time delay from H1 using the sky
+location fixed above.
+The SNRs are computed from the noise power spec-
+tral density (PSD), estimated from the data segments
+in the vicinity of the event GW150914 [53]. The ampli-
+tudes ofKerr220 and theKerr221 systems are adjusted to
+give a signal-to-noise ratioSNR ≈ 14, comparable to the
+SNRs of ringdown events observed so far, e.g., GW150914.
+On the other hand,SNR ≈ 14 is too low to allow for a
+detection of the subdominant(3, 3, 0) mode: following
+[14, 23], we expect that the higher mode(3, 3, 0) is re-
+solved from the(2, 2, 0) starting from a ringdown SNR
+of O(50), for nonspinning progenitors with mass ratio
+q ≈ 1.5. Therefore, we fix the corresponding amplitudes
+to {A220, A330} = {30 × 10−21, 3 × 10−21}, which results
+into SNR≈ 53.
+We infer the posteriors from box-uniform priors in
+the model parameters, within the prior ranges listed in
+Table II. We benchmark our results against posterior
+samples obtained with the time-domain inference software
+pyRing (v2.3.0) [3, 52, 67, 72]. We sample with the nested
+sampler cpnest [73], using 4096 live points and 4094
+maximum Markov-chain steps, which typically results in
+∼ 20k posterior samples. For consistency, we extract 20k
+posterior samples from the trained estimatorqϕ(θ|xo)
+when doing the comparisons.
+We train the posterior density estimators on a sin-
+gle GPU A100. Individual training processes take
+{291, 324, 249} epochs and last{81, 70, 52} mins for the
+{Kerr220,Kerr221,Kerr330} models respectively. Figure
+
+===== PAGE 4 =====
+
+4
+50 60 70 80
+M [M ]
+0.0
+0.2
+0.4
+0.6
+0.8
+pyring
+sbi
+Kerr220
+50 55 60 65 70 75 80
+M [M ]
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+pyring
+sbi
+Kerr221
+62 64 66 68 70
+M [M ]
+0.550
+0.575
+0.600
+0.625
+0.650
+0.675
+0.700
+0.725
+0.750
+pyring
+sbi
+Kerr330
+FIG. 1. Marginalized posteriors for(Mf , χf ) for the three injected systems. The systemsKerr220 and Kerr221 have SNR ≈ 14
+while the systemKerr330 has SNR ≈ 53, which justifies its narrower posteriors. 2-D contours denote68% and 90% credible
+regions. Black dashed lines denote the injected parameters.
+220
+Kerr220
+220
+Kerr221
+221
+Kerr221
+220
+Kerr330
+330
+Kerr330
+4
+2
+0
+2
+4
+lmn
+(true)
+lmn
+sbi
+pyring
+FIG. 2. Violin plots of the recovered amplitudesAlmn for
+each injected model. We subtract the injected valuesA(true)
+lmn
+for better visualization. All amplitudes are expressed in units
+of 10−21.
+Parameter Prior range
+Mf [20, 300] M⊙
+χf [0, 0.99]
+A220 [0.1, 50] × 10−21
+A221 [0, 50] × 10−21
+A330 [0, 50] × 10−21
+ϕlmn [0, 2π]
+TABLE II. Prior ranges for inferring the model parameters.
+All priors are box-uniform distributions within the specified
+ranges.
+1 displays the marginalized posteriors for(Mf , χf) ob-
+tained with pyRing and with our SBI approach, showing
+an excellent agreement between the two methods. Figure
+2 shows that amplitudes, containing the physical infor-
+mation on the degree of excitation of the QNMs, are
+recovered consistently with Markov-chain methods for all
+injected systems. We also display full corner plots for the
+Kerr221 and Kerr330 in Appendix C.
+As an internal diagnostics, we perform coverage tests
+[74–76]. In particular we check that, over a set of sim-
+ulated injections from the restricted priors ˜p(θ), the
+Bayesian credible intervals can be used similar to fre-
+quentist confidence regions; equivalently, that the true
+injected values fall within theγ% credible regions in a
+fraction γ of the injections. This is a necessary condi-
+tion for the density estimators to provide a consistent
+parameter estimation. Further details are provided in Ap-
+pendix B. Figure 3 displays the cumulative distribution
+c.d.f.(γ) of the Bayesian credible intervals for the model
+Kerr220: in order to check consistency with the identity,
+we evaluatec.d.f.(γ) for 100 catalogs, each consisting of
+100 events. We see thatc.d.f.(γ) has support well within
+the expected 90% credible interval around the diagonal
+line, represented by the gray region [4]1. We obtain simi-
+lar consistency results for theKerr221 and Kerr330 models,
+as displayed in Appendix B.
+Our results show that the time-domain SBI inference
+for ringdown returns posterior parameter predictions that
+are internally consistent and it reproduces the results
+obtained by the established Markov-chain methods.
+V. INFERENCE OF REAL DA T A
+We perform a Bayesian parameter estimation on the
+real event GW150914 [1]. A full inspiral-merger-ringdown
+(IMR) analysis identified it as a binary BH with detector-
+frame total massM = 72+4
+−3 M⊙ and binary mass ratio
+q < 1.42 at 90% credibility, while being compatible with
+vanishing progenitor spins [71]. In order to reconstruct
+1 Note that such tests are difficult with ordinary Markov-chain
+methods, in which typically the densities are sampled from but
+not evaluated exactly, often restricting the scope of coverage
+diagnostics to the marginalized 1-d distributions [77].
+
+===== PAGE 5 =====
+
+5
+0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0c.d.f.( )
+Kerr220: p-value=0.504 0.385
++0.419
+FIG. 3. Cumulative distribution of the coverage γ(θ∗, x∗)
+for the injected model Kerr220. Each of the 100 blue lines
+corresponds to the c.d.f. ofγ from Ns = 100 draws of θ∗. The
+shaded gray area denote the90% uncertainty overc.d.f.(γ).
+We also quote the median and90% confidence bounds of the
+KS test p-values across all draws.
+the remnant properties, we analyze the event attH1+3 ms,
+corresponding to ∼ 10M after the merger (tstart ∼ tpeak +
+10M was found to mark the onset of the ringdown stage
+from the analysis of nearly equal mass NR simulations
+[44, 78]). This choice results in a ringdown-onlySNR ∼
+8.5 [54]. As in [67], we fix{α, δ, ϕ} = {1.95, −1.27, 0.82}
+and ι = π. We assume a model containing only the
+fundamental mode (2, 2, 0), which dominates the late
+ringdown stage for nearly equal-mass nonspinning binaries
+[22, 44, 62, 79]. The training takes 282 epochs and lasts
+91 minutes. Figure 4 shows the 90% credible regions
+of the reconstructed final mass and final spin using our
+SBI implementation, compared to the estimates from the
+pyRing software. The two results are in good agreement
+with each other. In the plot, we also display the final
+mass and spin deduced from the IMR posterior samples
+[71] using the phenomenological fits in [80, 81].
+VI. CONCLUSIONS AND OUTLOOK
+Our study shows that simulation-based GW inference
+of BBH ringdowns gives results that are both internally
+consistent and compatible with Markov-chain methods.
+After benchmarking SBI on a control set of injections at
+zero noise, we applied our methods to the analysis of real
+GW data from LIGO detectors. We see that inferences
+done using our model on the event GW150914 agrees with
+the inference of the traditional setup. It is important to
+note that zero-noise injections include several simplifica-
+tions, but real data present noise and a morphological bias
+between the template and the underlying signal. The fact
+that our results are consistent in both cases constitutes a
+robust demonstration of the feasibility of our approach.
+50 60 70 80 90 100 110
+M [M ]
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+pyring
+sbi
+IMR
+FIG. 4. Remnant properties of GW150914, obtained by ana-
+lyzing the publicly released data from LVK [82]. Solid lines
+denote the 90% credible regions reconstructed with our SBI
+implementation (blue) and with thepyRing analysis (orange).
+We also display the final mass and spin obtained from the
+full IMR posterior samples [71] through the phenomenological
+remnant fits in [80, 81].
+We envisage a number of future studies to further ex-
+pand our results. First, a detailed investigation of all
+the promising ringdown events from the GW observa-
+tions is ongoing. While the significance for detecting a
+second mode in present ringdown data is still debated
+[3, 4, 48, 68, 83, 84], there is tentative evidence that
+GW150914 and GW190521 [85] allow us to measure the
+presence of a subdominant overtone [67, 86] and of a
+higher angular harmonic [17, 18], respectively. We seek
+to confirm or refute these findings with our independent,
+likelihood-free method.
+A promising application leverages on the ability of SBI
+to automatically marginalize over nuisance parameters.
+In particular, when inferring on ringdown signals, one is
+only interested in the small subset of modes which are bet-
+ter resolved. The presence of multiple modes, which are
+challenging to resolve individually, is a potential source of
+confusion noise and therefore it must be modeled. More-
+over, an ideal model would allow for a variable number
+of such modes, in order to fit the residuals with greater
+flexibility. This problem is especially suited for SBI, as a
+variable number of background modes can be regarded as
+a collection of nuisances, and we will present a dedicated
+exploration in a follow-up work.
+Lastly, we use sequential (i.e., nonamortised) NPE
+because it is convenient for analyzing individual observa-
+tions, which is the scope of our work. On the other hand,
+amortized NPE might prove useful when assessing the
+expected performances of a detector on large population
+catalogs. Such studies are well timed, given the recent
+
+===== PAGE 6 =====
+
+6
+adoption of the LISA mission [19] by the European Space
+Agency, and the strong efforts to build next-generation
+ground-based GW detectors [20, 21]. Relevant examples
+include [87] exploring a battery of diverse science cases,
+and [23, 25, 26, 88, 89] with a focus on BH spectroscopy.
+Since performing rigorous Bayesian analysis on tens of
+thousands of sources is computationally challenging, all
+these works approximate individual posterior densities
+with Fisher matrices, which are known to introduce sys-
+tematic biases in the shape of the posterior recovery [90].
+Training an amortized density estimator on the expected
+noise spectral densities would allow to drop such approxi-
+mations and to draw much more robust conclusions.
+VII. ACKNOWLEDGMENTS
+WeareespeciallygratefultoEnricoBarausseandMarco
+Crisostomi for fruitful exchanges during an earlier stage of
+this work. CP thanks Elliot Finch for useful discussions.
+C.P. is supported by ERC Starting Grant No. 945155–
+GWmining, Cariplo Foundation Grant No. 2021-0555,
+MUR PRIN Grant No. 2022-Z9X4XS, and the ICSC Na-
+tional Research Centre funded by NextGenerationEU. CP
+acknowledges support from the European Union’s H2020
+ERC Consolidator Grant “GRavity from Astrophysical to
+Microscopic Scales” (Grant No. GRAMS-815673) during
+a visit to SISSA. S.B. is supported by UKRI Stephen
+Hawking Fellowship No. EP/W005727. R.C. is supported
+by NSF Grants No. AST-2006538, PHY-2207502, PHY-
+090003 and PHY-20043, and by NASA Grants No. 20-
+LPS20-0011 and 21-ATP21-0010. Computational work
+was performed on the LEONARDO HPC facility hosted
+at CINECA, with allocations through INFN and Bicocca.
+Software. We used the following public software:
+scipy [91] and pycbc [41] to estimate the PSD and the
+correlation matrix from noisy time series;sbi [60] for
+simulation based inference;pyRing [72] for Markov-chain
+ringdown inferences; numpy [92], matplotlib [93] and
+seaborn [94] for chain visualizations.
+
+===== PAGE 7 =====
+
+7
+Appendix A: T echnical details
+In this Appendix, we provide technical details on the
+process of data preparation, and on the numerical imple-
+mentation and training of the neural density estimator.
+1. Data preparation
+When performing simulated injections, we sample the
+strains at 2048 Hz and truncate them at a duration of0.1
+s, thus resulting in a data segment of204 bins per detector.
+When analyzing real data, we use the publicly available
+data from GWOSC [82] at 4096 Hz and down-sample
+them to 2048 Hz.
+We whiten the data directly in the time domain follow-
+ing [53],
+ha
+white(θ) =
+X
+b
+(L−1)a
+bhb(θ) (A1)
+where the matrix L is the (upper-triangular) Cholesky
+factor of the covariance matrix. Specifically, we first
+compute the auto-correlation function (ACF) from the
+inverse-Fourier transform of the PSD, then, we compute
+the covariance matrix as the Toeplitz matrix of the ACF
+(see Eq.s (39)-(44) of [53]). Noise realizations can be
+added to the whitened ringdown strain as simply as
+xwhite(θ) = hwhite(θ) + N (0, 1) . (A2)
+2. Density estimator
+We model the density estimator as a neural spline flow
+(NSF) [35, 58] and use the implementation from thesbi
+package [60]. The relevant hyper-parameters are listed in
+Table III. In particular, the NSF is a flow of 5 transforms
+and each hidden layer contains 150 units.
+The NSF does not takexwhite in input directly, but
+we apply an embedding network for dimensional reduc-
+tion: the raw input is a concatenation ofxwhite from two
+detectors (LIGO-Hanford and LIGO-Livingstone), thus
+resulting into an input dimension of204 + 204bins; they
+are then mapped into 128 bins by a fully connected neural
+network with two hidden layers consisting of 150 units.
+The output of the embedding network is fed into the NSF.
+We train and validate the density estimator in batches
+of 512 samples. During the first round we generate 50k
+training samples, while at later rounds we generate 100k
+additional samples. We use the Adam optimizer with
+learning rate 0.001.
+Since neural networks learn better from standardized
+and/or normalized data [95], we linearly rescalexwhite to
+have zero mean and unit variance along the feature di-
+mension [96], and we normalize the parametersθ between
+0 and 1.
+Finally, we vary the noise realizations in(A2) at each
+training epoch to make the inference resilient to specific
+Neural spline flow
+num_blocks 2
+hidden_features 150
+num_transforms 5
+num_bins 10
+batch_norm True
+Embedding FC network
+input_dim 408
+num_hidden_layers 2
+hidden_dim 150
+output_dim 128
+Training hyper-parameters
+num_simulations [50k,100k,...]
+batch_size 512
+learning_rate 0.001
+validation_fraction 0.1
+trunc_quantile ϵ 10−4
+stopping_ratio 0.8
+varying_noise True
+TABLEIII.Hyper-parametersforthearchitectureandtraining
+of the the density estimator.
+noise realizations2. Note that the original implemen-
+tation of sbi does not allow to vary noise realizations
+between training epochs. We leverage on the flexibility of
+object-oriented programming to wrap the original SNPE
+implementation of sbi and we redefine its loss method,
+so as to resample the noise at each evaluation of the loss3.
+Appendix B: Coverage T est
+Given model parametersθ∗ and a corresponding model
+realization x∗ = h(θ∗) + n, we define the coverage
+γ(θ∗, x∗) as the approximate posterior probability con-
+tained within the highest posterior density (HPD) region
+which has θ∗ at its boundary,
+γ(θ∗, x∗) =
+Z
+dθ qϕ(θ|x∗)1 [qϕ(θ|x∗) > q ϕ(θ∗|x∗)]
+(B1)
+2 To avoid confusion, we clarify the distinction between training
+rounds and training epochs. A training round is the training
+update of the density estimator at each truncation of the prior
+volume. A training epoch is a single feed-forward and back-
+propagation step of the training set into the network. Each
+training round consists of several-to-many training epochs, neces-
+sary to optimize the model at the current round.
+3 Such a data-augmentation strategy is feasible, because sampling
+a standard normal in (A2) is a fast numerical operation and
+it does not impact on the training time. In cases where noise
+generation is computationally costly, one would opt for alternative
+data augmentations, e.g., preparing the training set offline with
+multiple copies of the same raw strainsh(θ) but different noise
+realizations. See [48] for an example of the last strategy.
+
+===== PAGE 8 =====
+
+8
+where qϕ is the density estimator.
+The integral(B1) can be evaluated efficiently via im-
+portance sampling as the expectation value
+γ(θ∗, x∗) ≈ Eθ∼qϕ(θ|x∗ )
+ 
+1 [qϕ(θ|x∗) > q ϕ(θ∗|x∗)]
+
+(B2)
+thanks to the fact that the neural density estimator is
+fast to sample and to evaluate. It can be shown [75, 76]
+that, if the density estimatorqϕ(θ|x) approximates the
+true posterior p(θ|x), then the coverage across the prior
+p(θ) is distributed uniformly within [0, 1]. The latter
+statement is equivalent toc.d.f.(γ) ≡
+R γ
+0 dγ′p(γ′) = γ for
+each γ ≡ γ(θ∗, x∗) and θ∗ ∼ p(θ). This is a necessary
+condition for the density estimator to be a valid inference
+and we check for it.
+Since we are performing truncated SNPE, we cannot
+sample the injected parameters from the original prior,
+θ∗ ∼ p(θ). Indeed, sequential training progressively trun-
+cates the prior volume as the training proceeds and the
+density estimator is only guaranteed to work on the final
+version of the truncated prior˜p(θ). Therefore, in the case
+of TNSPE, the prior for the Bayesian coverage test must
+correspond to the final truncated prior,θ∗ ∼ ˜p(θ).
+Figure 5 displays coverage diagnostics for the the in-
+jected models corresponding toKerr221 and Kerr330, com-
+plementing the diagnostics for theKerr220 presented in
+Figure 3 in the main text.
+Appendix C: Additional corner plots
+0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0c.d.f.( )
+Kerr221: p-value=0.449 0.425
++0.474
+0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1.0c.d.f.( )
+Kerr330: p-value=0.509 0.424
++0.450
+FIG. 5. Cumulative distributions of the coverageγ(θ∗, x∗)
+for the injected modelsKerr221 and Kerr330. Each blue line
+corresponds to the c.d.f. ofγ from Ns = 100 draws ofθ∗. Each
+panel plots the cumulatives from100 experiments. Shaded
+grey areas denote the90% uncertainties overc.d.f.(γ). For
+each panel, we also quote the median and90% confidence
+bounds of the KS test p-values across all draws.
+
+===== PAGE 9 =====
+
+9
+M [M ]
+0.2
+0.4
+0.6
+0.8
+ pyring
+sbi
+Kerr221
+0.6
+0.8
+1.0
+1.2220
+1e 20
+0.50
+0.75
+1.00
+1.25
+1.50221
+1e 20
+0.5
+1.0
+1.5220
+50 60 70 80
+M [M ]
+3.5
+4.0
+4.5
+5.0221
+0.2 0.4 0.6 0.8
+ 0.6 0.8 1.0 1.2
+220
+ 1e 20
+0.50 0.75 1.00 1.25 1.50
+221
+ 1e 20
+0.5 1.0 1.5
+220
+3.5 4.0 4.5 5.0
+221
+FIG. 6. Full corner plot of the posterior recovered from the injected systemKerr221. 2-D contours denote the68% and 90%
+credible regions. Black dashed lines denote the injected parameters from Table I.
+M [M ]
+0.55
+0.60
+0.65
+0.70
+0.75
+pyring
+sbi
+Kerr330
+2.8
+3.0
+3.2220
+1e 20
+1
+2
+3
+4
+5330
+1e 21
+1.00
+1.05
+1.10
+1.15220
+62 64 66 68 70
+M [M ]
+4.5
+5.0
+5.5330
+0.55 0.60 0.65 0.70 0.75
+ 2.8 3.0 3.2
+220
+ 1e 20
+1 2 3 4 5
+330
+ 1e 21
+1.00 1.05 1.10 1.15
+220
+4.5 5.0 5.5
+330
+FIG. 7. Full corner plot of the posterior recovered from the injected systemKerr330. 2-D contours denote the68% and 90%
+credible regions. Black dashed lines denote the injected parameters from Table I.
+
+===== PAGE 10 =====
+
+10
+[1] B. P. Abbottet al.(LIGO Scientific, Virgo), Phys. Rev.
+Lett. 116, 061102 (2016), arXiv:1602.03837 [gr-qc].
+[2] N. Yunes, K. Yagi, and F. Pretorius, Phys. Rev. D94,
+084002 (2016), arXiv:1603.08955 [gr-qc].
+[3] R. Abbottet al.(LIGO Scientific, Virgo), Phys. Rev. D
+103, 122002 (2021), arXiv:2010.14529 [gr-qc].
+[4] R. Abbott et al. (LIGO Scientific, VIRGO, KAGRA),
+(2021), arXiv:2112.06861 [gr-qc].
+[5] R. P. Kerr, Phys. Rev. Lett.11, 237 (1963).
+[6] W. Israel, Commun. Math. Phys.8, 245 (1968).
+[7] B. Carter, Phys. Rev. Lett.26, 331 (1971).
+[8] S. A. Teukolsky, Class. Quant. Grav.32, 124006 (2015),
+arXiv:1410.2130 [gr-qc].
+[9] C. V. Vishveshwara, Nature227, 936 (1970).
+[10] K. D. Kokkotas and B. G. Schmidt, Living Rev. Rel.2, 2
+(1999), arXiv:gr-qc/9909058.
+[11] E. Berti, V. Cardoso, and A. O. Starinets, Class. Quant.
+Grav. 26, 163001 (2009), arXiv:0905.2975 [gr-qc].
+[12] S. A. Teukolsky, Phys. Rev. Lett.29, 1114 (1972).
+[13] E. Berti, V. Cardoso, and C. M. Will, Phys. Rev. D73,
+064030 (2006), arXiv:gr-qc/0512160.
+[14] E. Berti, J. Cardoso, V. Cardoso, and M. Cavaglia, Phys.
+Rev. D 76, 104044 (2007), arXiv:0707.1202 [gr-qc].
+[15] O. Dreyer, B. J. Kelly, B. Krishnan, L. S. Finn, D. Garri-
+son, and R. Lopez-Aleman, Class. Quant. Grav.21, 787
+(2004), arXiv:gr-qc/0309007.
+[16] E. Barausse and T. P. Sotiriou, Phys. Rev. Lett.101,
+099001 (2008), arXiv:0803.3433 [gr-qc].
+[17] C. D. Capano, M. Cabero, J. Westerweck, J. Abedi,
+S. Kastha, A. H. Nitz, Y.-F. Wang, A. B. Nielsen,
+and B. Krishnan, Phys. Rev. Lett.131, 221402 (2023),
+arXiv:2105.05238 [gr-qc].
+[18] H. Siegel, M. Isi, and W. M. Farr, Phys. Rev. D108,
+064008 (2023), arXiv:2307.11975 [gr-qc].
+[19] P. Amaro-Seoane, H. Audley, S. Babak, J. Baker, E. Ba-
+rausse, P. Bender, E. Berti, P. Binetruy, M. Born, D. Bor-
+toluzzi, J. Camp, C. Caprini, V. Cardoso, M. Colpi,
+J. Conklin, N. Cornish, C. Cutler, K. Danzmann,
+R. Dolesi, L. Ferraioli, V. Ferroni, E. Fitzsimons, J. Gair,
+L. Gesa Bote, D. Giardini, F. Gibert, C. Grimani, H. Hal-
+loin, G. Heinzel, T. Hertog, M. Hewitson, K. Holley-
+Bockelmann, D. Hollington, M. Hueller, H. Inchauspe,
+P. Jetzer, N. Karnesis, C. Killow, A. Klein, B. Klipstein,
+N. Korsakova, S. L. Larson, J. Livas, I. Lloro, N. Man,
+D. Mance, J. Martino, I. Mateos, K. McKenzie, S. T.
+McWilliams, C. Miller, G. Mueller, G. Nardini, G. Nele-
+mans, M. Nofrarias, A. Petiteau, P. Pivato, E. Plagnol,
+E.Porter, J.Reiche, D.Robertson, N.Robertson, E.Rossi,
+G. Russano, B. Schutz, A. Sesana, D. Shoemaker, J. Slut-
+sky, C. F. Sopuerta, T. Sumner, N. Tamanini, I. Thorpe,
+M. Troebs, M. Vallisneri, A. Vecchio, D. Vetrugno,
+S. Vitale, M. Volonteri, G. Wanner, H. Ward, P. Wass,
+W. Weber, J. Ziemer, and P. Zweifel, arXiv e-prints ,
+arXiv:1702.00786 (2017), arXiv:1702.00786 [astro-ph.IM].
+[20] M. Punturoet al., Class. Quant. Grav.27, 194002 (2010).
+[21] B. P. Abbottet al.(LIGO Scientific), Class. Quant. Grav.
+34, 044001 (2017), arXiv:1607.08697 [astro-ph.IM].
+[22] S. Gossan, J. Veitch, and B. S. Sathyaprakash, Phys. Rev.
+D 85, 124056 (2012), arXiv:1111.5819 [gr-qc].
+[23] E. Berti, A. Sesana, E. Barausse, V. Cardoso, and
+K. Belczynski, Phys. Rev. Lett. 117, 101102 (2016),
+arXiv:1605.09286 [gr-qc].
+[24] M. Cabero, J. Westerweck, C. D. Capano, S. Kumar,
+A. B. Nielsen, and B. Krishnan, Phys. Rev. D101, 064044
+(2020), arXiv:1911.01361 [gr-qc].
+[25] S. Bhagwat, C. Pacilio, E. Barausse, and P. Pani, Phys.
+Rev. D 105, 124063 (2022), arXiv:2201.00023 [gr-qc].
+[26] S. Bhagwat, C. Pacilio, P. Pani, and M. Mapelli, Phys.
+Rev. D 108, 043019 (2023), arXiv:2304.02283 [gr-qc].
+[27] S. Kumar, A. H. Nitz, and X. J. Forteza, (2022),
+arXiv:2202.12762 [astro-ph.IM].
+[28] Q. Baghi, N. Korsakova, J. Slutsky, E. Castelli, N. Kar-
+nesis, and J.-B. Bayle, Phys. Rev. D105, 042002 (2022),
+arXiv:2112.07490 [gr-qc].
+[29] A. Spadaro, R. Buscicchio, D. Vetrugno, A. Klein,
+D.Gerosa, S.Vitale, R.Dolesi, W.J.Weber,andM.Colpi,
+Phys. Rev. D108, 123029 (2023), arXiv:2306.03923 [gr-
+qc].
+[30] A. Toubiana, L. Pompili, A. Buonanno, J. R. Gair, and
+M. L. Katz, (2023), arXiv:2307.15086 [gr-qc].
+[31] K. Cranmer, J. Brehmer, and G. Louppe, Proceedings
+of the National Academy of Science117, 30055 (2020),
+arXiv:1911.01429 [stat.ML].
+[32] A. J. K. Chua and M. Vallisneri, Phys. Rev. Lett.124,
+041102 (2020), arXiv:1909.05966 [gr-qc].
+[33] H. Gabbard, C. Messenger, I. S. Heng, F. Tonolini,
+and R. Murray-Smith, Nature Phys. 18, 112 (2022),
+arXiv:1909.06296 [astro-ph.IM].
+[34] S. R. Green, C. Simpson, and J. Gair, Phys. Rev. D102,
+104057 (2020), arXiv:2002.07656 [astro-ph.IM].
+[35] S. R. Green and J. Gair, Mach. Learn. Sci. Tech.2, 03LT01
+(2021), arXiv:2008.03312 [astro-ph.IM].
+[36] M. Dax, S. R. Green, J. Gair, J. H. Macke, A. Buonanno,
+and B. Schölkopf, Phys. Rev. Lett.127, 241103 (2021),
+arXiv:2106.12594 [gr-qc].
+[37] M. Dax, S. R. Green, J. Gair, M. Pürrer, J. Wildberger,
+J. H. Macke, A. Buonanno, and B. Schölkopf, Phys. Rev.
+Lett. 130, 171403 (2023), arXiv:2210.05686 [gr-qc].
+[38] J. Wildberger, M. Dax, S. R. Green, J. Gair, M. Pürrer,
+J. H. Macke, A. Buonanno, and B. Schölkopf, Phys. Rev.
+D 107, 084046 (2023), arXiv:2211.08801 [gr-qc].
+[39] U. Bhardwaj, J. Alvey, B. K. Miller, S. Nissanke,
+and C. Weniger, Phys. Rev. D 108, 042004 (2023),
+arXiv:2304.02035 [gr-qc].
+[40] J. Veitch et al., Phys. Rev. D 91, 042003 (2015),
+arXiv:1409.7215 [gr-qc].
+[41] C. M. Biwer, C. D. Capano, S. De, M. Cabero, D. A.
+Brown, A. H. Nitz, and V. Raymond, Publ. Astron. Soc.
+Pac. 131, 024503 (2019), arXiv:1807.10312 [astro-ph.IM].
+[42] G. Ashton and C. Talbot, Mon. Not. Roy. Astron. Soc.
+507, 2037 (2021), arXiv:2106.08730 [gr-qc].
+[43] G. Ashtonet al., Nature 2, 10.1038/s43586-022-00121-x
+(2022), arXiv:2205.15570 [stat.CO].
+[44] L. London, D. Shoemaker, and J. Healy, Phys. Rev. D90,
+124032 (2014), [Erratum: Phys.Rev.D 94, 069902 (2016)],
+arXiv:1404.3197 [gr-qc].
+[45] L. London and E. Fauchon-Jones, Class. Quant. Grav.36,
+235015 (2019), arXiv:1810.03550 [gr-qc].
+[46] V. Baibhav, M. H.-Y. Cheung, E. Berti, V. Cardoso,
+G. Carullo, R. Cotesta, W. Del Pozzo, and F. Duque,
+Phys. Rev. D108, 104020 (2023), arXiv:2302.03050 [gr-
+qc].
+
+===== PAGE 11 =====
+
+11
+[47] M. H.-Y. Cheung, E. Berti, V. Baibhav, and R. Cotesta,
+Phys. Rev. D109, 044069 (2024), arXiv:2310.04489 [gr-
+qc].
+[48] M. Crisostomi, K. Dey, E. Barausse, and R. Trotta, Phys.
+Rev. D 108, 044029 (2023), arXiv:2305.18528 [gr-qc].
+[49] S. Bhagwat and C. Pacilio, Phys. Rev. D104, 024030
+(2021), arXiv:2101.07817 [gr-qc].
+[50] D. P. Kingma and M. Welling, arXiv e-prints ,
+arXiv:1312.6114 (2013), arXiv:1312.6114 [stat.ML].
+[51] C. Doersch, arXiv e-prints , arXiv:1606.05908 (2016),
+arXiv:1606.05908 [stat.ML].
+[52] G. Carullo, W. Del Pozzo, and J. Veitch, Phys. Rev. D
+99, 123029 (2019), [Erratum: Phys.Rev.D 100, 089903
+(2019)], arXiv:1902.07527 [gr-qc].
+[53] M. Isi and W. M. Farr, (2021), arXiv:2107.05609 [gr-qc].
+[54] B. P. Abbottet al.(LIGO Scientific, Virgo), Phys. Rev.
+Lett. 116, 221101 (2016), [Erratum: Phys.Rev.Lett. 121,
+129902 (2018)], arXiv:1602.03841 [gr-qc].
+[55] G. Papamakarios and I. Murray, Advances in neural infor-
+mation processing systems29 (2016), arXiv:1605.06376
+[stat.ML].
+[56] D. Greenberg, M. Nonnenmacher, and J. Macke, inInter-
+national Conference on Machine Learning(PMLR, 2019)
+pp. 2404–2414, arXiv:1905.07488 [cs.LG].
+[57] M. Deistler, P. J. Goncalves, and J. H. Macke, Advances in
+Neural Information Processing Systems35, 23135 (2022),
+arXiv:2210.04815 [stat.ML].
+[58] G. Papamakarios, E. Nalisnick, D. J. Rezende,
+S. Mohamed, and B. Lakshminarayanan, Normalizing
+flows for probabilistic modeling and inference (2021),
+arXiv:1912.02762 [stat.ML].
+[59] C. Durkan, A. Bekasov, I. Murray, and G. Papa-
+makarios, arXiv e-prints , arXiv:1906.04032 (2019),
+arXiv:1906.04032 [stat.ML].
+[60] A. Tejero-Cantero, J. Boelts, M. Deistler, J.-M. Lueck-
+mann, C. Durkan, P. J. Gonçalves, D. S. Greenberg, and
+J. H. Macke, Journal of Open Source Software5, 2505
+(2020).
+[61] P. Jaranowski, A. Krolak, and B. F. Schutz, Phys. Rev.
+D 58, 063001 (1998), arXiv:gr-qc/9804014.
+[62] I. Kamaretsos, M. Hannam, and B. Sathyaprakash, Phys.
+Rev. Lett. 109, 141102 (2012), arXiv:1207.0399 [gr-qc].
+[63] L. T. London, Phys. Rev. D 102, 084052 (2020),
+arXiv:1801.08208 [gr-qc].
+[64] X. Jiménez Forteza, S. Bhagwat, P. Pani, and V. Ferrari,
+Phys. Rev. D102, 044053 (2020), arXiv:2005.03260 [gr-
+qc].
+[65] X. J. Forteza, S. Bhagwat, S. Kumar, and P. Pani, Phys.
+Rev. Lett. 130, 021001 (2023), arXiv:2205.14910 [gr-qc].
+[66] E. Berti and A. Klein, Phys. Rev. D90, 064012 (2014),
+arXiv:1408.1860 [gr-qc].
+[67] M. Isi, M. Giesler, W. M. Farr, M. A. Scheel, and
+S. A. Teukolsky, Phys. Rev. Lett.123, 111102 (2019),
+arXiv:1905.00869 [gr-qc].
+[68] R. Cotesta, G. Carullo, E. Berti, and V. Cardoso, Phys.
+Rev. Lett. 129, 111102 (2022), arXiv:2201.00822 [gr-qc].
+[69] S. Nissanke, D. E. Holz, S. A. Hughes, N. Dalal, and J. L.
+Sievers, Astrophys. J.725, 496 (2010), arXiv:0904.1017
+[astro-ph.CO].
+[70] C. L. Rodriguez, B. Farr, V. Raymond, W. M. Farr, T. B.
+Littenberg, D. Fazi, and V. Kalogera, Astrophys. J.784,
+119 (2014), arXiv:1309.3273 [astro-ph.HE].
+[71] https://dcc.ligo.org/ligo-p1800370/public (2022).
+[72] G. Carullo, W. Del Pozzo, and J. Veitch, pyRing:
+a time-domain ringdown analysis python package,
+git.ligo.org/lscsoft/pyring (2023).
+[73] https://johnveitch.github.io/cpnest/.
+[74] S. R. Cook, A. Gelman, and D. B. Rubin, Journal of
+Computational and Graphical Statistics15, 675 (2006).
+[75] S. Talts, M. Betancourt, D. Simpson, A. Vehtari, and
+A. Gelman, arXiv e-prints , arXiv:1804.06788 (2018),
+arXiv:1804.06788 [stat.ME].
+[76] K. Karchev, R. Trotta, and C. Weniger 10.1093/mn-
+ras/stac3785 (2022), arXiv:2209.06733 [astro-ph.CO].
+[77] I. M. Romero-Shawet al., Mon. Not. Roy. Astron. Soc.
+499, 3295 (2020), arXiv:2006.00714 [astro-ph.IM].
+[78] S. Bhagwat, M. Okounkova, S. W. Ballmer, D. A. Brown,
+M. Giesler, M. A. Scheel, and S. A. Teukolsky, Phys. Rev.
+D 97, 104065 (2018), arXiv:1711.00926 [gr-qc].
+[79] I. Kamaretsos, M. Hannam, S. Husa, and B. S.
+Sathyaprakash, Phys. Rev. D 85, 024018 (2012),
+arXiv:1107.0854 [gr-qc].
+[80] E. Barausse, V. Morozova, and L. Rezzolla, Astrophys. J.
+758, 63 (2012), [Erratum: Astrophys.J. 786, 76 (2014)],
+arXiv:1206.3803 [gr-qc].
+[81] F. Hofmann, E. Barausse, and L. Rezzolla, Astrophys. J.
+Lett. 825, L19 (2016), arXiv:1605.01938 [gr-qc].
+[82] https://gwosc.org/gwtc-1/ (2020).
+[83] R. Abbottet al.(LIGO Scientific, Virgo), Astrophys. J.
+Lett. 900, L13 (2020), arXiv:2009.01190 [astro-ph.HE].
+[84] M. Isi and W. M. Farr, (2022), arXiv:2202.02941 [gr-qc].
+[85] R. Abbottet al.(LIGO Scientific, Virgo), Phys. Rev. Lett.
+125, 101102 (2020), arXiv:2009.01075 [gr-qc].
+[86] E. Finch and C. J. Moore, Phys. Rev. D106, 043005
+(2022), arXiv:2205.07809 [gr-qc].
+[87] M. Branchesi et al., JCAP 07, 068, arXiv:2303.15923
+[gr-qc].
+[88] A. Maselli, S. Yi, L. Pierini, V. Vellucci, L. Reali,
+L. Gualtieri, and E. Berti, Phys. Rev. D109, 064060
+(2024), arXiv:2311.14803 [gr-qc].
+[89] S. Yi, A. Kuntz, E. Barausse, E. Berti, M. H.-Y. Cheung,
+K. Kritos, and A. Maselli, Phys. Rev. D109, 124029
+(2024), arXiv:2403.09767 [gr-qc].
+[90] M. Vallisneri, Phys. Rev. D77, 042001 (2008), arXiv:gr-
+qc/0703086.
+[91] P. Virtanen, R. Gommers, T. E. Oliphant, M. Haber-
+land, T. Reddy, D. Cournapeau, E. Burovski, P. Peterson,
+W. Weckesser, J. Bright, S. J. van der Walt, M. Brett,
+J. Wilson, K. J. Millman, N. Mayorov, A. R. J. Nel-
+son, E. Jones, R. Kern, E. Larson, C. J. Carey, İ. Polat,
+Y. Feng, E. W. Moore, J. VanderPlas, D. Laxalde, J. Perk-
+told, R. Cimrman, I. Henriksen, E. A. Quintero, C. R.
+Harris, A. M. Archibald, A. H. Ribeiro, F. Pedregosa,
+P. van Mulbregt, and SciPy 1.0 Contributors, Nature
+Methods 17, 261 (2020).
+[92] C. R. Harris, K. J. Millman, S. J. van der Walt, R. Gom-
+mers, P. Virtanen, D. Cournapeau, E. Wieser, J. Tay-
+lor, S. Berg, N. J. Smith, R. Kern, M. Picus, S. Hoyer,
+M. H. van Kerkwijk, M. Brett, A. Haldane, J. F. del Río,
+M. Wiebe, P. Peterson, P. Gérard-Marchant, K. Sheppard,
+T. Reddy, W. Weckesser, H. Abbasi, C. Gohlke, and T. E.
+Oliphant, Nature 585, 357 (2020).
+[93] J. D. Hunter, Computing in Science & Engineering9, 90
+(2007).
+[94] M. L. Waskom, Journal of Open Source Software6, 3021
+(2021).
+[95] Y. LeCun, L. Bottou, G. B. Orr, and K. R. Müller, Effi-
+cient backprop, inNeural Networks: Tricks of the Trade,
+
+===== PAGE 12 =====
+
+12
+edited by G. B. Orr and K.-R. Müller (Springer Berlin
+Heidelberg, Berlin, Heidelberg, 1998) pp. 9–50.
+[96] D. George and E. A. Huerta, Phys. Rev. D97, 044039
+(2018), arXiv:1701.00008 [astro-ph.IM].

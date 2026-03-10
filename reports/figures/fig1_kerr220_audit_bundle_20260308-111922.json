@@ -1,0 +1,42 @@
+{
+  "latest_run": "c:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260308-111922",
+  "previous_run": "c:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-121502",
+  "figure": "c:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\figures\\fig1_kerr220_audit_bundle_20260308-111922.png",
+  "latest_stats": {
+    "m_median": 62.64742660522461,
+    "m_q05": 51.58339862823486,
+    "m_q95": 73.01096076965332,
+    "chi_median": 0.5631807744503021,
+    "chi_q05": 0.15796745866537096,
+    "chi_q95": 0.773057734966278,
+    "outside_prior_count": 14
+  },
+  "previous_stats": {
+    "m_median": 56.90373420715332,
+    "m_q05": 48.24707431793213,
+    "m_q95": 70.29878845214843,
+    "chi_median": 0.4189169704914093,
+    "chi_q05": 0.06430614590644837,
+    "chi_q95": 0.7352508932352066,
+    "outside_prior_count": 123
+  },
+  "truth": {
+    "M_f_msun": 67.0,
+    "chi_f": 0.6700000166893005
+  },
+  "latest_paper_grade_issues": [],
+  "previous_paper_grade_issues": [],
+  "latest_stop_reason": "eligible_ratio_check",
+  "latest_stop_by_ratio": true,
+  "latest_truncation_relaxed_rounds": [
+    2,
+    3,
+    4
+  ],
+  "latest_budget_adjusted_rounds": [
+    3,
+    4
+  ],
+  "snr_target": 14.0,
+  "snr_measured": 12.551301132069094
+}

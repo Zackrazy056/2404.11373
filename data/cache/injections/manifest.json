@@ -1,0 +1,12 @@
+{
+  "configs_glob": "configs/injections/kerr*.yaml",
+  "index_csv": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\cache\\injections\\index.csv",
+  "index_jsonl": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\cache\\injections\\index.jsonl",
+  "noise_std_override": 1e-23,
+  "samples_per_config": 20,
+  "seed": 240411373,
+  "total_samples": 60,
+  "train_samples": 48,
+  "val_fraction": 0.2,
+  "val_samples": 12
+}

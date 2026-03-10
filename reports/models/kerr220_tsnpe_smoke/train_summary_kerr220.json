@@ -1,0 +1,11 @@
+{
+  "index_csv": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\cache\\injections\\index.csv",
+  "n_observed_candidates": 5,
+  "n_train": 12,
+  "noise_std_train": 0.001,
+  "posterior_samples": 256,
+  "sample_source": "estimator",
+  "samples_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\models\\kerr220_tsnpe_smoke\\posterior_samples_kerr220.npz",
+  "theta_dim": 4,
+  "x_dim": 408
+}

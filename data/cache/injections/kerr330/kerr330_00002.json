@@ -1,0 +1,52 @@
+{
+  "chi_f": 0.67,
+  "detectors": {
+    "H1": {
+      "f_cross": 0.5828523088211641,
+      "f_plus": 0.6490581895354137,
+      "t_start_detector_s": 0.0,
+      "time_delay_from_geocenter_s": 0.014685709968640936
+    },
+    "L1": {
+      "f_cross": -0.553047696680518,
+      "f_plus": -0.40772480659512716,
+      "t_start_detector_s": -0.006984385696649813,
+      "time_delay_from_geocenter_s": 0.007701324271991123
+    }
+  },
+  "mass_msun": 67.0,
+  "modes": [
+    {
+      "damping_time_s": 0.004032098029168807,
+      "frequency_hz": 250.71404282315675,
+      "l": 2,
+      "m": 2,
+      "n": 0,
+      "omega_dimensionless_imag": -0.08184520591058873,
+      "omega_dimensionless_real": 0.519855755170482
+    },
+    {
+      "damping_time_s": 0.003924441583741297,
+      "frequency_hz": 397.77985252058056,
+      "l": 3,
+      "m": 3,
+      "n": 0,
+      "omega_dimensionless_imag": -0.08409040787260051,
+      "omega_dimensionless_real": 0.824796821490965
+    }
+  ],
+  "name": "Kerr330",
+  "noise_std": 1e-23,
+  "output_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\cache\\injections\\kerr330\\kerr330_00002.npz",
+  "reference_detector": "H1",
+  "seed": 240411375,
+  "source": {
+    "dec_rad": -1.27,
+    "gmst_rad": 2.4564618255382484,
+    "gps_h1": 1126259462.42323,
+    "inclination_rad": 0.7853981633974483,
+    "psi_rad": 0.82,
+    "ra_rad": 1.95
+  },
+  "use_detector_time_delay": true
+}

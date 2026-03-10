@@ -1,0 +1,33 @@
+embedding:
+  input_dim: 408
+  num_hidden_layers: 2
+  hidden_dim: 150
+  output_dim: 128
+
+density_estimator:
+  model: nsf
+  hidden_features: 150
+  num_transforms: 5
+  num_bins: 10
+  num_blocks: 2
+  batch_norm: true
+  z_score_theta: null
+  z_score_x: independent
+
+tsnpe:
+  num_simulations_first_round: 50000
+  num_simulations_per_round: 100000
+  trunc_quantile: 1.0e-4
+  stopping_ratio: 0.8
+  max_rounds: 8
+  posterior_samples_for_hpd: 8192
+  prior_volume_mc_samples: 16384
+  rejection_candidate_batch: 16384
+  rejection_max_batches: 1024
+
+training:
+  training_batch_size: 512
+  learning_rate: 1.0e-3
+  validation_fraction: 0.1
+  stop_after_epochs: 20
+  max_num_epochs: 1000

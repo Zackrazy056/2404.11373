@@ -1,0 +1,201 @@
+{
+  "check_artifacts": false,
+  "findings": [
+    {
+      "detail": "mass_msun=67.0",
+      "key": "injection.kerr220.mass",
+      "ok": true
+    },
+    {
+      "detail": "chi_f=0.67",
+      "key": "injection.kerr220.chi",
+      "ok": true
+    },
+    {
+      "detail": "sample_rate_hz=2048.0",
+      "key": "injection.kerr220.sample_rate",
+      "ok": true
+    },
+    {
+      "detail": "duration_s=0.1",
+      "key": "injection.kerr220.duration",
+      "ok": true
+    },
+    {
+      "detail": "modes=[(2, 2, 0)]",
+      "key": "injection.kerr220.modes",
+      "ok": true
+    },
+    {
+      "detail": "target_snr=14.0",
+      "key": "injection.kerr220.target_snr",
+      "ok": true
+    },
+    {
+      "detail": "mass_msun=67.0",
+      "key": "injection.kerr221.mass",
+      "ok": true
+    },
+    {
+      "detail": "chi_f=0.67",
+      "key": "injection.kerr221.chi",
+      "ok": true
+    },
+    {
+      "detail": "sample_rate_hz=2048.0",
+      "key": "injection.kerr221.sample_rate",
+      "ok": true
+    },
+    {
+      "detail": "duration_s=0.1",
+      "key": "injection.kerr221.duration",
+      "ok": true
+    },
+    {
+      "detail": "modes=[(2, 2, 0), (2, 2, 1)]",
+      "key": "injection.kerr221.modes",
+      "ok": true
+    },
+    {
+      "detail": "target_snr=14.0",
+      "key": "injection.kerr221.target_snr",
+      "ok": true
+    },
+    {
+      "detail": "mass_msun=67.0",
+      "key": "injection.kerr330.mass",
+      "ok": true
+    },
+    {
+      "detail": "chi_f=0.67",
+      "key": "injection.kerr330.chi",
+      "ok": true
+    },
+    {
+      "detail": "sample_rate_hz=2048.0",
+      "key": "injection.kerr330.sample_rate",
+      "ok": true
+    },
+    {
+      "detail": "duration_s=0.1",
+      "key": "injection.kerr330.duration",
+      "ok": true
+    },
+    {
+      "detail": "modes=[(2, 2, 0), (3, 3, 0)]",
+      "key": "injection.kerr330.modes",
+      "ok": true
+    },
+    {
+      "detail": "target_snr=53.0",
+      "key": "injection.kerr330.target_snr",
+      "ok": true
+    },
+    {
+      "detail": "inc220=3.141592653589793, inc330=0.7853981633974483",
+      "key": "injection.kerr330.inclination_differs",
+      "ok": true
+    },
+    {
+      "detail": "input_dim=408",
+      "key": "model.embedding.input_dim",
+      "ok": true
+    },
+    {
+      "detail": "output_dim=128",
+      "key": "model.embedding.output_dim",
+      "ok": true
+    },
+    {
+      "detail": "hidden_features=150",
+      "key": "model.nsf.hidden_features",
+      "ok": true
+    },
+    {
+      "detail": "training_batch_size=512",
+      "key": "model.training.batch",
+      "ok": true
+    },
+    {
+      "detail": "num_simulations_first_round=50000",
+      "key": "model.tsnpe.num_sim_first",
+      "ok": true
+    },
+    {
+      "detail": "num_simulations_per_round=100000",
+      "key": "model.tsnpe.num_sim_round",
+      "ok": true
+    },
+    {
+      "detail": "trunc_quantile=0.0001",
+      "key": "model.tsnpe.trunc_quantile",
+      "ok": true
+    },
+    {
+      "detail": "stopping_ratio=0.8",
+      "key": "model.tsnpe.stopping_ratio",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--num-sim-first\\\"\\,\\s*type=int,\\s*default=50_000",
+      "key": "script.default.num_sim_first",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--num-sim-round\\\"\\,\\s*type=int,\\s*default=100_000",
+      "key": "script.default.num_sim_round",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--trunc-quantile\\\"\\,\\s*type=float,\\s*default=1e-4",
+      "key": "script.default.trunc_quantile",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--stopping-ratio\\\"\\,\\s*type=float,\\s*default=0\\.8",
+      "key": "script.default.stopping_ratio",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--training-batch-size\\\"\\,\\s*type=int,\\s*default=512",
+      "key": "script.default.batch_size",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--truncation-probe-samples\\\"\\,\\s*type=int,\\s*default=50_000",
+      "key": "script.default.probe_samples",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--min-rounds-before-stopping\\\"\\,\\s*type=int,\\s*default=3",
+      "key": "script.default.min_rounds_before_stopping",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--max-volume-for-stopping\\\"\\,\\s*type=float,\\s*default=0\\.95",
+      "key": "script.default.max_volume_for_stopping",
+      "ok": true
+    },
+    {
+      "detail": "pattern=low = \\[20\\.0, 0\\.0\\].*high = \\[300\\.0, 0\\.99\\]",
+      "key": "script.prior.mass_range",
+      "ok": true
+    },
+    {
+      "detail": "token=torch.quantile(log_prob_post, self.config.trunc_quantile)",
+      "key": "tsnpe.hpd.threshold_quantile",
+      "ok": true
+    },
+    {
+      "detail": "token=keep = logp >= threshold",
+      "key": "tsnpe.hpd.accept_condition",
+      "ok": true
+    },
+    {
+      "detail": "token=return bool((current_volume / previous_volume) > stopping_ratio)",
+      "key": "tsnpe.stop.rule",
+      "ok": true
+    }
+  ],
+  "overall_ok": true
+}

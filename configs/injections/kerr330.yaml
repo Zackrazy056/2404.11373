@@ -1,0 +1,46 @@
+name: Kerr330
+description: "Two-mode injection (2,2,0)+(3,3,0), paper Table I"
+
+remnant:
+  mass_msun: 67.0
+  chi_f: 0.67
+
+data:
+  sample_rate_hz: 2048.0
+  duration_s: 0.1
+  t_start_s: 0.0
+
+source:
+  ra_rad: 1.95
+  dec_rad: -1.27
+  psi_rad: 0.82
+  inclination_rad: 0.7853981633974483
+  gps_h1: 1126259462.42323
+
+use_detector_time_delay: true
+reference_detector: H1
+
+qnm:
+  method: fit
+  spin_weight: -2
+  alpha_r: 0.0
+  alpha_i: 0.0
+
+modes:
+  - l: 2
+    m: 2
+    n: 0
+    amplitude: 3.0e-20
+    phase: 1.047
+  - l: 3
+    m: 3
+    n: 0
+    amplitude: 3.0e-21
+    phase: 5.014
+
+detectors: ["H1", "L1"]
+noise_std: 0.0
+seed: 240411373
+target_snr: 53.0
+output:
+  path: data/processed/injections/kerr330.npz

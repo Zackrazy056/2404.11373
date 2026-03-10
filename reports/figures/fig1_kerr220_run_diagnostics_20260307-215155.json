@@ -1,0 +1,53 @@
+{
+  "run_dir": "c:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-215155",
+  "figure": "c:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\figures\\fig1_kerr220_run_diagnostics_20260307-215155.png",
+  "rounds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "truncated_prior_volume": [
+    0.03875732421875,
+    0.0006103515625,
+    0.00067138671875,
+    0.00048828125,
+    0.0001220703125,
+    0.000244140625
+  ],
+  "probe_acceptance_rate": [
+    0.03790000081062317,
+    0.0006600000197067857,
+    0.0004400000034365803,
+    0.00033999999868683517,
+    0.00031999999191612005,
+    0.00019999999494757503
+  ],
+  "effective_num_simulations": [
+    50000,
+    100000,
+    8858,
+    5905,
+    4563,
+    4294
+  ],
+  "requested_num_simulations": [
+    50000,
+    100000,
+    100000,
+    100000,
+    100000,
+    100000
+  ],
+  "epochs_trained_this_round": [
+    78,
+    115,
+    53,
+    92,
+    37,
+    42
+  ],
+  "failure_error": "TSNPE rejection budget infeasible for next round: requested=100000, estimated_max_accepted=2684, acceptance_estimate=0.000200, max_draws=16777216. Increase rejection budget or relax truncation."
+}

@@ -1,0 +1,22 @@
+embedding:
+  input_dim: 408
+  num_hidden_layers: 2
+  hidden_dim: 32
+  output_dim: 16
+
+density_estimator:
+  model: nsf
+  hidden_features: 32
+  num_transforms: 2
+  num_bins: 8
+  num_blocks: 2
+  batch_norm: true
+  z_score_theta: independent
+  z_score_x: independent
+
+training:
+  training_batch_size: 64
+  learning_rate: 1.0e-3
+  validation_fraction: 0.2
+  stop_after_epochs: 2
+  max_num_epochs: 8

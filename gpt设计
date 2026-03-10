@@ -1,0 +1,325 @@
+下面给你一套“**多轮 AI 交互剧本**”（你每次把对应内容贴给 AI，就能一步步拿到**完整工程代码 + 可复现实验**）。我按你课题目标：**LISA/MBHB/EMRI ringdown + 端到端可校准 SBI + 可解释 QNM 偏差参数 (\alpha)** 来设计，并尽量让每轮产出都“可审计、可跑、可复用”。
+
+你可以把它当作：**从 0 到 1 的交互式工程规格书生成流程**。每轮我都给：
+
+* 你对 AI 说什么（可直接复制粘贴）
+* AI 必须返回什么（交付物清单）
+* 你这轮要验收什么（验收标准）
+* 下一轮需要带入的材料
+
+---
+
+# 总体原则（你每轮都坚持）
+
+1. **每轮只推进一个“可运行增量”**：跑通 > 完美。
+2. **固定接口**：数据结构、张量 shape、随机种子、配置管理先定死。
+3. **强制审计**：每个模块都要有 `tests/` 和最小 demo。
+4. **不依赖“人脑记忆”**：所有关键超参、命令、路径写入 `configs/` + README。
+
+---
+
+# Round 0：项目总规格 + 文件结构冻结（最关键的一轮）
+
+### 你对 AI 说（复制）
+
+> 我在做 GW ringdown 的 SBI 推断管线，目标是端到端、可校准，参数包含 Kerr ((M_f,\chi_f)) + QNM 偏差参数 (\alpha)。请你输出一个工程级设计：
+>
+> 1. repo 目录结构（src/, configs/, scripts/, tests/, notebooks/ 等）
+> 2. 每个模块的职责与 API（函数签名、输入输出张量 shape、dtype、单位约定）
+> 3. 配置系统设计（yaml + dataclass），可复现实验（seed、日志、版本锁）
+> 4. 一条命令从零开始跑通最小 demo（模拟数据→训练→后验采样→coverage）
+>    要求：用 Python + PyTorch + sbi；whitening 用时间域 Toeplitz/Cholesky；训练用 TSNPE；输出必须包含具体文件名与伪代码骨架。
+
+### AI 必须交付
+
+* 完整 repo tree（到文件级别）
+* 每个文件的 API 列表（函数名、参数、返回、shape）
+* 配置字段全集（含默认值）
+* 最小 demo 的 CLI 命令（例如 `python scripts/train_tsnpe.py --config ...`）
+
+### 你验收
+
+* 读完就能开始创建空 repo，并且每个模块边界清晰，不互相打架。
+
+---
+
+# Round 1：先写“纯 ringdown simulator”（不带噪声不 whitening）
+
+### 你对 AI 说
+
+> 基于上一轮冻结的 API，请你实现 `src/simulators/ringdown_time_domain.py`：
+>
+> * 输入参数：(\theta=(M_f,\chi_f,{A_{lmn},\phi_{lmn}}_{modes})) + 固定外参（天区、极化、倾角、起始时刻）
+> * 输出：两台探测器应变时间序列 `h: (n_det=2, T)`，采样率 fs=2048Hz，时长 0.1s（T=204）
+> * QNM 频率/阻尼：先用一个占位函数接口 `qnm_kerr(M_f,chi_f,mode)->(f,tau)`，后续再替换真实拟合
+> * 要求：单位/归一化写清楚；提供 `tests/test_simulator_shapes.py`；提供 `scripts/demo_simulator.py` 画一条波形（matplotlib）。
+>   输出必须给我完整代码（每个文件一份），可直接复制到本地运行。
+
+### AI 必须交付
+
+* `ringdown_time_domain.py` 完整实现
+* 2 个测试文件
+* 1 个 demo 脚本
+
+### 你验收
+
+* `pytest -q` 通过
+* `python scripts/demo_simulator.py` 出图且 shape 正确
+
+---
+
+# Round 2：实现时间域 whitening（Toeplitz + Cholesky）并校验白化后噪声 ~ N(0,1)
+
+### 你对 AI 说
+
+> 现在实现 `src/noise/whitening.py`：
+>
+> * 输入：PSD 函数/离散 PSD 数组、fs、T、以及时间序列 x
+> * 输出：白化后的 x_white
+> * 方法：PSD -> ACF (ifft of 1-sided?) -> Toeplitz covariance -> Cholesky L -> apply L^{-1}
+> * 同时实现 `src/noise/psd.py`（先提供一个可用的 toy PSD，比如 aLIGO-like 或 powerlaw；LISA 后续替换）
+> * 写 `tests/test_whitening_gaussianity.py`：生成 colored 噪声→白化→检验均值~0 方差~1（容差给出）
+> * 写 `scripts/demo_whitening.py`：展示白化前后功率谱或自相关变化。
+>   要求：数值稳定（加 jitter）、复杂度可控（T=204 先不管大规模）。
+
+### AI 必须交付
+
+* whitening 全实现 + 稳定性处理
+* 可跑测试与 demo
+
+### 你验收
+
+* 白化后样本均值/方差符合预期
+* 不报 Cholesky 失败
+
+---
+
+# Round 3：把 simulator + whitening + 噪声注入组合成 sbi 的 forward model
+
+### 你对 AI 说
+
+> 请实现 `src/simulators/forward_model.py`：
+>
+> * 输入：theta batch `(B, D)`
+> * 输出：x_white `(B, n_det*T)`（扁平化给 embedding）
+> * 流程：h(theta)->white(h)->加 N(0,1) 噪声
+> * 要求：支持 torch 张量（尽量 GPU 友好），但 whitening 允许先 numpy（写清楚瓶颈）
+> * 写 `tests/test_forward_model_batching.py` 和 `scripts/generate_dataset.py`（生成训练集到 disk，npz）。
+>   另外请输出一个 `configs/minimal.yaml`：仅 Kerr220 单模，参数维度最小化，便于先跑通。
+
+### AI 必须交付
+
+* forward_model + 数据生成脚本
+* 最小 config
+
+### 你验收
+
+* 生成数据集文件，shape 正确、可重复（seed）
+
+---
+
+# Round 4：TSNPE 训练脚本（sbi），先跑“单轮 SNPE”再升级 TSNPE
+
+### 你对 AI 说
+
+> 实现训练入口：`scripts/train_snpe.py`（先单轮）、`scripts/train_tsnpe.py`（多轮截断）。
+> 要求：
+>
+> * 使用 sbi 的 NSF（5 transforms, hidden 150）+ embedding(408->128)
+> * round1=50k，后续每轮 +100k；epsilon=1e-4；stopping_ratio=0.8
+> * 记录：每轮接受率、训练损失曲线、posterior 的简单体积 proxy（协方差行列式或 HPD 近似）
+> * 输出：checkpoint、posterior.pkl、训练日志（jsonl）
+> * 写 `scripts/sample_posterior.py`：对给定 x_o 输出 corner 数据（保存 npz）。
+>   先给我可运行的最小版本，即使 whitening 用 numpy 也可以，但必须能端到端训练完一轮并采样。
+
+### AI 必须交付
+
+* 两个训练脚本 + 采样脚本
+* 日志规范（字段固定）
+* checkpoint 读写规范
+
+### 你验收
+
+* 端到端跑通：训练完能采样 posterior
+
+---
+
+# Round 5：实现 TSNPE 的“HPD 截断采样器”（关键：拒绝采样 + HPD 阈值估计）
+
+### 你对 AI 说
+
+> 现在把 TSNPE 的截断逻辑做正确：
+>
+> * 每轮从 prior 采样 theta
+> * 用上一轮 posterior 在 x_o 上评估 log_prob(theta)
+> * 估计 1-epsilon 的 HPD 阈值（比如用大量 theta 样本的分位数近似）
+> * log_prob < threshold 的拒绝
+> * 记录：阈值、接受率、截断体积估计（接受率就是 proxy）
+> * 停止：当前截断体积 > 上一轮的 0.8 就停
+>   请你把这块实现成 `src/sbi_ext/tsnpe.py`，并给出单元测试：当 posterior 很尖时接受率下降，当 posterior 变平时接受率上升。
+
+### AI 必须交付
+
+* `tsnpe.py` 模块化实现（可复用）
+* 单元测试覆盖关键逻辑
+
+### 你验收
+
+* 接受率趋势合理
+* 轮次停止逻辑生效
+
+---
+
+# Round 6：实现“每个 epoch 重采样噪声”的 loss wrapper（论文里提到的 trick）
+
+### 你对 AI 说
+
+> 论文里说 sbi 默认不支持每个 epoch 重新采样噪声，他们通过 OOP 重写 loss 实现。
+> 请你在我们的工程里实现：
+>
+> * 一个 wrapper，使得每次 `loss(theta_batch)` 时，都用新的噪声生成 x_batch（而不是固定 dataset）
+> * 同时支持：固定 dataset 模式（baseline）
+> * 输出对比实验脚本：同样配置下，fixed-noise vs resample-noise 的 posterior 稳定性对比（比如 KL proxy 或 coverage 粗测）。
+>   写在 `src/sbi_ext/resample_noise_snpe.py`，并给出 usage 示例。
+
+### AI 必须交付
+
+* loss wrapper + 对比脚本
+* 清晰的接口与解释（不需要长文，重在可用）
+
+### 你验收
+
+* 两种模式都能跑
+* resample-noise 不会崩、训练曲线更平滑（至少不更差）
+
+---
+
+# Round 7：Coverage / SBC 校准（你的“可校准管线”核心）
+
+### 你对 AI 说
+
+> 实现 `scripts/run_coverage.py`：
+>
+> * 从最终截断先验 \tilde p(theta) 抽 theta*
+> * forward_model 生成 x*
+> * posterior 采样/评估得到 HPD 覆盖概率 gamma
+> * 输出：reliability diagram 数据（保存 npz），以及 coverage 曲线图
+>   注意：TSNPE 的注入必须来自最终截断先验，而不是原始 prior。
+>   同时实现 `src/metrics/coverage.py`（计算 gamma、rank statistic 等）。
+>   要求：最小可运行版本先做 200 次注入。
+
+### AI 必须交付
+
+* coverage 完整实现 + 图 + 数据文件
+* 解释怎么判定“校准良好”的标准
+
+### 你验收
+
+* 200 injections 能跑完
+* coverage 曲线可视化输出存在
+
+---
+
+# Round 8：把 (\alpha) 引入（最小侵入式：只改 QNM 映射）
+
+### 你对 AI 说
+
+> 现在扩展参数加入 \alpha（可解释 QNM 偏差参数）。
+> 需求：
+>
+> * 在 `qnm_kerr()` 之上加一层 `qnm_deformed(M,chi,alpha)`
+> * 给出两种参数化：
+>   (1) 单一 alpha 对所有 mode 同比例偏移：f -> f*(1+alpha), tau -> tau*(1+alpha_tau*alpha)（alpha_tau 可选）
+>   (2) 更物理：alpha 通过 mode-dependent g_lmn 加权（你给接口，g_lmn 默认 1）
+> * 更新 prior、config、训练脚本，使得 Kerr-only 与 Kerr+alpha 两条 pipeline 都能跑
+> * 写一个 sanity check：alpha=0 时等价回 Kerr。
+>   输出全部代码改动（patch 形式或逐文件给出）。
+
+### AI 必须交付
+
+* alpha 模块 + 接口 + 默认实现
+* Kerr 回归测试
+
+### 你验收
+
+* alpha=0 的数值一致性通过
+* pipeline 仍可训练
+
+---
+
+# Round 9：面向 LISA 的噪声与响应（逐步替换，不要一口吃）
+
+### 你对 AI 说
+
+> 把 toy PSD 替换成 LISA PSD（先用公开解析式或你给一个可插拔接口，不要求完美）。
+> 同时把探测器响应抽象成接口：
+>
+> * `DetectorResponse`：输入极化波形 h+/hx 与 sky location，输出每个 channel 的应变
+> * 先保留 2-detector toy 版本，后续换成 LISA TDI (A,E,T)
+>   要求：不破坏现有训练/coverage 框架，只是替换 response 与 PSD。
+>   给我：接口设计 + 最小可运行实现 + 一条命令跑通 alpha 推断 demo。
+
+### AI 必须交付
+
+* response 抽象层
+* LISA PSD 初版
+* demo 命令
+
+### 你验收
+
+* 仍能端到端跑通
+
+---
+
+# Round 10：工程收尾（文档、复现实验、打包）
+
+### 你对 AI 说
+
+> 现在请你把工程做到“可交付状态”：
+>
+> * README：安装、快速开始、复现实验、常见错误
+> * configs：给出 3 套：Kerr220、Kerr220+221、Kerr220+alpha
+> * scripts：train、sample、coverage、plot 全部可用
+> * tests：至少覆盖 simulator/whitening/tsnpe/alpha 回归
+> * 结果目录结构固定（runs/xxx/）
+>   输出：最终 repo 的文件清单 + 每个脚本怎么跑。
+
+### AI 必须交付
+
+* 完整文档与可复现入口
+* 最终 check-list
+
+### 你验收
+
+* 新电脑从零 clone 后按 README 一条条跑都不崩
+
+---
+
+## 你实际执行时的“带入物”模板（每轮你贴给 AI）
+
+为了让 AI 不走偏，你每轮都带上这段固定头：
+
+> 当前 repo 结构如下：…（贴 tree）
+> 当前 config 如下：…（贴 yaml）
+> 当前报错/输出日志：…（贴关键几行）
+> 这一轮目标：…（一句话）
+> 请只修改/新增这些文件：…（列表）
+> 产出要求：给完整代码，不要只给伪代码。
+
+---
+
+## 我建议你从哪一轮开始？
+
+从 **Round 0** 开始。你把 Round 0 的提示发给我，我会直接给你：
+
+* repo tree
+* 模块 API/shape 约定
+* 配置 schema
+* 最小 demo 命令
+
+然后你按顺序推进，每轮都能“跑起来”，不会出现最后才发现接口不统一、shape 对不上、可复现崩盘的问题。
+
+
+
+
+

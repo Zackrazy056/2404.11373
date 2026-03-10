@@ -1,0 +1,24 @@
+{
+  "cases": {
+    "kerr220": {
+      "chi_ci90": [
+        0.048663401044905186,
+        0.9444653034210205
+      ],
+      "chi_p50": 0.5063965320587158,
+      "m_ci90": [
+        32.89636154174805,
+        286.93360595703126
+      ],
+      "m_p50": 161.2688980102539,
+      "n_samples": 20000,
+      "npz_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\kerr220_sbi_posterior_20000.npz",
+      "summary_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\kerr220_run_summary.json",
+      "total_seconds": 3378.5249724388123
+    }
+  },
+  "skipped": {
+    "kerr221": "no paper-budget run_summary found",
+    "kerr330": "no paper-budget run_summary found"
+  }
+}

@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: pyRingGW
+Version: 2.3.0
+Summary: pyRing: Black hole ringdown data-analysis in time-domain
+Home-page: https://git.ligo.org/lscsoft/pyring
+Author: Gregorio Carullo, Walter Del Pozzo, John Veitch
+Author-email: gregorio.carullo@ligo.org, walter.delpozzo@ligo.org, john.veitch@ligo.org
+License: MIT
+Project-URL: Bug Tracker, https://git.ligo.org/lscsoft/pyring/-/issues
+Project-URL: Documentation, https://lscsoft.docs.ligo.org/pyring
+Project-URL: Source Code, https://git.ligo.org/lscsoft/pyring
+Description: 
+        ======
+        pyRing
+        ======
+        
+        Time-domain Bayesian inference software package targeting the analysis of ringdown signals.
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3
+Provides-Extra: docs

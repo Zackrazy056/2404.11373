@@ -1,0 +1,501 @@
+{
+  "check_artifacts": false,
+  "findings": [
+    {
+      "detail": "issues=[]",
+      "key": "injection.kerr220.paper_case_validation",
+      "ok": true
+    },
+    {
+      "detail": "mass_msun=67.0",
+      "key": "injection.kerr220.mass",
+      "ok": true
+    },
+    {
+      "detail": "chi_f=0.67",
+      "key": "injection.kerr220.chi",
+      "ok": true
+    },
+    {
+      "detail": "sample_rate_hz=2048.0",
+      "key": "injection.kerr220.sample_rate",
+      "ok": true
+    },
+    {
+      "detail": "duration_s=0.1",
+      "key": "injection.kerr220.duration",
+      "ok": true
+    },
+    {
+      "detail": "modes=[(2, 2, 0)]",
+      "key": "injection.kerr220.modes",
+      "ok": true
+    },
+    {
+      "detail": "target_snr=14.0",
+      "key": "injection.kerr220.target_snr",
+      "ok": true
+    },
+    {
+      "detail": "amplitude=5e-21",
+      "key": "injection.kerr220.(2, 2, 0).amplitude",
+      "ok": true
+    },
+    {
+      "detail": "phase=1.047",
+      "key": "injection.kerr220.(2, 2, 0).phase",
+      "ok": true
+    },
+    {
+      "detail": "inclination_rad=3.141592653589793",
+      "key": "injection.kerr220.inclination",
+      "ok": true
+    },
+    {
+      "detail": "ra_rad=1.95",
+      "key": "injection.kerr220.ra_rad",
+      "ok": true
+    },
+    {
+      "detail": "dec_rad=-1.27",
+      "key": "injection.kerr220.dec_rad",
+      "ok": true
+    },
+    {
+      "detail": "psi_rad=0.82",
+      "key": "injection.kerr220.psi_rad",
+      "ok": true
+    },
+    {
+      "detail": "gps_h1=1126259462.42323",
+      "key": "injection.kerr220.gps_h1",
+      "ok": true
+    },
+    {
+      "detail": "detectors=['H1', 'L1']",
+      "key": "injection.kerr220.detectors",
+      "ok": true
+    },
+    {
+      "detail": "use_detector_time_delay=True",
+      "key": "injection.kerr220.use_detector_time_delay",
+      "ok": true
+    },
+    {
+      "detail": "reference_detector=H1",
+      "key": "injection.kerr220.reference_detector",
+      "ok": true
+    },
+    {
+      "detail": "qnm.method=fit",
+      "key": "injection.kerr220.kerr_mapping_reference45",
+      "ok": true
+    },
+    {
+      "detail": "issues=[]",
+      "key": "injection.kerr221.paper_case_validation",
+      "ok": true
+    },
+    {
+      "detail": "mass_msun=67.0",
+      "key": "injection.kerr221.mass",
+      "ok": true
+    },
+    {
+      "detail": "chi_f=0.67",
+      "key": "injection.kerr221.chi",
+      "ok": true
+    },
+    {
+      "detail": "sample_rate_hz=2048.0",
+      "key": "injection.kerr221.sample_rate",
+      "ok": true
+    },
+    {
+      "detail": "duration_s=0.1",
+      "key": "injection.kerr221.duration",
+      "ok": true
+    },
+    {
+      "detail": "modes=[(2, 2, 0), (2, 2, 1)]",
+      "key": "injection.kerr221.modes",
+      "ok": true
+    },
+    {
+      "detail": "target_snr=14.0",
+      "key": "injection.kerr221.target_snr",
+      "ok": true
+    },
+    {
+      "detail": "amplitude=8.92e-21",
+      "key": "injection.kerr221.(2, 2, 0).amplitude",
+      "ok": true
+    },
+    {
+      "detail": "phase=1.047",
+      "key": "injection.kerr221.(2, 2, 0).phase",
+      "ok": true
+    },
+    {
+      "detail": "amplitude=9.81e-21",
+      "key": "injection.kerr221.(2, 2, 1).amplitude",
+      "ok": true
+    },
+    {
+      "detail": "phase=4.19",
+      "key": "injection.kerr221.(2, 2, 1).phase",
+      "ok": true
+    },
+    {
+      "detail": "inclination_rad=3.141592653589793",
+      "key": "injection.kerr221.inclination",
+      "ok": true
+    },
+    {
+      "detail": "ra_rad=1.95",
+      "key": "injection.kerr221.ra_rad",
+      "ok": true
+    },
+    {
+      "detail": "dec_rad=-1.27",
+      "key": "injection.kerr221.dec_rad",
+      "ok": true
+    },
+    {
+      "detail": "psi_rad=0.82",
+      "key": "injection.kerr221.psi_rad",
+      "ok": true
+    },
+    {
+      "detail": "gps_h1=1126259462.42323",
+      "key": "injection.kerr221.gps_h1",
+      "ok": true
+    },
+    {
+      "detail": "detectors=['H1', 'L1']",
+      "key": "injection.kerr221.detectors",
+      "ok": true
+    },
+    {
+      "detail": "use_detector_time_delay=True",
+      "key": "injection.kerr221.use_detector_time_delay",
+      "ok": true
+    },
+    {
+      "detail": "reference_detector=H1",
+      "key": "injection.kerr221.reference_detector",
+      "ok": true
+    },
+    {
+      "detail": "qnm.method=fit",
+      "key": "injection.kerr221.kerr_mapping_reference45",
+      "ok": true
+    },
+    {
+      "detail": "issues=[]",
+      "key": "injection.kerr330.paper_case_validation",
+      "ok": true
+    },
+    {
+      "detail": "mass_msun=67.0",
+      "key": "injection.kerr330.mass",
+      "ok": true
+    },
+    {
+      "detail": "chi_f=0.67",
+      "key": "injection.kerr330.chi",
+      "ok": true
+    },
+    {
+      "detail": "sample_rate_hz=2048.0",
+      "key": "injection.kerr330.sample_rate",
+      "ok": true
+    },
+    {
+      "detail": "duration_s=0.1",
+      "key": "injection.kerr330.duration",
+      "ok": true
+    },
+    {
+      "detail": "modes=[(2, 2, 0), (3, 3, 0)]",
+      "key": "injection.kerr330.modes",
+      "ok": true
+    },
+    {
+      "detail": "target_snr=53.0",
+      "key": "injection.kerr330.target_snr",
+      "ok": true
+    },
+    {
+      "detail": "amplitude=3e-20",
+      "key": "injection.kerr330.(2, 2, 0).amplitude",
+      "ok": true
+    },
+    {
+      "detail": "phase=1.047",
+      "key": "injection.kerr330.(2, 2, 0).phase",
+      "ok": true
+    },
+    {
+      "detail": "amplitude=3e-21",
+      "key": "injection.kerr330.(3, 3, 0).amplitude",
+      "ok": true
+    },
+    {
+      "detail": "phase=5.014",
+      "key": "injection.kerr330.(3, 3, 0).phase",
+      "ok": true
+    },
+    {
+      "detail": "inclination_rad=0.7853981633974483",
+      "key": "injection.kerr330.inclination",
+      "ok": true
+    },
+    {
+      "detail": "ra_rad=1.95",
+      "key": "injection.kerr330.ra_rad",
+      "ok": true
+    },
+    {
+      "detail": "dec_rad=-1.27",
+      "key": "injection.kerr330.dec_rad",
+      "ok": true
+    },
+    {
+      "detail": "psi_rad=0.82",
+      "key": "injection.kerr330.psi_rad",
+      "ok": true
+    },
+    {
+      "detail": "gps_h1=1126259462.42323",
+      "key": "injection.kerr330.gps_h1",
+      "ok": true
+    },
+    {
+      "detail": "detectors=['H1', 'L1']",
+      "key": "injection.kerr330.detectors",
+      "ok": true
+    },
+    {
+      "detail": "use_detector_time_delay=True",
+      "key": "injection.kerr330.use_detector_time_delay",
+      "ok": true
+    },
+    {
+      "detail": "reference_detector=H1",
+      "key": "injection.kerr330.reference_detector",
+      "ok": true
+    },
+    {
+      "detail": "qnm.method=fit",
+      "key": "injection.kerr330.kerr_mapping_reference45",
+      "ok": true
+    },
+    {
+      "detail": "inc220=3.141592653589793, inc330=0.7853981633974483",
+      "key": "injection.kerr330.inclination_differs",
+      "ok": true
+    },
+    {
+      "detail": "input_dim=408",
+      "key": "model.embedding.input_dim",
+      "ok": true
+    },
+    {
+      "detail": "num_hidden_layers=2",
+      "key": "model.embedding.num_hidden_layers",
+      "ok": true
+    },
+    {
+      "detail": "hidden_dim=150",
+      "key": "model.embedding.hidden_dim",
+      "ok": true
+    },
+    {
+      "detail": "output_dim=128",
+      "key": "model.embedding.output_dim",
+      "ok": true
+    },
+    {
+      "detail": "hidden_features=150",
+      "key": "model.nsf.hidden_features",
+      "ok": true
+    },
+    {
+      "detail": "num_transforms=5",
+      "key": "model.nsf.num_transforms",
+      "ok": true
+    },
+    {
+      "detail": "num_bins=10",
+      "key": "model.nsf.num_bins",
+      "ok": true
+    },
+    {
+      "detail": "num_blocks=2",
+      "key": "model.nsf.num_blocks",
+      "ok": true
+    },
+    {
+      "detail": "batch_norm=True",
+      "key": "model.nsf.batch_norm",
+      "ok": true
+    },
+    {
+      "detail": "training_batch_size=512",
+      "key": "model.training.batch",
+      "ok": true
+    },
+    {
+      "detail": "learning_rate=0.001",
+      "key": "model.training.learning_rate",
+      "ok": true
+    },
+    {
+      "detail": "validation_fraction=0.1",
+      "key": "model.training.validation_fraction",
+      "ok": true
+    },
+    {
+      "detail": "num_simulations_first_round=50000",
+      "key": "model.tsnpe.num_sim_first",
+      "ok": true
+    },
+    {
+      "detail": "num_simulations_per_round=100000",
+      "key": "model.tsnpe.num_sim_round",
+      "ok": true
+    },
+    {
+      "detail": "trunc_quantile=0.0001",
+      "key": "model.tsnpe.trunc_quantile",
+      "ok": true
+    },
+    {
+      "detail": "stopping_ratio=0.8",
+      "key": "model.tsnpe.stopping_ratio",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--num-sim-first\\\"\\,\\s*type=int,\\s*default=50_000",
+      "key": "script.default.num_sim_first",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--num-sim-round\\\"\\,\\s*type=int,\\s*default=100_000",
+      "key": "script.default.num_sim_round",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--trunc-quantile\\\"\\,\\s*type=float,\\s*default=1e-4",
+      "key": "script.default.trunc_quantile",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--stopping-ratio\\\"\\,\\s*type=float,\\s*default=0\\.8",
+      "key": "script.default.stopping_ratio",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--training-batch-size\\\"\\,\\s*type=int,\\s*default=512",
+      "key": "script.default.batch_size",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--truncation-probe-samples\\\"\\,\\s*type=int,\\s*default=50_000",
+      "key": "script.default.probe_samples",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--min-rounds-before-stopping\\\"\\,\\s*type=int,\\s*default=3",
+      "key": "script.default.min_rounds_before_stopping",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--max-volume-for-stopping\\\"\\,\\s*type=float,\\s*default=0\\.95",
+      "key": "script.default.max_volume_for_stopping",
+      "ok": true
+    },
+    {
+      "detail": "pattern=low = \\[20\\.0, 0\\.0\\].*high = \\[300\\.0, 0\\.99\\]",
+      "key": "script.prior.mass_range",
+      "ok": true
+    },
+    {
+      "detail": "pattern=0\\.1e-21 if \\(l, m, n\\) == \\(2, 2, 0\\) else 0\\.0",
+      "key": "script.prior.a220_floor",
+      "ok": true
+    },
+    {
+      "detail": "pattern=high\\.append\\(50\\.0e-21\\)",
+      "key": "script.prior.mode_amplitude_high",
+      "ok": true
+    },
+    {
+      "detail": "pattern=high\\.append\\(2\\.0 \\* np\\.pi\\)",
+      "key": "script.prior.phase_high",
+      "ok": true
+    },
+    {
+      "detail": "token=torch.quantile(log_prob_post, self.config.trunc_quantile)",
+      "key": "tsnpe.hpd.threshold_quantile",
+      "ok": true
+    },
+    {
+      "detail": "token=keep = logp >= threshold",
+      "key": "tsnpe.hpd.accept_condition",
+      "ok": true
+    },
+    {
+      "detail": "token=return bool((current_volume / previous_volume) > stopping_ratio)",
+      "key": "tsnpe.stop.rule",
+      "ok": true
+    },
+    {
+      "detail": "src/rd_sbi/noise/whitening.py",
+      "key": "pipeline.whitening.has_psd_to_acf",
+      "ok": true
+    },
+    {
+      "detail": "src/rd_sbi/noise/whitening.py",
+      "key": "pipeline.whitening.has_toeplitz_covariance",
+      "ok": true
+    },
+    {
+      "detail": "src/rd_sbi/noise/whitening.py",
+      "key": "pipeline.whitening.has_cholesky_whitener",
+      "ok": true
+    },
+    {
+      "detail": "scripts/08_run_fig1_paper_precision.py",
+      "key": "pipeline.fig1.uses_exact_whitening",
+      "ok": true
+    },
+    {
+      "detail": "src/rd_sbi/inference/sbi_loss_patch.py",
+      "key": "pipeline.training.has_noise_resampling_impl",
+      "ok": true
+    },
+    {
+      "detail": "scripts/08_run_fig1_paper_precision.py",
+      "key": "pipeline.training.uses_varying_noise",
+      "ok": true
+    },
+    {
+      "detail": "scripts/08_run_fig1_paper_precision.py",
+      "key": "pipeline.training.x_standardization_matches_paper",
+      "ok": true
+    },
+    {
+      "detail": "scripts/08_run_fig1_paper_precision.py",
+      "key": "pipeline.training.theta_normalization_matches_paper",
+      "ok": true
+    }
+  ],
+  "overall_ok": true,
+  "reproduction_grade": {
+    "failed_keys": [],
+    "grade": "preflight-only",
+    "reason": "artifact checks were not requested"
+  }
+}

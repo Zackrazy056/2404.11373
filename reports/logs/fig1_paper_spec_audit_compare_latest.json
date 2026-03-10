@@ -1,0 +1,251 @@
+{
+  "check_artifacts": true,
+  "findings": [
+    {
+      "detail": "mass_msun=67.0",
+      "key": "injection.kerr220.mass",
+      "ok": true
+    },
+    {
+      "detail": "chi_f=0.67",
+      "key": "injection.kerr220.chi",
+      "ok": true
+    },
+    {
+      "detail": "sample_rate_hz=2048.0",
+      "key": "injection.kerr220.sample_rate",
+      "ok": true
+    },
+    {
+      "detail": "duration_s=0.1",
+      "key": "injection.kerr220.duration",
+      "ok": true
+    },
+    {
+      "detail": "modes=[(2, 2, 0)]",
+      "key": "injection.kerr220.modes",
+      "ok": true
+    },
+    {
+      "detail": "target_snr=14.0",
+      "key": "injection.kerr220.target_snr",
+      "ok": true
+    },
+    {
+      "detail": "mass_msun=67.0",
+      "key": "injection.kerr221.mass",
+      "ok": true
+    },
+    {
+      "detail": "chi_f=0.67",
+      "key": "injection.kerr221.chi",
+      "ok": true
+    },
+    {
+      "detail": "sample_rate_hz=2048.0",
+      "key": "injection.kerr221.sample_rate",
+      "ok": true
+    },
+    {
+      "detail": "duration_s=0.1",
+      "key": "injection.kerr221.duration",
+      "ok": true
+    },
+    {
+      "detail": "modes=[(2, 2, 0), (2, 2, 1)]",
+      "key": "injection.kerr221.modes",
+      "ok": true
+    },
+    {
+      "detail": "target_snr=14.0",
+      "key": "injection.kerr221.target_snr",
+      "ok": true
+    },
+    {
+      "detail": "mass_msun=67.0",
+      "key": "injection.kerr330.mass",
+      "ok": true
+    },
+    {
+      "detail": "chi_f=0.67",
+      "key": "injection.kerr330.chi",
+      "ok": true
+    },
+    {
+      "detail": "sample_rate_hz=2048.0",
+      "key": "injection.kerr330.sample_rate",
+      "ok": true
+    },
+    {
+      "detail": "duration_s=0.1",
+      "key": "injection.kerr330.duration",
+      "ok": true
+    },
+    {
+      "detail": "modes=[(2, 2, 0), (3, 3, 0)]",
+      "key": "injection.kerr330.modes",
+      "ok": true
+    },
+    {
+      "detail": "target_snr=53.0",
+      "key": "injection.kerr330.target_snr",
+      "ok": true
+    },
+    {
+      "detail": "inc220=3.141592653589793, inc330=0.7853981633974483",
+      "key": "injection.kerr330.inclination_differs",
+      "ok": true
+    },
+    {
+      "detail": "input_dim=408",
+      "key": "model.embedding.input_dim",
+      "ok": true
+    },
+    {
+      "detail": "output_dim=128",
+      "key": "model.embedding.output_dim",
+      "ok": true
+    },
+    {
+      "detail": "hidden_features=150",
+      "key": "model.nsf.hidden_features",
+      "ok": true
+    },
+    {
+      "detail": "training_batch_size=512",
+      "key": "model.training.batch",
+      "ok": true
+    },
+    {
+      "detail": "num_simulations_first_round=50000",
+      "key": "model.tsnpe.num_sim_first",
+      "ok": true
+    },
+    {
+      "detail": "num_simulations_per_round=100000",
+      "key": "model.tsnpe.num_sim_round",
+      "ok": true
+    },
+    {
+      "detail": "trunc_quantile=0.0001",
+      "key": "model.tsnpe.trunc_quantile",
+      "ok": true
+    },
+    {
+      "detail": "stopping_ratio=0.8",
+      "key": "model.tsnpe.stopping_ratio",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--num-sim-first\\\"\\,\\s*type=int,\\s*default=50_000",
+      "key": "script.default.num_sim_first",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--num-sim-round\\\"\\,\\s*type=int,\\s*default=100_000",
+      "key": "script.default.num_sim_round",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--trunc-quantile\\\"\\,\\s*type=float,\\s*default=1e-4",
+      "key": "script.default.trunc_quantile",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--stopping-ratio\\\"\\,\\s*type=float,\\s*default=0\\.8",
+      "key": "script.default.stopping_ratio",
+      "ok": true
+    },
+    {
+      "detail": "pattern=--training-batch-size\\\"\\,\\s*type=int,\\s*default=512",
+      "key": "script.default.batch_size",
+      "ok": true
+    },
+    {
+      "detail": "pattern=low = \\[20\\.0, 0\\.0\\].*high = \\[300\\.0, 0\\.99\\]",
+      "key": "script.prior.mass_range",
+      "ok": true
+    },
+    {
+      "detail": "token=torch.quantile(log_prob_post, self.config.trunc_quantile)",
+      "key": "tsnpe.hpd.threshold_quantile",
+      "ok": true
+    },
+    {
+      "detail": "token=keep = logp >= threshold",
+      "key": "tsnpe.hpd.accept_condition",
+      "ok": true
+    },
+    {
+      "detail": "token=return bool((current_volume / previous_volume) > stopping_ratio)",
+      "key": "tsnpe.stop.rule",
+      "ok": true
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\kerr220_run_summary.json -> 50000",
+      "key": "artifact.kerr220.num_sim_first",
+      "ok": true
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\kerr220_run_summary.json -> 100000",
+      "key": "artifact.kerr220.num_sim_round",
+      "ok": true
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\kerr220_run_summary.json -> 0.0001",
+      "key": "artifact.kerr220.trunc_quantile",
+      "ok": true
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\kerr220_run_summary.json -> 0.8",
+      "key": "artifact.kerr220.stopping_ratio",
+      "ok": true
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\kerr220_run_summary.json includes prior/tsnpe_definition",
+      "key": "artifact.kerr220.audit_fields",
+      "ok": true
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260305-205241\\kerr220_sbi_posterior_20000.npz",
+      "key": "artifact.kerr220.posterior_npz_exists",
+      "ok": true
+    },
+    {
+      "detail": "n_samples=20000",
+      "key": "artifact.kerr220.posterior_samples_20k",
+      "ok": true
+    },
+    {
+      "detail": "no summary under C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision",
+      "key": "artifact.kerr221.run_summary",
+      "ok": false
+    },
+    {
+      "detail": "no summary under C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision",
+      "key": "artifact.kerr330.run_summary",
+      "ok": false
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_pyring.npz",
+      "key": "artifact.kerr220.pyring_npz_exists",
+      "ok": false
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr221_pyring.npz",
+      "key": "artifact.kerr221.pyring_npz_exists",
+      "ok": false
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr330_pyring.npz",
+      "key": "artifact.kerr330.pyring_npz_exists",
+      "ok": false
+    },
+    {
+      "detail": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_overlay_summary.json",
+      "key": "artifact.overlay.summary_exists",
+      "ok": false
+    }
+  ],
+  "overall_ok": false
+}

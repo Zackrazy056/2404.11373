@@ -1,0 +1,65 @@
+{
+  "chi_f": 0.67,
+  "detectors": {
+    "H1": {
+      "f_cross": -0.45103535980460757,
+      "f_plus": 0.5786886537529047,
+      "relative_delay_to_reference_s": 0.0,
+      "t_start_detector_s": 0.006984385696649813,
+      "time_delay_from_geocenter_s": 0.014685709968640936
+    },
+    "L1": {
+      "f_cross": 0.20528761139367327,
+      "f_plus": -0.5274098710858718,
+      "relative_delay_to_reference_s": -0.006984385696649813,
+      "t_start_detector_s": 0.0,
+      "time_delay_from_geocenter_s": 0.007701324271991123
+    }
+  },
+  "mass_msun": 67.0,
+  "modes": [
+    {
+      "amplitude": 8.92e-21,
+      "damping_time_s": 0.003999026698058971,
+      "frequency_hz": 252.07548766683053,
+      "l": 2,
+      "m": 2,
+      "n": 0,
+      "omega_dimensionless_imag": -0.08252205308086033,
+      "omega_dimensionless_real": 0.5226787120713454,
+      "phase": 1.047
+    },
+    {
+      "amplitude": 9.81e-21,
+      "damping_time_s": 0.0013161754407608572,
+      "frequency_hz": 246.31426847084654,
+      "l": 2,
+      "m": 2,
+      "n": 1,
+      "omega_dimensionless_imag": -0.25073245042334813,
+      "omega_dimensionless_real": 0.5107328197626985,
+      "phase": 4.19
+    }
+  ],
+  "name": "Kerr221",
+  "noise_std": 0.0,
+  "output_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\cache\\snr_validation\\kerr221__tmp.npz",
+  "reference_detector": "H1",
+  "seed": 240411373,
+  "source": {
+    "dec_rad": -1.27,
+    "gmst_rad": 2.4564618255382484,
+    "gps_h1": 1126259462.42323,
+    "inclination_rad": 3.141592653589793,
+    "leap_seconds": 18,
+    "psi_rad": 0.82,
+    "ra_rad": 1.95
+  },
+  "use_detector_time_delay": true,
+  "window_anchor": {
+    "earliest_detector": "L1",
+    "earliest_relative_delay_s": -0.006984385696649813,
+    "shift_s": 0.006984385696649813,
+    "strategy": "preserve_earliest_arrival_in_common_window"
+  }
+}

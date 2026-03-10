@@ -1,0 +1,68 @@
+{
+  "paper_case": "kerr220",
+  "audit_date": "2026-03-08",
+  "sources": {
+    "pyring_source_root": "external/pyRingGW-2.3.0",
+    "public_config_html": "external/pyring_public_kerr220_config.html",
+    "public_stdout": "external/pyring_public_kerr221_stdout.txt",
+    "local_config": "configs/injections/kerr220.yaml",
+    "local_runner": "scripts/08_run_fig1_paper_precision.py",
+    "local_injection": "src/rd_sbi/simulator/injection.py",
+    "local_snr_report": "reports/tables/kerr220_snr_validation_report.json"
+  },
+  "local_snapshot": {
+    "sample_rate_hz": 2048.0,
+    "duration_s": 0.1,
+    "reference_detector": "H1",
+    "use_detector_time_delay": true,
+    "window_anchor_strategy": "preserve_earliest_arrival_in_common_window",
+    "target_network_snr": 14.0,
+    "measured_network_snr": 14.27205026991145
+  },
+  "public_pyring_snapshot": {
+    "ref_det": "H1",
+    "sampling_rate_hz": 4096.0,
+    "analysis_duration_s": 0.2,
+    "bandpassing": true,
+    "f_min_bp_hz": 100.0,
+    "f_max_bp_hz": 500.0,
+    "reference_amplitude": 1e-21,
+    "truncate": true,
+    "acf_simple_norm": true,
+    "nlive": 2048,
+    "maxmcmc": 2048
+  },
+  "highest_risk_mismatches": [
+    {
+      "topic": "time_axis_and_truncation_semantics",
+      "severity": "high",
+      "summary": "pyRing truncates after moving each detector into its own arrival-time frame, while the local SBI pipeline still builds a shared fixed-length detector representation."
+    },
+    {
+      "topic": "sample_rate_and_duration",
+      "severity": "high",
+      "summary": "Public pyRing GW150914 runs use 4096 Hz and 0.2 s, while the local pipeline uses 2048 Hz and 0.1 s."
+    },
+    {
+      "topic": "bandpass_and_noise_model",
+      "severity": "high",
+      "summary": "Public pyRing GW150914 runs use 100-500 Hz bandpassing and ACF estimation from data chunks; the local pipeline does not yet mirror that full preprocessing path."
+    }
+  ],
+  "medium_risk_mismatches": [
+    {
+      "topic": "amplitude_parameterisation",
+      "severity": "medium",
+      "summary": "pyRing uses reference-amplitude scaling, while the local injection config specifies A_220 directly in physical units."
+    },
+    {
+      "topic": "acf_normalisation",
+      "severity": "medium",
+      "summary": "Public pyRing runs use acf-simple-norm=1, which the local PSD-derived covariance path does not explicitly mirror."
+    }
+  ],
+  "recommended_next_step": {
+    "title": "replicate pyRing detector-local truncation semantics in the SBI observation builder",
+    "reason": "This is the most plausible way to preserve the recovered SNR while restoring round-1 TSNPE contraction."
+  }
+}

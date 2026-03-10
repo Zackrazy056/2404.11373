@@ -1,0 +1,168 @@
+include:
+  # https://computing.docs.ligo.org/gitlab-ci-templates/
+  - project: computing/gitlab-ci-templates
+    file: python.yml
+
+stages:
+  - dist
+  - test
+  - docs
+  - lint
+  - deploy
+
+variables:
+  CPU_COUNT: 4
+  PYRING_PREFIX: "${CI_PROJECT_DIR}"
+
+# -- dist -------------------
+#
+# This job makes the pyRing-X.Y.Z.tar.gz
+# distribution and uploads it as a job
+# artifact
+#
+
+tarball:
+  extends:
+    # https://computing.docs.ligo.org/gitlab-ci-templates/python/#.python:build
+    - .python:build
+  image: python:3
+  stage: dist
+  variables:
+    # just pack up the tarball
+    WHEEL: "false"
+
+# -- test -------------------
+#
+# These jobs run the tests on
+# all supported platforms
+#
+
+.test:
+  extends:
+    # https://computing.docs.ligo.org/gitlab-ci-templates/python/#.python:pytest
+    - .python:pytest
+  stage: test
+  needs: []
+  variables:
+    # ensure a clean git repo
+    GIT_STRATEGY: clone
+    # enable coverage for C sources
+    CFLAGS: "--coverage"
+    # what to cover
+    COVERAGE_TARGET: "pyRing"
+    # enable coverage reporting for the Cython libraries
+    CYTHON_LINETRACE: "1"
+    # install Cython libraries in-place (helps with the coverage)
+    INSTALL_TARGET: "--editable ."
+    # pytest options
+    PYTEST_OPTIONS: "-ra -v pyRing"
+    # extra requirements for testing
+    TESTS_REQUIRE: "surfinBH"
+  before_script:
+    # install GSL to support on-the-fly compilation of gwsurrogate
+    # (for surfinBH)
+    - apt-get -yqq update && apt-get install -y -q libgsl-dev
+    # run the before_script from the template
+    - !reference [".python:pytest", before_script]
+    # print the package list
+    - python -m pip list installed
+  script:
+    # run the pytest suite
+    - !reference [".python:pytest", script]
+    # run one of the examples (modify config for no verbosity)
+    - EXAMPLE="${PYRING_PREFIX}/pyRing/config_files/Quickstart_configs/quick_gw150914_DS.ini"
+    - |
+      python3 - << EOF
+      import configparser
+      conf = configparser.ConfigParser()
+      conf.optionxform = str
+      with open("${EXAMPLE}", "r") as file:
+          conf.read_file(file)
+      conf.set("Sampler settings", "verbose", "0")  # disable verbosity
+      with open("${EXAMPLE}", "w") as file:
+          conf.write(file)
+      EOF
+    - python -m coverage run
+          --append
+          --source pyRing
+          -m pyRing.pyRing --config-file "${EXAMPLE}"
+
+test:python3.6:
+  extends:
+    - .test
+  image: python:3.6
+
+test:python3.7:
+  extends:
+    - .test
+  image: python:3.7
+
+test:python3.8:
+  extends:
+    - .test
+  image: python:3.8
+
+test:python3.9:
+  extends:
+    - .test
+  image: python:3.9
+
+# -- docs -------------------
+#
+# This jobs generates the
+# project documentation
+#
+
+docs:
+  extends:
+    - .python:cache
+  image: python:3.9
+  stage: docs
+  needs: []
+  before_script:
+    # install GSL to support on-the-fly compilation of gwsurrogate
+    # (for surfinBH)
+    - apt-get -yqq update && apt-get install -y -q libgsl-dev
+    # install numpy for gwsurrogate
+    - python -m pip install numpy
+    # install this project, the docs requirements, and surfinBH
+    - python -m pip install
+          --editable .[docs]
+          surfinBH
+  script:
+    # generate the docs
+    - python -m sphinx -b dirhtml docs/ html/
+  artifacts:
+    paths:
+      - html
+
+pages:
+  stage: deploy
+  needs:
+    - docs
+  script:
+    - mv -v html public
+  artifacts:
+    paths:
+      - public
+  rules:
+    # only run for pushes to the default branch of the main repo (no forks)
+    - if: '$CI_PROJECT_PATH == "lscsoft/pyring" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+
+# -- lint -------------------
+#
+# These jobs check the code
+# for quality issues
+#
+
+.lint:
+  stage: lint
+
+flake8:
+  extends:
+    # https://computing.docs.ligo.org/gitlab-ci-templates/python/#.python:flake8
+    - .python:flake8
+    - .lint
+  needs: []
+  variables:
+    FLAKE8_OPTIONS: "--exit-zero"

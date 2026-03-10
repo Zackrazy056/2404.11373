@@ -1,0 +1,52 @@
+{
+  "all_pass": false,
+  "metric": "network",
+  "relative_tolerance": 0.05,
+  "results": [
+    {
+      "config": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\configs\\injections\\kerr220.yaml",
+      "metric": "network",
+      "metric_value": 14.27205026991145,
+      "name": "Kerr220",
+      "network_snr": 14.27205026991145,
+      "pass": true,
+      "per_detector": {
+        "H1": 10.521104294497556,
+        "L1": 9.643535831383868
+      },
+      "relative_error": 0.019432162136532125,
+      "rss_mean_snr": 10.091863527289682,
+      "target_snr": 14.0
+    },
+    {
+      "config": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\configs\\injections\\kerr221.yaml",
+      "metric": "network",
+      "metric_value": 15.831785393469945,
+      "name": "Kerr221",
+      "network_snr": 15.831785393469945,
+      "pass": false,
+      "per_detector": {
+        "H1": 12.366143040097196,
+        "L1": 9.885541717920368
+      },
+      "relative_error": 0.13084181381928175,
+      "rss_mean_snr": 11.194762810012731,
+      "target_snr": 14.0
+    },
+    {
+      "config": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\configs\\injections\\kerr330.yaml",
+      "metric": "network",
+      "metric_value": 68.20388262674538,
+      "name": "Kerr330",
+      "network_snr": 68.20388262674538,
+      "pass": false,
+      "per_detector": {
+        "H1": 53.583026830622806,
+        "L1": 42.1974980423202
+      },
+      "relative_error": 0.2868657099385921,
+      "rss_mean_snr": 48.227427908623014,
+      "target_snr": 53.0
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+project:
+  name: rd-sbi-repro
+  paper: arXiv:2404.11373v3
+  sample_rate_hz: 2048
+  segment_duration_s: 0.1
+  detector_bins: 204
+
+runtime:
+  seed: 240411373
+  dtype: float32
+  device: auto
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  data_cache: data/cache
+  reports_figures: reports/figures
+  reports_tables: reports/tables
+  reports_logs: reports/logs

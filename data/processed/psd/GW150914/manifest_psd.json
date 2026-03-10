@@ -1,0 +1,25 @@
+{
+  "event": "GW150914",
+  "file_count": 2,
+  "files": [
+    {
+      "detector": "H1",
+      "n_frequency_bins": 8193,
+      "noverlap": 8192,
+      "nperseg": 16384,
+      "output_npz": "data\\processed\\psd\\GW150914\\H1_psd_welch.npz",
+      "sample_rate_hz": 4096.0,
+      "source_hdf5": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\raw\\gwosc\\GW150914\\H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+    },
+    {
+      "detector": "L1",
+      "n_frequency_bins": 8193,
+      "noverlap": 8192,
+      "nperseg": 16384,
+      "output_npz": "data\\processed\\psd\\GW150914\\L1_psd_welch.npz",
+      "sample_rate_hz": 4096.0,
+      "source_hdf5": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\data\\raw\\gwosc\\GW150914\\L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+    }
+  ],
+  "input_glob": "data/raw/gwosc/GW150914/*-32.hdf5"
+}

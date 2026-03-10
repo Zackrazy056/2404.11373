@@ -1,0 +1,28 @@
+{
+  "axis_limits": {
+    "chi": [
+      0.0,
+      0.9900000095367432
+    ],
+    "m": [
+      20.0,
+      212.5251043701172
+    ]
+  },
+  "case": "kerr220",
+  "chi_ci90": [
+    0.0676606073975563,
+    0.7344584465026855
+  ],
+  "issues": [],
+  "m_ci90": [
+    48.31043701171875,
+    70.22852478027345
+  ],
+  "npz_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-121502\\kerr220_sbi_posterior_20000.npz",
+  "num_samples_in_prior": 19877,
+  "num_samples_outside_prior": 123,
+  "num_samples_total": 20000,
+  "output_figure": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\figures\\fig1_kerr220_paper_grade_20260307-121502.png",
+  "summary_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260307-121502\\kerr220_run_summary.json"
+}

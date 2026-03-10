@@ -1,0 +1,195 @@
+
+Reading config file: config_gw150914_production.ini
+With sections ['input', 'Sampler settings', 'Priors', 'Injection', 'Plot']
+
+----Input parameters----
+I'll be running with the following values:
+
+data-H1                    : 
+data-L1                    : 
+data-V1                    : 
+ignore-data-filename       : 0
+download-data              : 1
+datalen-download           : 4096.0
+gw-data-find               : 0
+gw-data-type-H1            : 
+gw-data-type-L1            : 
+gw-data-type-V1            : 
+tag                        : CLN
+channel-H1                 : GWOSC
+channel-L1                 : GWOSC
+channel-V1                 : GWOSC
+config-file                : config_gw150914_production.ini
+run-type                   : full
+output                     : GW150914_PROD1_Kerr_221_0M
+run-tag                    : PROD1
+screen-output              : 0
+pesummary                  : 1
+trigtime                   : 1126259462.423235
+detectors                  : H1,L1
+ref-det                    : H1
+sky-frame                  : equatorial
+acf-H1                     : 
+acf-L1                     : 
+acf-V1                     : 
+psd-H1                     : 
+psd-L1                     : 
+psd-V1                     : 
+signal-chunksize           : 4.0
+noise-chunksize            : 2.0
+window-onsource            : 0
+window                     : 1
+alpha-window               : 0.1
+sampling-rate              : 4096.0
+f-min-bp                   : 100.0
+f-max-bp                   : 500.0
+bandpassing                : 1
+fft-acf                    : 1
+acf-simple-norm            : 1
+no-lognorm                 : 0
+truncate                   : 1
+analysis-duration          : 0.2
+analysis-duration-n        : 410
+zero-noise                 : 0
+gaussian-noise             : 
+gaussian-noise-seed        : -1
+gaussian-noise-white-sigma : 1e-21
+chisquare-computation      : 0
+non-stationarity-check     : 0
+onsource-ACF               : 0
+noise-averaging-method     : mean
+Dirac-comb                 : 0
+Zeroing-data               : 0
+maxent-psd                 : 
+PSD-investigation          : 0
+injection-parameters       : None
+injection-approximant      : 
+inject-n-ds-modes          : {'s': 0, 'v': 0, 't': 1}
+inject-area-quantization   : 0
+inject-charge              : 0
+injection-scaling          : 1.0
+injection-T                : 64.0
+template                   : Kerr
+single-mode                : None
+n-ds-modes                 : {'s': 0, 'v': 0, 't': 1}
+ds-ordering                : freq
+kerr-modes                 : [(2, 2, 2, 0), (2, 2, 2, 1)]
+reference-amplitude        : 1e-21
+spheroidal                 : 0
+qnm-fit                    : 1
+coherent-n                 : 0
+amp-non-prec-sym           : 1
+max-Kerr-amp-ratio         : 0.0
+TGR-overtones-ordering     : Unordered
+domega-tgr-modes           : None
+dtau-tgr-modes             : None
+area-quantization          : 0
+tau-AQ                     : 0
+prior-reweight             : 0
+ParSpec                    : 0
+ParSpec_Dmax_TGR           : 2
+ParSpec_Dmax_charge        : 0
+EsGB                       : 0
+charge                     : 0
+gr-time-prior              : 1
+dist-flat-prior            : 0
+ds-amp-flat-prior          : 0
+mf-time-prior              : 0.0
+analysis-duration-n        : 819
+inject-n-ds-modes          : {'t': 1}
+n-ds-modes                 : {'t': 1}
+gr-time-prior              : 1
+dist-flat-prior            : 0
+ds-amp-flat-prior          : 0
+mf-time-prior              : 67.92493161247017
+
+Trigtime in H1: 1126259462.423235
+
+
+Reading data...
+
+Using GWPY to download data.
+Fetched 1 URLs from www.gw-openscience.org for [1126257414 .. 1126261510))
+Reading data... [Done]
+
+Loaded channel GWOSC starting at 1126257414.0 length 4096.0s.
+Bandpassing the raw strain between [100.0, 500.0] Hz.
+Downsampling detector data from 16384.0 to 4096.0 Hz, decimate factor 4
+Computing the one-sided PSD with the Welch method and the standard ACF for comparison.
+No ACF was passed. Estimating ACF.
+Plancherel theorem E(f)/E(t) (expected value: 1) = 1.0665630496396028
+
+Reading data...
+
+Using GWPY to download data.
+Fetched 1 URLs from www.gw-openscience.org for [1126257414 .. 1126261510))
+Reading data... [Done]
+
+Loaded channel GWOSC starting at 1126257414.0 length 4096.0s.
+Bandpassing the raw strain between [100.0, 500.0] Hz.
+Downsampling detector data from 16384.0 to 4096.0 Hz, decimate factor 4
+Computing the one-sided PSD with the Welch method and the standard ACF for comparison.
+No ACF was passed. Estimating ACF.
+Plancherel theorem E(f)/E(t) (expected value: 1) = 1.0658912536124905
+
+Using equatorial sky coordinates.
+
+
+----Prior section - General----
+I'll be running with the following prior bounds:
+
+
+Noise evidence: inf
+Running the Kerr model with modes: [(2, 2, 2, 0), (2, 2, 2, 1)]
+
+----Prior section - Kerr model----
+I'll be running with the following prior bounds:
+
+Mf           : [20.0, 200.0]
+af           : [0.0, 0.99]
+
+----Prior section - Kerr Model - Testing-GR parameters----
+I'll be running with the following prior bounds:
+
+No TGR parameter was considered.
+
+----Prior section - Kerr Model - Amplitudes and phases----
+I'll be running with the following prior bounds:
+
+A2220        : [0.0, 50.0]
+A2221        : [0.0, 50.0]
+phi2220      : [0.0, 6.283185307179586]
+phi2221      : [0.0, 6.283185307179586]
+
+----Prior section - Kerr Model - Fixed parameters----
+I'll be running with the following fixed parameters:
+
+ra           : 1.95
+dec          : -1.27
+psi          : 0.82
+t            : 0.0
+cosiota      : -1.0
+phi          : 0.0
+
+----Setting up the sampler----
+I'll be running with the following sampler parameters:
+
+verbose  : 2
+poolsize : 32
+nthreads : 1
+nlive    : 2048
+maxmcmc  : 2048
+seed     : 1234
+resume   : 0
+
+
+Whitened plots (using the FD PSD and a default windowing) are illustrative, and do not correspond to the full TD treatment applied in the analysis.
+
+Warning: To err on the conservative side, when fixing the start time, pyRing selects the discrete sample immediately after the start time requested. This implies that the actual start time used in the analysis can be larger than the one requested up to 0.000244 s, i.e. 1/(sampling_rate).
+If you wish to reduce this error, please increase the sampling rate and the bandpassing frequency accordingly.
+
+Noise evidence            : inf
+
+Starting sampling using CPNest 0.11.3 version.
+The sampling output can be found in the `GW150914_PROD1_Kerr_221_0M/Nested_sampler/cpnest.log` file.
+

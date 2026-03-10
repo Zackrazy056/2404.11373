@@ -1,0 +1,25 @@
+{
+  "cases": {
+    "kerr220": {
+      "pyring_median": [
+        64.29534727350395,
+        0.6116018400770616
+      ],
+      "pyring_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_pyring_raw.npz",
+      "pyring_samples": 956,
+      "pyring_source_kind": "raw_npz",
+      "sbi_median": [
+        63.21771049499512,
+        0.5849863588809967
+      ],
+      "sbi_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260310-fig1220-detlocal\\kerr220_sbi_posterior_20000.npz",
+      "sbi_samples": 20000,
+      "truth": [
+        67.0,
+        0.6700000166893005
+      ]
+    }
+  },
+  "prefer_raw_pyring": true,
+  "style": "paper"
+}
