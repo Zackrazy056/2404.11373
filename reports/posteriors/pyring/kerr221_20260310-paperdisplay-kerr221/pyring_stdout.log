@@ -1,0 +1,407 @@
+* Warning: The `art` package could not be imported. Please consider installing it locally for best visual renditions. The cause of this not being taken care of automatically by the `pyRing` package is that the `art` package is not deployed on conda, hence the conda-build fails and `art` cannot be listed as a requirement for the `pyRing` package.
+
+
+ [[38;5;39m
+                                         @.
+                                        &  @
+                                        @  ,
+                                        (
+                                                       *
+                                            &            @
+                                       #    @        @
+                                       @             .    ,
+                                       *    .             @
+                                                     @
+                                                     ,    &
+                                      (     #             @           @
+                                      *     @                       @   @
+                                      *     &       /
+                                            .       @      #       @     @          *
+*   @  %       *       @       &     @                     %                      @    &          *    @     &    @     @
+                                                    *      *              @      @      @     @
+                                             &                    @                        %
+                                                                 .&        @   @
+                                                   .        @                &
+                                             @                   @
+                                                   @
+                                             *               @  @
+                                                   .            &
+                                                              %&
+                                              *
+                                              .
+                                              @    @
+                                              
+                                               @  .
+                                               /
+                                                 @
+[0m
+* Using pyRing version: `2.3.0`.
+
+
+
+
+####################
+# [[38;5;39mInput parameters[0m #
+####################
+
+* Reading config file : `/mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/reports/posteriors/pyring/kerr221_20260310-paperdisplay-kerr221/kerr221_pyring.ini`.
+* With sections       : ['input', 'Sampler settings', 'Priors', 'Injection', 'Plot'].
+
+* I'll be running with the following values:
+
+data-H1                    : /mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/external/pyRingGW-2.3.0/pyRing/data/Real_data/GW150914/H-H1_GWOSC_4KHZ_R1-1126259447-32.txt
+data-L1                    : /mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/external/pyRingGW-2.3.0/pyRing/data/Real_data/GW150914/L-L1_GWOSC_4KHZ_R1-1126259447-32.txt
+data-V1                    : 
+ignore-data-filename       : 0
+download-data              : 0
+datalen-download           : 4096.0
+gw-data-find               : 0
+gw-data-type-H1            : 
+gw-data-type-L1            : 
+gw-data-type-V1            : 
+channel-H1                 : GWOSC
+channel-L1                 : GWOSC
+channel-V1                 : GWOSC
+config-file                : /mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/reports/posteriors/pyring/kerr221_20260310-paperdisplay-kerr221/kerr221_pyring.ini
+run-type                   : full
+output                     : /mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/reports/posteriors/pyring/kerr221_20260310-paperdisplay-kerr221
+run-tag                    : kerr221_20260310-paperdisplay-kerr221
+screen-output              : 1
+debug                      : 0
+pesummary                  : 0
+trigtime                   : 1126259462.42323
+detectors                  : H1,L1
+ref-det                    : H1
+sky-frame                  : equatorial
+acf-H1                     : 
+acf-L1                     : 
+acf-V1                     : 
+psd-H1                     : 
+psd-L1                     : 
+psd-V1                     : 
+signal-chunksize           : 4.0
+noise-chunksize            : 4.0
+window-onsource            : 0
+window                     : 1
+alpha-window               : 0.1
+sampling-rate              : 2048.0
+f-min-bp                   : 100.0
+f-max-bp                   : 500.0
+bandpassing                : 0
+noise-averaging-method     : mean
+fft-acf                    : 1
+acf-simple-norm            : 1
+no-lognorm                 : 0
+truncate                   : 1
+analysis-duration          : 0.1
+analysis-duration-n        : 410
+zero-noise                 : 1
+gaussian-noise             : 
+gaussian-noise-seed        : -1
+gaussian-noise-white-sigma : 1e-21
+chisquare-computation      : 0
+non-stationarity-check     : 0
+maxent-psd                 : 
+PSD-investigation          : 0
+onsource-ACF               : 0
+Dirac-comb                 : 0
+Zeroing-data               : 0
+likelihood-method          : direct-inversion
+split-inner-products       : 0
+injection-parameters       : None
+injection-approximant      : Kerr
+inject-n-ds-modes          : {'s': 0, 'v': 0, 't': 1}
+inject-area-quantization   : 0
+inject-braneworld          : 0
+inject-charge              : 0
+injection-scaling          : 1.0
+injection-T                : 64.0
+template                   : Kerr
+single-mode                : None
+teob-modes                 : [(2, 2)]
+n-ds-modes                 : {'s': 0, 'v': 0, 't': 1}
+ds-ordering                : freq
+kerr-modes                 : [(2, 2, 2, 0), (2, 2, 2, 1)]
+reference-amplitude        : 1e-21
+spheroidal                 : 0
+amp-non-prec-sym           : 1
+tail-modes                 : None
+quadratic-modes            : None
+quadratic-linear-prop      : 0
+qnm-fit                    : 1
+coherent-n                 : 0
+max-Kerr-amp-ratio         : 0.0
+TGR-overtones-ordering     : Unordered
+domega-tgr-modes           : None
+dtau-tgr-modes             : None
+area-quantization          : 0
+braneworld                 : 0
+tau-AQ                     : 0
+prior-reweight             : 
+ParSpec                    : 0
+ParSpec_Dmax_TGR           : 2
+ParSpec_Dmax_charge        : 0
+EsGB                       : 0
+charge                     : 0
+analysis-duration-n        : 204
+inject-n-ds-modes          : {'t': 1}
+n-ds-modes                 : {'t': 1}
+gr-time-prior              : 1
+dist-flat-prior            : 0
+mass-ratio-flat-prior      : 0
+ds-amp-flat-prior          : 0
+mf-time-prior              : 67.0
+
+
+
+##################
+# [[38;5;39mKerr injection[0m #
+##################
+
+* I'll be injecting the following parameters:
+
+* Warning: Imposing non-precessing Kerr amplitude symmetry for both injection and recovery (to be relaxed in future versions).
+
+ra                         : 1.95
+dec                        : -1.27
+psi                        : 0.82
+cos_altitude               : 0.0
+azimuth                    : 0.0
+t0                         : 0.0
+Mf                         : 67.0
+af                         : 0.67
+logdistance                : 6.0857
+cosiota                    : -1.0
+phi                        : 0.0
+alpha                      : 25.132741228718345
+beta                       : -0.4
+Q                          : 0.0
+kerr-amplitudes            : {(2, 2, 2, 0): np.complex128(4.461525985405866+7.724065372687381j), (2, 2, 2, 1): np.complex128(-4.894718344677837-8.501637038022398j)}
+kerr-tail-amplitudes       : None
+kerr-tail-phases           : None
+kerr-tail-exponents        : None
+kerr-quad-amplitudes       : None
+kerr-quad-phases           : None
+kerr-domegas               : {(2, 2, 2, 0): 0.0}
+kerr-dtaus                 : {(2, 2, 2, 0): 0.0}
+kerr-tail-parameters       : None
+
+
+
+##########################
+# [[38;5;39mSetting the start time[0m #
+##########################
+
+Trigtime in H1             : 1126259462.423230
+
+
+
+
+################
+# [[38;5;39mData reading[0m #
+################
+
+
+------
+- [[38;5;39mH1[0m -
+------
+
+* Warning: The file name is expected to follow GWOSC conventions 'DET-FRAMETYPE-STARTTIME--DATALEN.txt', e.g.: 'H-H1_GWOSC_4_V1-1126259446-32.txt'. See https://www.gw-openscience.org for more infomation. This requirement can be relaxed by activating the 'ignore-data-filename' option.
+
+* Loaded `/mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/external/pyRingGW-2.3.0/pyRing/data/Real_data/GW150914/H-H1_GWOSC_4KHZ_R1-1126259447-32.txt` starting at `1126259447.0` length 32.0s.
+
+* No bandpassing applied.
+
+* Downsampling detector data from 4096.0 to 2048.0 Hz, decimate factor 2
+
+* Computing the one-sided PSD with the Welch method for comparison with the standard ACF.
+
+* Although an injection was selected, the ACF is being computed from the strain.
+
+* A Kolmogorov–Smirnov test of whitened data chunks gave 5/319 normality outliers (at 1.0 % significance).
+
+* Injecting the `Kerr` waveform model in the H1 detector.
+
+
+* Zero noise injection selected.
+
+
+------
+- [[38;5;39mL1[0m -
+------
+
+* Warning: The file name is expected to follow GWOSC conventions 'DET-FRAMETYPE-STARTTIME--DATALEN.txt', e.g.: 'H-H1_GWOSC_4_V1-1126259446-32.txt'. See https://www.gw-openscience.org for more infomation. This requirement can be relaxed by activating the 'ignore-data-filename' option.
+
+* Loaded `/mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/external/pyRingGW-2.3.0/pyRing/data/Real_data/GW150914/L-L1_GWOSC_4KHZ_R1-1126259447-32.txt` starting at `1126259447.0` length 32.0s.
+
+* No bandpassing applied.
+
+* Downsampling detector data from 4096.0 to 2048.0 Hz, decimate factor 2
+
+* Computing the one-sided PSD with the Welch method for comparison with the standard ACF.
+
+* Although an injection was selected, the ACF is being computed from the strain.
+
+* WARNING: Covariance matrix conditioning number is 1.097327e+14, and exceeds the safety threshold of 1.000000e+14, implying possible errors of order 1% or greater in the likelihood computation (since we use double precision, hence ~16 significant digits). Double check your settings, e.g. search for possible data corruption, inconsistency of sampling rate and bandpassing filter, etc. Also, consider trying different covariance inversion methods to improve the numerical stability and verify the robustness of the analysis results (see the `likelihood-method` option). Running with the `debug` option turned on will print additional information.
+
+* A Kolmogorov–Smirnov test of whitened data chunks gave 0/319 normality outliers (at 1.0 % significance).
+
+* Injecting the `Kerr` waveform model in the L1 detector.
+
+
+* Zero noise injection selected.
+
+
+
+
+########################
+# [[38;5;39mModel initialisation[0m #
+########################
+
+* Using equatorial sky coordinates.
+
+
+
+
+##########
+# [[38;5;39mPriors[0m #
+##########
+
+I'll be running with the following prior bounds:
+
+
+-------------
+- [[38;5;39mExtrinsic[0m -
+-------------
+
+
+-------------------------
+- [[38;5;39mIntrinsic: Kerr model[0m -
+-------------------------
+
+* Running the Kerr model with modes: `[(2, 2, 2, 0), (2, 2, 2, 1)]`.
+
+Mf           : [50.0, 100.0]
+af           : [0.2, 0.96]
+
+--------------------------
+- [[38;5;39mIntrinsic: Beyond-Kerr[0m -
+--------------------------
+
+* No TGR parameter was considered.
+
+--------------------
+- [[38;5;39mModes amplitudes[0m -
+--------------------
+
+A2220        : [0.0, 13.92]
+A2221        : [0.0, 14.81]
+phi2220      : [0.0, 6.283185307179586]
+phi2221      : [0.0, 6.283185307179586]
+
+---------
+- [[38;5;39mFixed[0m -
+---------
+
+ra           : 1.95
+dec          : -1.27
+psi          : 0.82
+t            : 0.0
+cosiota      : -1.0
+phi          : 0.0
+
+
+
+##########################
+# [[38;5;39mSampler initialisation[0m #
+##########################
+
+* I'll be running with the following sampler parameters:
+
+verbose                      : 2
+nlive                        : 2048
+maxmcmc                      : 2048
+poolsize                     : 128
+nthreads                     : 1
+seed                         : 1234
+resume                       : 1
+periodic_checkpoint_interval : 900
+
+Noise evidence: 19680.452
+
+
+* Whitened plots using the FD PSD are illustrative, and do not correspond to the full TD treatment applied in the analysis.
+
+* Pre-sampling execution time (min): 0.18
+
+
+
+##################
+# [[38;5;39mStart sampling[0m #
+##################
+
+* Using CPNest version: `0.12.0`.
+
+* The sampling output appears in the `/mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/reports/posteriors/pyring/kerr221_20260310-paperdisplay-kerr221/Nested_sampler/cpnest.log` file.
+
+
+Signal evidence         : 19772.153
+ln B                    : 91.701
+Estimated SNR from logB : 14.622
+
+* Sampling execution time (min): 29552587.33
+
+
+
+###########################
+# [[38;5;39mPosterior railing tests[0m #
+###########################
+
+A2221        is railing against the upper prior bound.
+
+
+
+###################
+# [[38;5;39mSNR computation[0m #
+###################
+
+Medians:
+
+H1      matched_filter SNR (TD): 11.506
+L1      matched_filter SNR (TD): 8.764
+Network matched_filter SNR (TD): 14.463
+H1      optimal        SNR (TD): 11.541
+L1      optimal        SNR (TD): 8.749
+Network optimal        SNR (TD): 14.480
+
+Percentage SNR loss due to truncation (in maxL sample):
+
+H1      matched_filter: 1.0%
+L1      matched_filter: 2.1%
+H1      optimal       : -0.4%
+L1      optimal       : 0.6%
+
+
+
+####################
+# [[38;5;39mPlots generation[0m #
+####################
+
+
+* Warning: Global corner plot failed with error: None.
+* Skipping sky position plot, since at least one of the sky position parameters was fixed.
+
+* Skipping time plot, since time was fixed.
+
+* A Kolmogorov–Smirnov test of whitened H1 residuals gave 9488/9488 normality outliers (at 1.0 % significance).
+
+* A Kolmogorov–Smirnov test of whitened L1 residuals gave 9488/9488 normality outliers (at 1.0 % significance).
+
+* Fetching the IMR posterior from the default ones included in the package.
+
+* To predict the GR spectrum of QNM or final mass and spin, the following parameters will be used:
+
+  Mf: 67.920  (1.832)
+  af: 0.667   (0.027)
+
+* Total execution time (min): 19.15

@@ -1,0 +1,34 @@
+{
+  "analysis_duration": 0.1,
+  "bandpass_enabled": false,
+  "bandpass_hz": null,
+  "case": "kerr221",
+  "config_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\configs\\injections\\kerr221.yaml",
+  "fix_t": 0.0,
+  "locallike_path": {
+    "analysis_duration_s": 0.1,
+    "bandpass_enabled": false,
+    "fft_acf": true,
+    "sampling_rate_hz": 2048.0,
+    "truncate": true
+  },
+  "maxmcmc": 256,
+  "mode_amplitudes_direct": {
+    "2220": 8.92e-21,
+    "2221": 9.81e-21
+  },
+  "mode_amplitudes_relative": {
+    "2220": 8.920000000000002,
+    "2221": 9.81
+  },
+  "nlive": 256,
+  "noise_chunksize": 4.0,
+  "pyring_ini": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr221_20260310-fig1-rest-locallike-main\\kerr221_pyring.ini",
+  "reference_amplitude": 1e-21,
+  "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr221_20260310-fig1-rest-locallike-main",
+  "sampling_rate": 2048.0,
+  "signal_chunksize": 4.0,
+  "stderr_log": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr221_20260310-fig1-rest-locallike-main\\pyring_stderr.log",
+  "stdout_log": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr221_20260310-fig1-rest-locallike-main\\pyring_stdout.log",
+  "zero_noise_injection": true
+}
