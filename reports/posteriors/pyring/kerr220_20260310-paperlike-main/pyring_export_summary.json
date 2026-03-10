@@ -1,0 +1,16 @@
+{
+  "export_sample_count": 20000,
+  "manifest_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\manifest_pyring.json",
+  "posterior_columns": [
+    "Mf",
+    "af",
+    "A2220",
+    "phi2220",
+    "logL",
+    "logPrior"
+  ],
+  "raw_sample_count": 879,
+  "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_20260310-paperlike-main",
+  "run_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_20260310-paperlike-main\\kerr220_pyring.npz",
+  "stable_npz": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_pyring.npz"
+}

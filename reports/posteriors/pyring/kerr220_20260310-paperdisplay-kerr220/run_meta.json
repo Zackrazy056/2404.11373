@@ -1,0 +1,32 @@
+{
+  "analysis_duration": 0.1,
+  "bandpass_enabled": false,
+  "bandpass_hz": null,
+  "case": "kerr220",
+  "config_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\configs\\injections\\kerr220.yaml",
+  "fix_t": 0.0,
+  "locallike_path": {
+    "analysis_duration_s": 0.1,
+    "bandpass_enabled": false,
+    "fft_acf": true,
+    "sampling_rate_hz": 2048.0,
+    "truncate": true
+  },
+  "maxmcmc": 2048,
+  "mode_amplitudes_direct": {
+    "2220": 5e-21
+  },
+  "mode_amplitudes_relative": {
+    "2220": 5.0
+  },
+  "nlive": 2048,
+  "noise_chunksize": 4.0,
+  "pyring_ini": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_20260310-paperdisplay-kerr220\\kerr220_pyring.ini",
+  "reference_amplitude": 1e-21,
+  "run_dir": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_20260310-paperdisplay-kerr220",
+  "sampling_rate": 2048.0,
+  "signal_chunksize": 4.0,
+  "stderr_log": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_20260310-paperdisplay-kerr220\\pyring_stderr.log",
+  "stdout_log": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_20260310-paperdisplay-kerr220\\pyring_stdout.log",
+  "zero_noise_injection": true
+}

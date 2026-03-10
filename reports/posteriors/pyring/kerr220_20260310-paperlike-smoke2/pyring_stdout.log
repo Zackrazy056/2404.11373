@@ -1,0 +1,227 @@
+* Warning: The `art` package could not be imported. Please consider installing it locally for best visual renditions. The cause of this not being taken care of automatically by the `pyRing` package is that the `art` package is not deployed on conda, hence the conda-build fails and `art` cannot be listed as a requirement for the `pyRing` package.
+
+
+ [[38;5;39m
+                                         @.
+                                        &  @
+                                        @  ,
+                                        (
+                                                       *
+                                            &            @
+                                       #    @        @
+                                       @             .    ,
+                                       *    .             @
+                                                     @
+                                                     ,    &
+                                      (     #             @           @
+                                      *     @                       @   @
+                                      *     &       /
+                                            .       @      #       @     @          *
+*   @  %       *       @       &     @                     %                      @    &          *    @     &    @     @
+                                                    *      *              @      @      @     @
+                                             &                    @                        %
+                                                                 .&        @   @
+                                                   .        @                &
+                                             @                   @
+                                                   @
+                                             *               @  @
+                                                   .            &
+                                                              %&
+                                              *
+                                              .
+                                              @    @
+                                              
+                                               @  .
+                                               /
+                                                 @
+[0m
+* Using pyRing version: `2.3.0`.
+
+
+
+
+####################
+# [[38;5;39mInput parameters[0m #
+####################
+
+* Reading config file : `/mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/reports/posteriors/pyring/kerr220_20260310-paperlike-smoke2/kerr220_pyring.ini`.
+* With sections       : ['input', 'Sampler settings', 'Priors', 'Injection', 'Plot'].
+
+* I'll be running with the following values:
+
+data-H1                    : /mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/external/pyRingGW-2.3.0/pyRing/data/Real_data/GW150914/H-H1_GWOSC_4KHZ_R1-1126259447-32.txt
+data-L1                    : /mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/external/pyRingGW-2.3.0/pyRing/data/Real_data/GW150914/L-L1_GWOSC_4KHZ_R1-1126259447-32.txt
+data-V1                    : 
+ignore-data-filename       : 0
+download-data              : 0
+datalen-download           : 4096.0
+gw-data-find               : 0
+gw-data-type-H1            : 
+gw-data-type-L1            : 
+gw-data-type-V1            : 
+channel-H1                 : GWOSC
+channel-L1                 : GWOSC
+channel-V1                 : GWOSC
+config-file                : /mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/reports/posteriors/pyring/kerr220_20260310-paperlike-smoke2/kerr220_pyring.ini
+run-type                   : full
+output                     : /mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/reports/posteriors/pyring/kerr220_20260310-paperlike-smoke2
+run-tag                    : kerr220_20260310-paperlike-smoke2
+screen-output              : 1
+debug                      : 0
+pesummary                  : 0
+trigtime                   : 1126259462.42323
+detectors                  : H1,L1
+ref-det                    : H1
+sky-frame                  : equatorial
+acf-H1                     : 
+acf-L1                     : 
+acf-V1                     : 
+psd-H1                     : 
+psd-L1                     : 
+psd-V1                     : 
+signal-chunksize           : 4.0
+noise-chunksize            : 4.0
+window-onsource            : 0
+window                     : 1
+alpha-window               : 0.1
+sampling-rate              : 4096.0
+f-min-bp                   : 100.0
+f-max-bp                   : 500.0
+bandpassing                : 1
+noise-averaging-method     : mean
+fft-acf                    : 1
+acf-simple-norm            : 1
+no-lognorm                 : 0
+truncate                   : 1
+analysis-duration          : 0.2
+analysis-duration-n        : 410
+zero-noise                 : 1
+gaussian-noise             : 
+gaussian-noise-seed        : -1
+gaussian-noise-white-sigma : 1e-21
+chisquare-computation      : 0
+non-stationarity-check     : 0
+maxent-psd                 : 
+PSD-investigation          : 0
+onsource-ACF               : 0
+Dirac-comb                 : 0
+Zeroing-data               : 0
+likelihood-method          : direct-inversion
+split-inner-products       : 0
+injection-parameters       : None
+injection-approximant      : Kerr
+inject-n-ds-modes          : {'s': 0, 'v': 0, 't': 1}
+inject-area-quantization   : 0
+inject-braneworld          : 0
+inject-charge              : 0
+injection-scaling          : 1.0
+injection-T                : 64.0
+template                   : Kerr
+single-mode                : None
+teob-modes                 : [(2, 2)]
+n-ds-modes                 : {'s': 0, 'v': 0, 't': 1}
+ds-ordering                : freq
+kerr-modes                 : [(2, 2, 2, 0)]
+reference-amplitude        : 1e-21
+spheroidal                 : 0
+amp-non-prec-sym           : 1
+tail-modes                 : None
+quadratic-modes            : None
+quadratic-linear-prop      : 0
+qnm-fit                    : 1
+coherent-n                 : 0
+max-Kerr-amp-ratio         : 0.0
+TGR-overtones-ordering     : Unordered
+domega-tgr-modes           : None
+dtau-tgr-modes             : None
+area-quantization          : 0
+braneworld                 : 0
+tau-AQ                     : 0
+prior-reweight             : 
+ParSpec                    : 0
+ParSpec_Dmax_TGR           : 2
+ParSpec_Dmax_charge        : 0
+EsGB                       : 0
+charge                     : 0
+analysis-duration-n        : 819
+inject-n-ds-modes          : {'t': 1}
+n-ds-modes                 : {'t': 1}
+gr-time-prior              : 1
+dist-flat-prior            : 0
+mass-ratio-flat-prior      : 0
+ds-amp-flat-prior          : 0
+mf-time-prior              : 67.0
+
+
+
+##################
+# [[38;5;39mKerr injection[0m #
+##################
+
+* I'll be injecting the following parameters:
+
+* Warning: Imposing non-precessing Kerr amplitude symmetry for both injection and recovery (to be relaxed in future versions).
+
+ra                         : 1.95
+dec                        : -1.27
+psi                        : 0.82
+cos_altitude               : 0.0
+azimuth                    : 0.0
+t0                         : 0.0
+Mf                         : 67.0
+af                         : 0.67
+logdistance                : 6.0857
+cosiota                    : -1.0
+phi                        : 0.0
+alpha                      : 25.132741228718345
+beta                       : -0.4
+Q                          : 0.0
+kerr-amplitudes            : {(2, 2, 2, 0): np.complex128(2.5008553729853507+4.329633056439114j)}
+kerr-tail-amplitudes       : None
+kerr-tail-phases           : None
+kerr-tail-exponents        : None
+kerr-quad-amplitudes       : None
+kerr-quad-phases           : None
+kerr-domegas               : {(2, 2, 2, 0): 0.0}
+kerr-dtaus                 : {(2, 2, 2, 0): 0.0}
+kerr-tail-parameters       : None
+
+
+
+##########################
+# [[38;5;39mSetting the start time[0m #
+##########################
+
+Trigtime in H1             : 1126259462.423230
+
+
+
+
+################
+# [[38;5;39mData reading[0m #
+################
+
+
+------
+- [[38;5;39mH1[0m -
+------
+
+* Warning: The file name is expected to follow GWOSC conventions 'DET-FRAMETYPE-STARTTIME--DATALEN.txt', e.g.: 'H-H1_GWOSC_4_V1-1126259446-32.txt'. See https://www.gw-openscience.org for more infomation. This requirement can be relaxed by activating the 'ignore-data-filename' option.
+
+* Loaded `/mnt/c/Users/97747/GW QNM EMRI PROJECT/2404.11373v3/2404.11373/external/pyRingGW-2.3.0/pyRing/data/Real_data/GW150914/H-H1_GWOSC_4KHZ_R1-1126259447-32.txt` starting at `1126259447.0` length 32.0s.
+
+* Bandpassing the raw strain between [100.0, 500.0] Hz.
+
+* Computing the one-sided PSD with the Welch method for comparison with the standard ACF.
+
+* Although an injection was selected, the ACF is being computed from the strain.
+
+* WARNING: Covariance matrix conditioning number is 4.793062e+19, and exceeds the safety threshold of 1.000000e+14, implying possible errors of order 1% or greater in the likelihood computation (since we use double precision, hence ~16 significant digits). Double check your settings, e.g. search for possible data corruption, inconsistency of sampling rate and bandpassing filter, etc. Also, consider trying different covariance inversion methods to improve the numerical stability and verify the robustness of the analysis results (see the `likelihood-method` option). Running with the `debug` option turned on will print additional information.
+
+* Warning: Skipping gaussianity diagnostic because the covariance matrix is not positive definite.
+
+* Injecting the `Kerr` waveform model in the H1 detector.
+
+
+* Zero noise injection selected.
+

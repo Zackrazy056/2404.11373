@@ -1,0 +1,16 @@
+{
+  "cases": {
+    "kerr220": {
+      "area_ratio_90_sbi_over_pyring": 0.9980198019801981,
+      "ks_Mf_D": 0.06964999999999999,
+      "ks_chi_D": 0.06630000000000003,
+      "pyring_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\pyring\\kerr220_pyring.npz",
+      "pyring_samples": 20000,
+      "sbi_path": "C:\\Users\\97747\\GW QNM EMRI PROJECT\\2404.11373v3\\2404.11373\\reports\\posteriors\\fig1_paper_precision\\kerr220_20260310-fig1220-detlocal\\kerr220_sbi_posterior_20000.npz",
+      "sbi_samples": 20000,
+      "wasserstein_Mf": 1.0390229373196238,
+      "wasserstein_chi": 0.02425813861535793
+    }
+  },
+  "failures": {}
+}
